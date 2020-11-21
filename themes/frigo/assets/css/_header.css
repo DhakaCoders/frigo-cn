@@ -1,30 +1,210 @@
-nav.main-nav ul{
+.header-tp{
+	padding: 40px 0;
+}
+.hdr-tp-lft{
+	width: 28%;
+	float: left;
+}
+.logo a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: inherit;
+}
+.hdr-tp-rgt{
+	width: 72%;
+	float: right;
+	padding: 15px 0 0;
+}
 
-}
-nav.main-nav ul li{
-	
-}
-nav.main-nav ul li a{
-	
-}
-nav.main-nav > ul{
-
+/*
+-------------------
+ Header Css
+-------------------
+*/
+nav.main-nav{
+	padding: 15px 0 0;
+	float: left;
 }
 nav.main-nav > ul > li{
-
+	display: inline-block;
+	vertical-align: baseline;
+	text-transform: uppercase;
+	padding: 0 30px 30px;
+	font-size: 16px;
+	line-height: 18px;
+	position: relative;
 }
+/*nav.main-nav > ul > li:last-child{
+	padding-right: 0;
+}*/
 nav.main-nav > ul > li > a{
-
+	font-weight: 700;
+	color: #1E1E1E;
 }
 
-nav.main-nav > ul > li.current-menu-item > a{
-
+nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 205px;
+	padding: 5px 0 0 0;
+	background: #fff;
+	border-top: 2px solid #A61916;
+	z-index: 30;
+	box-shadow: 0 11px 10px 0 rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 11px 10px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 11px 10px 0 rgba(0, 0, 0, 0.15);
+    transform: scale3d(1,0,1);
+    -ms-transform: scale3d(1,0,1);
+    -webkit-transform: scale3d(1,0,1);
+    transition: all .5s;
+    -ms-transition: all .5s;
+    -webkit-transition: all .5s;
+    transform-origin: top;
+    -ms-transform-origin: top;
+    -webkit-transform-origin: top;
+}
+nav.main-nav > ul > li.menu-item-has-children:hover > ul.sub-menu{
+    transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -webkit-transform: scale3d(1,1,1);
+    opacity: 1;
+}
+nav.main-nav  ul.sub-menu li{
+	padding: 0 0 0 0;
+	display: block;
+	position: relative;
+	border-bottom: 1px solid #eee;
+}
+nav.main-nav ul.sub-menu li a{
+	color: #1E1E1E;
+	font-size: 14px;
+	display: block;
+	padding: 10px 20px;
+	position: relative;
+	font-weight: 700;
 }
 
-nav.main-nav > ul > li.menu-item-has-children > a{
-
+nav.main-nav ul.sub-menu li:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 0;
+    background: #A61916;;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+nav.main-nav ul.sub-menu li:hover:after{
+    height: 100%;
+}
+nav.main-nav ul li:hover > a,
+nav.main-nav ul li.current-menu-item a {
+    color: #A61916;;
 }
 
-nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
-	
+.hdr-tp-icons-cntlr{
+	float: right;
+	padding-top: 5px;
+	padding-left: 20px;
 }
+.hdr-sign-up{
+	float: left;
+}
+.hdr-sign-up a{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	text-decoration: none;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	border:2px solid#1e1e1e;
+	border-radius: 50px;
+}
+.hdr-sign-up a i{
+	margin-top: -2px;
+}
+.hdr-tp-cart-btn{
+	float: right;
+	padding-left: 25px;
+}
+.hdr-tp-cart-btn a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-decoration: none;
+	width: 40px;
+	height: 40px;
+	background: #a61916;
+	border-radius: 50px;
+	position: relative;
+}
+.hdr-tp-cart-btn a span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 19px;
+	height: 19px;
+	background: #1E1E1E;
+	border-radius: 50px;
+	font-size: 12px;
+	line-height: 15px;
+	color: #fff;
+	font-weight: 700;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}
+
+/*
+--------------------
+ Header Btm Css
+--------------------
+*/
+.header-btm{
+	padding: 20px 0;
+	background: #1E1E1E;
+}
+.hdr-btm-service-wrp ul li{
+	float: left;
+}
+.hdr-btm-service-wrp ul li:nth-child(1){
+	width: 31%;
+}
+.hdr-btm-service-wrp ul li:nth-child(2){
+	width: 26%;
+}
+.hdr-btm-service-wrp ul li:nth-child(3){
+	width: 24%;
+}
+.hdr-btm-service-wrp ul li:nth-child(4){
+	width: 19%;
+}
+.hdr-btm-service-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.hdr-btm-service-item span{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 16px;
+	line-height: 18px;
+	color: #fff;
+	font-weight: 500;
+	padding-left: 15px;
+}
+.hdr-btm-service-item i{
+	display: inline-block;
+	vertical-align: baseline;
+}
+
