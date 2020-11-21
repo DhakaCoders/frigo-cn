@@ -16,10 +16,12 @@ a, a:hover, a:focus, button:hover, button:focus{
 }
 
 body {
-    background: #f8f8f8;
-    color: #000000;
-    font-size: 18px;
-    line-height: 24px;
+    background: #ffffff;
+    color: #717171;
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 p{
 	line-height: 1.2;
@@ -88,7 +90,9 @@ Containers
 	
 }
 .container-lg{
-
+	max-width: 1400px;
+	width: 100%;
+	margin: 0 auto;
 }
 .container{
 	max-width: 1200px;
