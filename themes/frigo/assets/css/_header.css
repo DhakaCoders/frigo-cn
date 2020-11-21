@@ -24,13 +24,13 @@
 */
 nav.main-nav{
 	padding: 15px 0 0;
-	float: left;
+	float: right;
 }
 nav.main-nav > ul > li{
 	display: inline-block;
 	vertical-align: baseline;
 	text-transform: uppercase;
-	padding: 0 30px 30px;
+	padding: 0 28px 30px;
 	font-size: 16px;
 	line-height: 18px;
 	position: relative;
@@ -176,10 +176,10 @@ nav.main-nav ul li.current-menu-item a {
 	float: left;
 }
 .hdr-btm-service-wrp ul li:nth-child(1){
-	width: 31%;
+	width: 30%;
 }
 .hdr-btm-service-wrp ul li:nth-child(2){
-	width: 26%;
+	width: 27%;
 }
 .hdr-btm-service-wrp ul li:nth-child(3){
 	width: 24%;
@@ -187,9 +187,11 @@ nav.main-nav ul li.current-menu-item a {
 .hdr-btm-service-wrp ul li:nth-child(4){
 	width: 19%;
 }
+.hdr-btm-service-wrp ul li:nth-child(1) .hdr-btm-service-item{
+	padding-left: 10px;
+}
 .hdr-btm-service-item {
-    padding-left: 10px;
-    padding-right: 10px;
+	padding-right: 10px;
     display: flex;
     justify-content: left;
     align-items: center;
