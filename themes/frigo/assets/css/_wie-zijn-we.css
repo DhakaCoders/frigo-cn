@@ -1,0 +1,25 @@
+.who-are-you-sec{
+
+}
+.who-are-you-desc-inr{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #F6F6F6;
+	margin-bottom: 58px;
+}
+.who-are-you-lft{
+	width: 50%;
+}
+.who-are-you-title{
+	font-size: 48px;
+	margin-bottom: 10px;
+}
+.who-are-you-lft p{
+	color: #A61916;
+	font-weight: 700;
+}
+.who-are-you-rt{
+	width: 50%;
+	padding-top: 59px;
+}
