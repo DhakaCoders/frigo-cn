@@ -88,3 +88,8 @@
 	border-color: #fff;
 	background: #fff;
 }
+
+
+.banner{
+	min-height: 200px;
+}
