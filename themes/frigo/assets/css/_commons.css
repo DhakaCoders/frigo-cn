@@ -27,6 +27,26 @@ p{
 	line-height: 1.2;
 	margin-bottom: 15px;
 }
+b, strong {
+    font-weight: 700;
+}
+
+p::-moz-selection {
+  color: #fff;
+  background: #A61916;
+}
+p::-ms-selection { 
+  color: #fff;
+  background: #A61916;
+}
+p::-webkit-selection { 
+  color: #fff;
+  background: #A61916;
+}
+p::selection {
+  color: #fff;
+  background: #A61916;
+}
 /*-- app gap use pattern --*/
 /*data-xxs = 575
 data-xs = 767
@@ -90,11 +110,9 @@ Containers
 	
 }
 .container-lg{
-	max-width: 1400px;
 }
 .container{
-	max-width: 1200px;
-	width: 100%;
+	max-width: 1430px;
 }
 .container-md{
 

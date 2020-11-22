@@ -170,6 +170,31 @@ google.maps.event.addDomListener(window, 'load', initialize);
   }, false);
 })();
 
+
+
+/*Start Noyon*/
+
+
+
+
+
+/*Start Shoriful*/
+
+
+
+
+
+/*start milon*/
+
+
+
+
+
+/*Start Rannojit*/
+
+
+
+
     new WOW().init();
 
 })(jQuery);
