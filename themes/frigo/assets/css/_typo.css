@@ -8,6 +8,7 @@ h1,h2,h3,h4,h5,h6{
 	font-weight: 700;
 	font-family: 'Roboto', sans-serif;
 	color: #1E1E1E;
+	text-transform: uppercase;
 }
 h1{
 	font-size: 64px;
