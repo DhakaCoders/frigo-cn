@@ -141,13 +141,13 @@
 }
 .ftr-top-newsletter .from-group input{
     width: 100%;
-    padding: 15px 20px 15px;
+    padding: 12px 20px 12px;
     height: 40px;
     font-size: 12px;
     line-height: 14px;
     color: #717171;
     font-weight: 400;
-    border:1px solid#fff;
+    border:2px solid#fff;
     border-radius: 0;
 }
 .ftr-top-newsletter .from-group input:focus{
