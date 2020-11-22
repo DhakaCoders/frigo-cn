@@ -1,0 +1,261 @@
+/*
+-----------------
+ Footer Css
+-----------------
+*/
+.ftr-top{
+  background: #1E1E1E;
+  padding: 100px 0 30px;
+}
+.ftr-col-main .ftr-col{
+  padding-right: 20px;
+}
+.ftr-col-main .ftr-col{
+  float: left;
+}
+.ftr-col-1{
+  width: 25%;
+}
+.ftr-col-2{
+  width: 13%;
+}
+.ftr-col-3{
+  width: 17%;
+}
+.ftr-col-4{
+  width: 19%;
+}
+.ftr-col-5{
+  width: 26%;
+  background:#252525;
+  padding-top: 60px;
+  padding: 60px 10px 25px;
+  margin-top: -60px;
+  padding-right: 10px !important;
+}
+.ftr-logo {
+    padding-top: 2px;
+    padding-bottom: 35px;
+}
+.ftr-logo a{
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+.ftr-socail-icon {
+    padding-top: 40px;
+    max-width: 235px;
+    width: 100%;
+    float: left;
+    border-top: 2px solid rgba(255, 255, 255, 0.08);
+}
+.ftr-socail-icon ul{
+  display: table;
+  margin: 0 auto;
+}
+.ftr-socail-icon ul > li{
+	float: left;
+	padding: 0 8px !important;
+}
+.ftr-socail-icon ul > li > a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+
+.ftr-socail-icon ul li a:hover i svg{
+	fill: #A61916 !important;
+}
+
+.ftr-col h6{
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 25px;
+  margin-top: 0;
+  font-weight: 700;
+}
+.ftr-col-5 h6{
+  margin-bottom: 12px;
+  text-align: center;
+}
+.ftr-col h6 span{
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+}
+.ftr-col-4 ul li span,
+.ftr-col ul li{
+    padding: 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    padding-bottom: 25px;
+}
+.ftr-col-4 ul li span{
+  padding-bottom: 0;
+}
+.ftr-col-4 ul li span,
+.ftr-col ul li a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: #fff;
+}
+.ftr-col-4 ul li:first-child{
+  font-weight: 700;
+}
+.ftr-col-4 ul li:first-child a{
+  color: #5A5A5A;
+  text-transform: uppercase;
+}
+.ftr-col ul li a:hover{
+  color: #A61916;
+}
+
+/*
+-------------------
+ Footer form Css
+-------------------
+*/
+.ftr-top-newsletter{
+  max-width: 312px;
+  width: 100%;
+  margin: 0 auto;
+}
+.from-group-wrp p{
+  font-size: 12px;
+  line-height: 1.6;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.from-group-msg p{
+  font-size: 11px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+}
+.ftr-top-newsletter .from-group{
+  padding-bottom: 8px;
+}
+.ftr-top-newsletter .from-group input{
+    width: 100%;
+    padding: 15px 20px 15px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #717171;
+    font-weight: 400;
+    border:1px solid#fff;
+    border-radius: 0;
+}
+.ftr-top-newsletter .from-group input:focus{
+  border-color: #ddd;
+}
+.from-group-submit{
+  text-align: center;
+}
+.from-group-submit button{
+    font-size: 11px;
+    line-height: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    background: #A61916;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    margin-top: 6px;
+    cursor: pointer;
+    max-width: 176px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    border:2px solid #A61916;
+}
+.from-group-submit button:hover{
+    color: #A61916;
+    background: transparent;
+}
+
+.form-group.has-error input {
+    border-color: red;
+}
+
+.form-control:focus{
+    box-shadow: none!important;
+}
+.contact-error{
+    opacity: 0;
+}
+.was-validated .contact-error{
+    opacity: 1;
+}
+.custom-select.is-invalid,
+ .form-control.is-invalid, 
+ .was-validated .custom-select:invalid, 
+ .was-validated .form-control:invalid {
+    border-color: #FF674D;
+    border-width: 1px;
+}
+
+/*
+---------------------
+ Footer Btm
+---------------------
+*/
+.ftr-btm{
+  padding: 55px 0 55px;
+}
+.ftr-btm-col-1{
+  width: 30%;
+  float: left;
+  padding-right: 20px;
+}
+.ftr-btm-col-2{
+  width: 40%;
+  float: left;
+}
+.ftr-btm-col-3{
+  width: 30%;
+  float: left;
+  padding-left: 20px;
+}
+.ftr-btm-col-1 span{
+  font-size: 14px;
+  line-height: 16px;
+  color: #717171;
+  font-weight: 400;
+  padding-top: 2px;
+}
+.ftr-btm-col-2 ul {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ftr-btm-col-2 ul li{
+  padding: 0;
+  padding-left: 7px;
+  padding-right: 7px;
+  float: left;
+}
+.ftr-btm-col-2 ul li a{
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: baseline;
+}
+.ftr-btm-col-3 a{
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 14px;
+  line-height: 16px;
+  color: #717171;
+  padding-top: 2px;
+  text-decoration: none;
+  font-weight: 400;
+}
+.ftr-btm-col-3 a:hover{
+  color: #A61916;
+}
+
