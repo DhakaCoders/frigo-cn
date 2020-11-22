@@ -1,3 +1,60 @@
+.page-breadcrumbs{
+	padding: 25px 0 50px;
+}
+
+.page-breadcrumbs ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 0 30px;
+	position: relative;
+	font-size: 12px;
+	line-height: 1;
+}
+.page-breadcrumbs ul li:first-child{
+	padding-left: 0;
+}
+.page-breadcrumbs ul li:not(:last-child):after{
+	content: "";
+	background: url(../images/breadcrumbs-arrow-icon.svg);
+	width: 10px;
+	height: 10px;
+	background-size: 100% auto;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	
+}
+.page-breadcrumbs ul li a{
+	display: inline-block;
+	vertical-align: baseline;
+	color: #717171;
+}
+.page-breadcrumbs ul li a.fl-home-icon,
+.page-breadcrumbs ul li:first-child a{
+	padding-left: 30px;
+	position: relative;
+}
+.page-breadcrumbs ul li a.fl-home-icon:before,
+.page-breadcrumbs ul li:first-child a:before{
+	content: "";
+	background: url(../images/breadcrumbs-arrow-icon.svg);
+	width: 10px;
+	height: 10px;
+	background-size: 100% auto;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+/*end of beadcrumbs*/
+
+
+
 .innerpage-con-wrap{
 	overflow: hidden;
 	position: relative;
