@@ -1,0 +1,122 @@
+.product-details-page{
+	padding-bottom: 70px;
+}
+.fl-product .woocommerce-product-gallery{
+	float: left;
+	width: 57%;
+	padding: 0 120px 0 0;
+}
+
+.fl-product .summary{
+	float: left;
+	width: 43%;
+}
+
+.fl-product figure .woocommerce-product-gallery__image{
+	height: 575px;
+	width: 100%;
+	background-size: cover!important;
+	background-repeat: no-repeat!important;
+	background-position: center center!important;
+	position: relative;
+}
+.fl-product figure .woocommerce-product-gallery__image .woocommerce-main-image{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.highlight-text{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background: #A61916;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 1;
+	text-transform: uppercase;
+	padding: 8px 24px;
+}
+
+.thumbnails{
+	margin: 0 -10px!important;
+}
+.thumbnails .woocommerce-product-gallery__image{
+	padding: 0 10px;
+}
+
+.thumbnails .woocommerce-product-gallery__image .inline-bg{
+	height: 124px;
+	width: 100%;
+	cursor: pointer;
+}
+.fl-product .woocommerce-product-gallery__wrapper{
+	margin: 0 0 20px 0!important;
+}
+
+
+.fl-product .summary-hdr .product_title{
+	font-size: 48px;
+	margin: -7px 0 30px 0;
+	text-transform: uppercase;
+}
+.fl-product .summary .summary-hdr ul{
+	padding-left: 0;
+	padding-bottom: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 15px;
+}
+.fl-product .summary .summary-hdr ul li{
+	width: 50%;
+	padding-right: 15px;
+	padding-left: 35px;
+	padding: 5px 15px 5px 35px;
+	position: relative;
+	color: #A61916;
+}
+
+.fl-product .summary .summary-hdr ul:after,
+.fl-product .summary .summary-hdr ul:before{
+	content: "";
+	clear: both;
+	display: block;
+}
+.fl-product .summary .summary-hdr ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 24px;
+    height: 23px;
+    background: url(../images/star-icon.svg);
+    border-radius: 0;
+    background-size: 100% auto;
+}
+.fl-product .summary .summary-hdr ul li:nth-child(2n+2){
+	clear: left;
+}
+
+.fl-product .price-quentity{
+	margin-bottom: 50px;
+}
+.fl-product .pro-summary-content ul,
+.fl-product .pro-summary-content ol{
+	display: flex;
+	flex-wrap: wrap;
+}
+.fl-product .pro-summary-content li{
+	width: 50%;
+	padding-right: 15px;
+}
+
+.pro-summary-content h6{
+	margin-bottom: 15px;
+}
+
+.fl-product .woocommerce-tabs{
+	padding: 45px 0 0 0;
+	border-top: 1px solid #F6F6F6;
+	margin-top: 30px;
+}
