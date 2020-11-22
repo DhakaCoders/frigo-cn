@@ -29,6 +29,7 @@
 .spotlight-sec{
 	padding-top: 90px;
 	padding-bottom: 100px;
+	
 }
 .spotlight-inr{
 
@@ -48,10 +49,10 @@
 	padding: 0 105px;
 }
 .spotlight-slider-cntlr .spotlight-silder .slick-prev{
-	margin-left: -104px;
+	margin-left: -80px;
 }
 .spotlight-slider-cntlr .spotlight-silder .slick-next{
-	margin-right: -104px;
+	margin-right: -80px;
 }
 
 .spotlight-silder > div{

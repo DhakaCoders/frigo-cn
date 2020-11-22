@@ -27,8 +27,8 @@
 }
 
 .slick-next,.slick-prev{
-	height: 46px;
-	width: 46px;
+	height: 38px;
+	width: 24px;
 	position: absolute;
 	margin: 0;
 	padding: 0;
