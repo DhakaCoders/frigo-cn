@@ -267,7 +267,7 @@ if( $('.fl-product').length ){
     slideToScroll: 1,
     asNavFor: '.fl-product .woocommerce-product-gallery__wrapper',
     dots: false,
-    //centerMode: true,
+    //centerMode: false,
     focusOnSelect: true,
     speed: 300,
     responsive: [
