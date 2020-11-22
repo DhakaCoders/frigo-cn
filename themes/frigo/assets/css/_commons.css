@@ -110,6 +110,7 @@ Containers
 	
 }
 .container-lg{
+	max-width: 1640px;
 }
 .container{
 	max-width: 1430px;
