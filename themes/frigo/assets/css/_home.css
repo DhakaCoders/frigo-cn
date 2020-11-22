@@ -45,6 +45,15 @@
 	color: #8A8A8A;
 	font-size: 14px;
 }
+/*.bnr-search input:hover{
+	-webkit-appearance: none;
+	appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+}*/
+
+
 .bnr-search input::placeholder {
   color: #8A8A8A;
   opacity: 1;
@@ -109,20 +118,26 @@
 .spotlight-inr{
 
 }
-.spotlight-entry-hdr{
+.sec-entry-hdr{
 	text-align: center;
 }
-.spotlight-title{
+.sec-title{
 	color: #1E1E1E;
 	font-size: 36px;
 	margin-bottom: 22px;
 }
-.spotlight-entry-hdr p{
+.sec-entry-hdr p{
 	margin-bottom: 30px;
 }
-
-
-
+.spotlight-slider-cntlr{
+	padding: 0 105px;
+}
+.spotlight-slider-cntlr .spotlight-silder .slick-prev{
+	margin-left: -104px;
+}
+.spotlight-slider-cntlr .spotlight-silder .slick-next{
+	margin-right: -104px;
+}
 
 .spotlight-silder > div{
 	margin: 0 -12px;
@@ -222,6 +237,18 @@
 	text-align: center;
 	padding: 10.5px 0;
 }
+.quantity input:focus{
+
+}
+.quantity input[type=number]::-webkit-inner-spin-button, 
+.quantity input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+  -moz-appearance: textfield;
+}
+.quantity input[type="number"] {
+   -moz-appearance: textfield;
+}
 
 .quantity .minus{
 	width: 42px;
@@ -282,5 +309,117 @@
 .product-quantity-btn .fl-btn:hover{
 	border-color: #378a37;
 	background: #378a37;
+	color: #fff;
+}
+.work-sec{
+	background: #1E1E1E;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	color: #fff;
+	padding-left: 35px; 
+	padding-right: 35px; 
+}
+.work-inr .sec-entry-hdr .sec-title{
+	color: #fff;
+}
+
+.work-slider-cntlr{
+
+}
+.work-slider{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 -12px;
+}
+.work-slider > div{
+	
+	width: 33.33%;
+	padding: 0 12px;
+
+}
+.work-slide-item-cntlr{
+	
+	margin-bottom: 24px;
+	
+}
+.work-slide-item{
+	min-height: 270px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 15px;
+	position: relative;
+}
+.work-slide-item-icon{
+	margin-bottom: 27px;
+}
+.work-slide-item-title{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: initial;
+	margin-bottom: 20px;
+}
+.work-slide-item p{
+	margin-bottom: 0;
+	line-height: 1;
+	font-size: 14px;
+	color: #fff;
+}
+.work-sec-btn{
+	margin-top: 60px;
+	text-align: center;
+}
+.work-sec-btn .fl-btn{
+	border-color: #fff;
+	color: #fff;
+	background: transparent;
+	width: 269px;
+	height: 48px;
+}
+.work-sec-btn .fl-btn:hover{
+	border-color: #1E1E1E;
+	color: #1E1E1E;
+	background: #fff;
+}
+
+.about-frigobox{
+	padding: 100px 0;
+}
+.abt-frgbx-inr{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.abt-frgbx-img{
+	min-height: 575px;
+	width: 49%;
+}
+.abt-frgbx-desc{
+	width: 51%;
+	padding-left: 118px;
+}
+.abt-frgbx-desc-title{
+	font-size: 36px;
+	margin-bottom: 22px;
+}
+.abt-frgbx-desc p{
+	margin-bottom: 25px;
+}
+.abt-frgbx-desc-btn{
+	margin-top: 8px;
+}
+.abt-frgbx-desc-btn .fl-btn{
+	width: 200px;
+	height: 48px;
+
+	margin-left: initial;
+}
+.abt-frgbx-desc-btn .fl-btn:hover{
+	background: #8c1815;
+	border-color: #8c1815;
 	color: #fff;
 }
