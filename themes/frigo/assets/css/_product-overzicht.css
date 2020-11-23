@@ -7,7 +7,7 @@
 .pro-overview-cntnt-lft{
 	float: left;
 	background: #ccc;
-	width: 28.4%;
+	width: 23.72%;
 	height: 200px;
 }
 .pro-overview-filter{
@@ -36,7 +36,7 @@
 }
 .pro-overview-grid-cntlr{
 	float: left;
-	width: 71.6%;
+	width: 76.28%;
 	padding-left: 24px;
 }	
 .pro-overview-grid-cntlr > ul{
@@ -82,4 +82,34 @@
 	padding-bottom: 6px;
 	text-transform: uppercase;
 	color: #fff;
+}
+
+
+/*responsive*/
+@media(max-width: 1499px){
+
+}
+@media(max-width: 1399px){
+
+}
+@media(max-width: 1299px){
+
+}
+@media(max-width: 1199px){
+
+}
+@media(max-width: 991px){
+
+}
+@media(max-width: 767px){
+
+}
+@media(max-width: 639px){
+
+}
+@media(max-width: 575px){
+
+}
+@media(max-width: 479px){
+
 }
