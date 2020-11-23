@@ -550,6 +550,9 @@
 	.lft-img-rt-desc-mdul-desc{
 		padding-left: 35px;
 	}
+	.lft-img-rt-desc-mdul-desc-title{
+		font-size: 32px;
+	}
 }
 @media(max-width: 767px){
 	.spotlight-sec{
@@ -568,6 +571,9 @@
 	.pro-item-desc{
 		padding: 0;
 	}
+	.pro-item-desc-title{
+		font-size: 19px;
+	}
 	.quantity{
 		display: none;
 	}
@@ -582,6 +588,9 @@
 	}
 	.pro-item-desc-sub-title{
 		margin-bottom: 13px;
+	}
+	.lft-img-rt-desc-mdul-desc p{
+		font-size: 14px;
 	}
 	.product-price {
 		margin-bottom: 18px;
@@ -602,17 +611,11 @@
 	.work-inr .sec-entry-hdr p{
 		margin-bottom: 28px;
 	}
-	.work-slider-cntlr{
-		max-width: 375px;
-		width: 100%;
-		margin: auto;
-	}
+	
 	.work-slider{
 		display: initial;
 	}
-	.work-item-cntlr{
-		padding: 0;
-	}
+	
 	.work-sec-btn{
 		margin-top: 25px;
 	}
@@ -633,6 +636,16 @@
 		padding-left: 0;
 		text-align: center;
 	}
+	.sec-entry-hdr p{
+		font-size: 14px;
+	}
+	.lft-img-rt-desc-mdul-desc-title{
+		font-size: 28px;
+	}
+	.lft-img-rt-desc-mdul-desc-btn .fl-btn{
+		max-width: 200px;
+		font-size: 13px;
+	}
 
 }
 @media(max-width: 639px){
@@ -643,13 +656,19 @@
 		padding-top: 35px;
 		padding-bottom: 10px;
 	}
+	.pro-item-desc-title{
+		font-size: 16px;
+	}
+	.pro-item-desc-sub-title {
+		margin-bottom: 12px;
+	}
 	.sec-entry-hdr-title{
 		font-size: 24px;
 		margin-bottom: 10px;
 	}
 	.sec-entry-hdr p{
 		margin-bottom: 18px;
-		font-size: 14px;
+		font-size: 12px;
 	}
 	.work-sec{
 		padding: 60px 0;
@@ -660,17 +679,42 @@
 	.work-inr .sec-entry-hdr p{
 		margin-bottom: 20px;
 	}
+	.work-slider-cntlr{
+		max-width: 375px;
+		width: 100%;
+		margin: auto;
+	}
+	.work-item-cntlr{
+		padding: 0;
+	}
+	.sec-entry-hdr p{
+		font-size: 12px;
+	}
+	.work-item p{
+		font-size: 12px;
+	}
+	.work-sec-btn .fl-btn{
+		font-size: 11px;
+	}
 	.about-frigobox{
 		padding-top: 60px;
 		padding-bottom: 90px;
+	}
+	.lft-img-rt-desc-mdul-desc-title{
+		font-size: 24px;
 	}
 	.lft-img-rt-desc-mdul-img{
 		width: 100%;
 		margin-bottom: 30px;
 		height: 260px;
 	}
+	.lft-img-rt-desc-mdul-desc p{
+		font-size: 12px;
+	}
+
 	.lft-img-rt-desc-mdul-desc-btn .fl-btn{
 		max-width: 180px;
+		font-size: 11px;
 	}
 }
 @media(max-width: 479px){

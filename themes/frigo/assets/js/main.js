@@ -251,6 +251,15 @@ if( $('.workSlider').length ){
         {
           breakpoint: 768,
           settings: {
+            slidesToShow: 2,
+            arrows: false,
+            dots: true,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
             slidesToShow: 1,
             arrows: false,
             dots: true,
