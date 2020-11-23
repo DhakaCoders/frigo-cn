@@ -12,3 +12,8 @@ Text Domain: clipfresh
 */
 
 @import url('assets/css/main.css');
+
+
+/*header,footer{
+	display: none;
+}*/

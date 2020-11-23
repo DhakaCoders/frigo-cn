@@ -160,8 +160,7 @@ ol li::before {
 .dft-promo-module-title{
 	font-weight: 800;
 	display: block;
-	margin-bottom: 20px;
-	font-size: 60px;
+	margin-bottom: 40px;
 }
 .dft-plate-one-img-bx img{
 	width: 100%;
@@ -380,7 +379,9 @@ a.dft-btn:hover,
 	color: #A61916;
 }
 @media(max-width: 1199px){
-
+	.dft-promo-module-title{
+		margin-bottom: 35px;
+	}
 }
 
 
@@ -389,7 +390,15 @@ a.dft-btn:hover,
 		font-size: 20px;
 		line-height: 24px;
 	}
-	
+	.page-breadcrumbs {
+	    padding: 20px 0 40px;
+	}
+	.dft-promo-module-title {
+	    margin-bottom: 30px;
+	}
+	.dft-blockquote-cntlr {
+	    padding: 40px 45px 30px 50px;
+	}
 }
 @media(max-width: 890px){
 
@@ -424,6 +433,15 @@ a.dft-btn:hover,
 		padding-bottom: 0;
 	}
 
+	.page-breadcrumbs-sec{
+		display: none;
+	}
+	.default-page-con{
+		padding-top: 40px;
+	}
+	.dft-promo-module-title {
+	    margin-bottom: 27px;
+	}
 	
 }
 
@@ -448,7 +466,7 @@ a.dft-btn:hover,
 	.default-page-con ol,
 	.default-page-con ul,
 	ol,ul{
-		padding-left: 0;
+		padding-left: 14px;
 	}
 	.fl-dft-lftimg-rgtdes-lft {
 	    min-height: 240px;
@@ -460,12 +478,11 @@ a.dft-btn:hover,
 	.default-page-con p {
 	    margin-bottom: 20px;
 	}
-	.default-page-con ul li::before, ul li::before {
-	    width: 20px;
-	    height: 20px;
+	.default-page-con ul, ul{
+		padding-bottom: 15px;
 	}
 	.default-page-con ul li, ul li {
-	    padding: 2px 0 14px 35px;
+	    padding: 2px 0 14px 18px;
 	    line-height: 22px;
 	}
 	.default-page-con h1, .default-page-con h2, .default-page-con h3, .default-page-con h4, .default-page-con h5 {
@@ -489,7 +506,12 @@ a.dft-btn:hover,
 	.default-page-con ol li, ol li{
 		padding-bottom: 20px;
 	}
-	
+	.default-page-con ul li::before, ul li::before{
+		top: 8px;
+	}
+	.gallery-wrap{
+		padding-bottom: 20px;
+	}
 }
 
 
