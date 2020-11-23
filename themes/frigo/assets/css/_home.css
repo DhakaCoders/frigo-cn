@@ -2,7 +2,7 @@
 .fl-btn{
 	max-width: 269px;
 	width: 100%;
-	padding: 28px 10px 24px 10px;
+	padding: 28px 5px 24px 5px;
 	text-align: center;
 	margin-bottom: 0;
 	line-height: 1;
@@ -48,10 +48,10 @@
 	padding: 0 105px;
 }
 .spotlight-slider-cntlr .spotlight-silder .slick-prev{
-	margin-left: -80px;
+	margin-left: -65px;
 }
 .spotlight-slider-cntlr .spotlight-silder .slick-next{
-	margin-right: -80px;
+	margin-right: -65px;
 }
 
 .spotlight-silder{
@@ -231,7 +231,7 @@
 .product-order-btn .fl-btn{
 	background: #5CB85C;
 	border-color: #5CB85C;
-	max-width: 120px;
+	width: 120px;
 	font-size: 11px;
 	padding: 14px 10px 11px 10px;
 }
@@ -367,25 +367,205 @@
 
 }
 @media(max-width: 1399px){
-
+	.spotlight-slider-cntlr{
+		padding: 0 90px;
+	}
+	.spotlight-slider-cntlr .spotlight-silder .slick-prev{
+		margin-left: -50px;
+	}
+	.spotlight-slider-cntlr .spotlight-silder .slick-next{
+		margin-right: -50px;
+	}
+	.pro-item-img-cntlr{
+		height: 300px;
+	}
+	.pro-item-desc {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.pro-item-img-cntlr{
+		margin-bottom: 20px;
+	}
+	.pro-item-desc-title{
+		font-size: 27px;
+		margin-bottom: 8px;
+	}
+	.pro-item-desc-sub-title{
+		margin-bottom: 10px;
+		font-size: 15px;
+	}
+	.product-price .amount bdi{
+		font-size: 18px;
+	}
+	.product-price{
+		margin-bottom: 13px;
+	}
+	.quantity{
+		max-width: 125px;
+	}
+	.product-order-btn .fl-btn{
+		max-width: 100px;
+	}
 }
 @media(max-width: 1299px){
 	
 }
 @media(max-width: 1199px){
-	
+	.spotlight-sec{
+		padding-top: 80px;
+		padding-bottom: 55px;
+	}
+	.spotlight-slider-cntlr{
+		padding: 0 65px;
+	}
+	.spotlight-slider-cntlr .spotlight-silder .slick-prev{
+		margin-left: -27px;
+	}
+	.spotlight-slider-cntlr .spotlight-silder .slick-next{
+		margin-right: -27px;
+	}
+	.pro-item-img-cntlr{
+		height: 250px;
+	}
+	.pro-item-desc {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.pro-item-img-cntlr{
+		margin-bottom: 16px;
+	}
+	.pro-item-desc-title{
+		font-size: 24px;
+		margin-bottom: 8px;
+	}
+	.pro-item-desc-sub-title{
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+	.product-price .amount bdi{
+		font-size: 16px;
+	}
+	.product-price{
+		margin-bottom: 10px;
+	}
+	.quantity{
+		max-width: 110px;
+	}
+	.product-order-btn .fl-btn{
+		max-width: 90px;
+	}
 }
 @media(max-width: 991px){
-	
+	.spotlight-sec{
+		padding-top: 65px;
+		padding-bottom: 40px;
+	}
+	.sec-entry-hdr-title{
+		font-size: 32px;
+		margin-bottom: 17px;
+	}
+	.sec-entry-hdr p{
+		margin-bottom: 26px;
+	}
+	.spotlight-slider-cntlr{
+		padding: 0 35px;
+	}
+	.spotlight-slider-cntlr .spotlight-silder .slick-prev{
+		margin-left: -3px;
+	}
+	.spotlight-slider-cntlr .spotlight-silder .slick-next{
+		margin-right: -3px;
+	}
+	.pro-item-img-cntlr{
+		height: 200px;
+	}
+	.pro-item-desc {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.pro-item-img-cntlr{
+		margin-bottom: 13px;
+	}
+	.pro-item-desc-title{
+		font-size: 22px;
+		margin-bottom: 6px;
+	}
+	.pro-item-desc-sub-title{
+		margin-bottom: 8px;
+		font-size: 13px;
+	}
+	.product-price .amount bdi{
+		font-size: 14px;
+	}
+	.product-price{
+		margin-bottom: 8px;
+	}
+	.quantity{
+		max-width: 80px;
+	}
+	.quantity input{
+		max-width: 28px;
+	}
+	.product-order-btn .fl-btn{
+		max-width: 85px;
+	}
 }
 @media(max-width: 767px){
-	
+	.spotlight-sec{
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}
+	.spotlight-slider-cntlr{
+		padding: 0;
+	}
+	.pro-item{
+		background: transparent;
+	}
+	.pro-item-desc{
+		padding: 0;
+	}
+	.quantity{
+		display: none;
+	}
+	.product-order-btn{
+		margin-left: initial;
+	}
+	.product-order-btn .fl-btn{
+		max-width: 120px;
+	}
+	.pro-item-desc strong{
+		display: none;
+	}
+	.pro-item-desc-sub-title{
+		margin-bottom: 13px;
+	}
+	.product-price {
+		margin-bottom: 18px;
+	}
+	.sec-entry-hdr-title{
+		font-size: 27px;
+		margin-bottom: 13px;
+	}
+	.sec-entry-hdr p{
+		margin-bottom: 22px;
+	}
 }
 @media(max-width: 639px){
 	
 }
 @media(max-width: 575px){
-	
+	.spotlight-sec{
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+	.sec-entry-hdr-title{
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	.sec-entry-hdr p{
+		margin-bottom: 18px;
+		font-size: 14px;
+	}
 }
 @media(max-width: 479px){
 	
