@@ -228,7 +228,7 @@ if( $('.spotlightSlider').length ){
           breakpoint: 768,
           settings: {
             slidesToShow: 2,
-            arrow: false,
+            arrows: false,
             dots: true,
             slidesToScroll: 1
           }
@@ -247,6 +247,17 @@ if( $('.workSlider').length ){
       speed: 300,
       slidesToShow: 3,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+            slidesToScroll: 1
+          }
+        },
+      ]
     });
 }
 

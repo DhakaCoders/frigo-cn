@@ -264,6 +264,7 @@
 }
 .work-slider > div{
 	display: none;
+
 }
 .work-slider > div:nth-child(1){
 	display: block;
@@ -271,7 +272,7 @@
 .work-slider.slick-initialized.slick-slider > div{
 	display: block;
 }
-.work-slide-item-cntlr{
+.work-item-cntlr{
 	
 	margin-bottom: 24px;
 	padding: 0 12px;
@@ -408,7 +409,9 @@
 	}
 }
 @media(max-width: 1299px){
-	
+	.lft-img-rt-desc-mdul-desc{
+		padding-left: 95px;
+	}
 }
 @media(max-width: 1199px){
 	.spotlight-sec{
@@ -454,6 +457,9 @@
 	.product-order-btn .fl-btn{
 		max-width: 90px;
 	}
+	.lft-img-rt-desc-mdul-desc{
+		padding-left: 65px;
+	}
 }
 @media(max-width: 991px){
 	.spotlight-sec{
@@ -475,6 +481,12 @@
 	}
 	.spotlight-slider-cntlr .spotlight-silder .slick-next{
 		margin-right: -3px;
+	}
+	.pro-item-cntlr{
+		padding: 0 10px;
+	}
+	.spotlight-silder {
+		margin: 0 -10px;
 	}
 	.pro-item-img-cntlr{
 		height: 200px;
@@ -499,6 +511,17 @@
 	}
 	.product-price{
 		margin-bottom: 8px;
+		display: flex;
+		align-items: center;
+	}
+	.pro-prize-shrt-title{
+		font-weight: 700;
+		font-size: 10px;
+		line-height: 1;
+		display: inline-block;
+		text-transform: uppercase;
+		color: #D3D3D3;
+		padding-left: 10px;
 	}
 	.quantity{
 		max-width: 80px;
@@ -509,17 +532,38 @@
 	.product-order-btn .fl-btn{
 		max-width: 85px;
 	}
+	.work-sec{
+		padding: 90px 0;
+	}
+	.work-inr .sec-entry-hdr .sec-entry-hdr-title{
+		margin-bottom: 20px;
+	}
+	.work-inr .sec-entry-hdr p{
+		margin-bottom: 28px;
+	}
+	.work-slider{
+		margin: 0 -10px;
+	}
+	.work-item-cntlr{
+		padding: 0 10px;
+	}
+	.lft-img-rt-desc-mdul-desc{
+		padding-left: 35px;
+	}
 }
 @media(max-width: 767px){
 	.spotlight-sec{
 		padding-top: 45px;
-		padding-bottom: 45px;
+		padding-bottom: 20px;
 	}
 	.spotlight-slider-cntlr{
 		padding: 0;
 	}
 	.pro-item{
 		background: transparent;
+	}
+	.pro-item-cntlr{
+		margin-bottom: 16px;
 	}
 	.pro-item-desc{
 		padding: 0;
@@ -549,6 +593,47 @@
 	.sec-entry-hdr p{
 		margin-bottom: 22px;
 	}
+	.work-sec{
+		padding: 75px 0;
+	}
+	.work-inr .sec-entry-hdr .sec-entry-hdr-title{
+		margin-bottom: 40px;
+	}
+	.work-inr .sec-entry-hdr p{
+		margin-bottom: 28px;
+	}
+	.work-slider-cntlr{
+		max-width: 375px;
+		width: 100%;
+		margin: auto;
+	}
+	.work-slider{
+		display: initial;
+	}
+	.work-item-cntlr{
+		padding: 0;
+	}
+	.work-sec-btn{
+		margin-top: 25px;
+	}
+	.work-sec-btn .fl-btn{
+		max-width: 187px;
+	}
+	.about-frigobox{
+		padding-top: 70px;
+		padding-bottom: 90px;
+	}
+	.lft-img-rt-desc-mdul-img{
+		width: 100%;
+		margin-bottom: 30px;
+		height: 300px;
+	}
+	.lft-img-rt-desc-mdul-desc{
+		width: 100%;
+		padding-left: 0;
+		text-align: center;
+	}
+
 }
 @media(max-width: 639px){
 	
@@ -556,7 +641,7 @@
 @media(max-width: 575px){
 	.spotlight-sec{
 		padding-top: 35px;
-		padding-bottom: 35px;
+		padding-bottom: 10px;
 	}
 	.sec-entry-hdr-title{
 		font-size: 24px;
@@ -566,10 +651,42 @@
 		margin-bottom: 18px;
 		font-size: 14px;
 	}
+	.work-sec{
+		padding: 60px 0;
+	}
+	.work-inr .sec-entry-hdr .sec-entry-hdr-title{
+		margin-bottom: 30px;
+	}
+	.work-inr .sec-entry-hdr p{
+		margin-bottom: 20px;
+	}
+	.about-frigobox{
+		padding-top: 60px;
+		padding-bottom: 90px;
+	}
+	.lft-img-rt-desc-mdul-img{
+		width: 100%;
+		margin-bottom: 30px;
+		height: 260px;
+	}
+	.lft-img-rt-desc-mdul-desc-btn .fl-btn{
+		max-width: 180px;
+	}
 }
 @media(max-width: 479px){
-	
+	.about-frigobox{
+		padding-top: 50px;
+		padding-bottom: 70px;
+	}
+	.lft-img-rt-desc-mdul-img{
+		width: 100%;
+		margin-bottom: 30px;
+		height: 220px;
+	}
 } 
 @media(max-width: 359px){
-	
+	.about-frigobox{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 }

@@ -1,6 +1,5 @@
 .slick-slider ul.slick-dots{
 	position: static;
-	height: 5px;
 	line-height: 0;
 	padding: 0 20px!important;
 }
@@ -312,12 +311,18 @@
 		padding-bottom: 15px; 
 		font-size: 13px;
 	}
+	.bnr-search input{
+		padding: 15px 40px 15px 15px
+	}
 
 }
 @media(max-width: 639px){
 	
 }
 @media(max-width: 575px){
+	.search-cntlr{
+		padding: 15px 0;
+	}
 	.banner-sec{
 		min-height: 375px;
 	}
@@ -335,6 +340,10 @@
 		padding-bottom: 10px; 
 		font-size: 11px;
 	}
+	.bnr-search button{
+		right: 15px;
+	}
+
 }
 @media(max-width: 479px){
 	.bnr-sub-title{
