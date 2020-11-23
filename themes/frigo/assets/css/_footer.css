@@ -93,9 +93,13 @@
     font-weight: 400;
     padding-bottom: 25px;
 }
+.ftr-col ul li{
+  padding-right: 10px;
+}
 .ftr-col-4 ul li span{
   padding-bottom: 0;
 }
+.ftr-col-4 ul li strong,
 .ftr-col-4 ul li span,
 .ftr-col ul li a{
 	display: inline-block;
@@ -106,6 +110,7 @@
 .ftr-col-4 ul li:first-child{
   font-weight: 700;
 }
+.ftr-col-4 ul li strong,
 .ftr-col-4 ul li:first-child a{
   color: #5A5A5A;
   text-transform: uppercase;
@@ -124,7 +129,7 @@
   width: 100%;
   margin: 0 auto;
 }
-.from-group-wrp p{
+.ftr-col-5 > p{
   font-size: 12px;
   line-height: 1.6;
   color: #fff;
@@ -171,11 +176,10 @@
     width: 100%;
     height: 40px;
     padding: 0;
-    border:2px solid #A61916;
 }
 .from-group-submit button:hover{
     color: #A61916;
-    background: transparent;
+    background:#fff;
 }
 
 .form-group.has-error input {
@@ -207,6 +211,11 @@
 .ftr-btm{
   padding: 55px 0 55px;
 }
+.ftr-btm-innr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .ftr-btm-col-1{
   width: 30%;
   float: left;
@@ -226,7 +235,6 @@
   line-height: 16px;
   color: #717171;
   font-weight: 400;
-  padding-top: 2px;
 }
 .ftr-btm-col-2 ul {
     text-align: center;
@@ -251,7 +259,6 @@
   font-size: 14px;
   line-height: 16px;
   color: #717171;
-  padding-top: 2px;
   text-decoration: none;
   font-weight: 400;
 }

@@ -30,17 +30,15 @@ nav.main-nav > ul > li{
 	display: inline-block;
 	vertical-align: baseline;
 	text-transform: uppercase;
-	padding: 0 28px 30px;
+	padding: 0 28px;
 	font-size: 16px;
 	line-height: 18px;
 	position: relative;
 }
-/*nav.main-nav > ul > li:last-child{
-	padding-right: 0;
-}*/
 nav.main-nav > ul > li > a{
 	font-weight: 700;
 	color: #1E1E1E;
+	padding-bottom: 30px;
 }
 
 nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu{
@@ -153,21 +151,22 @@ nav.main-nav ul li.current-menu-item a {
 	border-radius: 50px;
 	position: relative;
 }
-.hdr-tp-cart-btn a span{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 19px;
-	height: 19px;
-	background: #1E1E1E;
-	border-radius: 50px;
-	font-size: 12px;
-	line-height: 15px;
-	color: #fff;
-	font-weight: 700;
-	position: absolute;
-	top: -8px;
-	right: -8px;
+.hdr-tp-cart-btn a span {
+    display: inline-block;
+    vertical-align: baseline;
+    width: 19px;
+    height: 19px;
+    background: #1E1E1E;
+    border-radius: 100%;
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 2.5px 2px 2.1px;
+    text-align: center;
 }
 .hdr-tp-cart-btn a:hover{
 	background: transparent;
