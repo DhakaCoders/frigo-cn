@@ -81,7 +81,7 @@ nav.main-nav ul.sub-menu li a{
 	color: #1E1E1E;
 	font-size: 14px;
 	display: block;
-	padding: 10px 20px;
+	padding: 10px 27px;
 	position: relative;
 	font-weight: 700;
 }
@@ -124,8 +124,14 @@ nav.main-nav ul li.current-menu-item a {
 	text-align: center;
 	width: 40px;
 	height: 40px;
-	border:2px solid#1e1e1e;
+	border:3px solid#1e1e1e;
 	border-radius: 50px;
+}
+.hdr-sign-up a:hover{
+	border-color: #A61916;
+}
+.hdr-sign-up a:hover i svg{
+	fill: #A61916;
 }
 .hdr-sign-up a i{
 	margin-top: -2px;
@@ -142,7 +148,8 @@ nav.main-nav ul li.current-menu-item a {
 	text-decoration: none;
 	width: 40px;
 	height: 40px;
-	background: #a61916;
+	background: #A61916;
+	border: 3px solid #A61916;
 	border-radius: 50px;
 	position: relative;
 }
@@ -159,8 +166,15 @@ nav.main-nav ul li.current-menu-item a {
 	color: #fff;
 	font-weight: 700;
 	position: absolute;
-	top: -5px;
-	right: -5px;
+	top: -8px;
+	right: -8px;
+}
+.hdr-tp-cart-btn a:hover{
+	background: transparent;
+	border-color: #A61916;
+}
+.hdr-tp-cart-btn a:hover i svg{
+	fill: #A61916;
 }
 
 /*
