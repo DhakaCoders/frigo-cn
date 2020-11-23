@@ -231,7 +231,7 @@
 .product-order-btn .fl-btn{
 	background: #5CB85C;
 	border-color: #5CB85C;
-	width: 120px;
+	max-width: 120px;
 	font-size: 11px;
 	padding: 14px 10px 11px 10px;
 }
@@ -313,7 +313,7 @@
 	border-color: #fff;
 	color: #fff;
 	background: transparent;
-	width: 269px;
+	max-width: 269px;
 	padding-top: 17px;
 	padding-bottom: 13px;
 }
@@ -350,7 +350,7 @@
 	margin-top: 8px;
 }
 .lft-img-rt-desc-mdul-desc-btn .fl-btn{
-	width: 200px;
+	max-width: 200px;
 	padding-top: 17px;
 	padding-bottom: 13px;
 
