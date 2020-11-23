@@ -1,0 +1,45 @@
+Header
+-------------------------
+Desktop--->
+
+1. https://prnt.sc/vo73ge
+	.svg hobe
+
+2. https://prnt.sc/vo74fh
+	10 hole lege jasche charpase
+	center a nai
+
+3. https://prnt.sc/vo76ha
+	padding bottom ta 'a' tag a daw
+
+
+
+Footer
+-------------------------
+Desktop--->
+
+1. https://prnt.sc/vo77ka
+	.svg hobe
+
+2. https://prnt.sc/vo78rs
+	text boro hole right a lege jay.
+	li ar padding right hobe
+
+3. https://prnt.sc/vo7atl
+	email a tel hoyna
+
+4. https://prnt.sc/vo7b59
+	ata link sarao design kore rkhte hobe
+	strong ar vitore a tag rakho
+	a tag ta tule dileo jeno design thik thake
+
+5. https://prnt.sc/vo7cm1
+	i) ai icon ta feta fata lagteche. 
+	ii) sob icon gulo .svg hobe
+
+6. https://prnt.sc/vo7dke
+	sob gulo akline a center a thakbe.
+	flex use korte paro
+
+7. https://prnt.sc/vo7hzj
+	hover korle amon daw
