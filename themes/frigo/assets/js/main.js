@@ -248,6 +248,36 @@ if( $('.spotlightSlider').length ){
 
 /*start milon*/
 
+/*
+----------------------
+ Tabs Js
+----------------------
+*/
+if( $('.tabs').length ){
+  $('.tabs:first').show();
+  $('.tabs-menu li:first').addClass('active');
+
+  $('.tabs-menu li').on('click',function(){
+    index = $(this).index();
+    $('.tabs-menu li').removeClass('active');
+    $(this).addClass('active');
+    $('.tabs').hide();
+    $('.tabs').eq(index).show();
+  });
+}
+
+var allPanels = $('.faq-accordion-dsc').hide();
+$('.faq-accordion-controller').removeClass('remove-border');
+  $('.faq-accordion-controller span').click(function() {
+        allPanels.slideUp();
+        $('.faq-accordion-controller span').removeClass('faq-accordion-active');
+        $('.faq-accordion-controller').removeClass('remove-border');
+        $(this).next().slideDown();
+        $(this).addClass('faq-accordion-active');
+        $(this).parent().next().addClass('remove-border');
+        return false;
+});
+
 
 
 

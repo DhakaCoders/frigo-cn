@@ -1,0 +1,114 @@
+.faq-tab-sec-wrp .contact-form-dsc{
+	max-width: 910px;
+	width: 100%;
+	margin: 0 auto;
+}
+.faq-tabs{
+	text-align: center;
+	padding-bottom: 50px;
+}
+.faq-tabs ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 0 35px;
+	font-size: 14px;
+	line-height: 16px;
+}
+.faq-tabs ul li a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: #1E1E1E;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.faq-tabs ul li a:hover{
+	color: #A61916;
+}
+.faq-tabs ul li.active a{
+	font-weight: 700;
+	color: #A61916;
+}
+
+.faq-accordion-wrp ul li{
+	width: 50%;
+	float: left;
+	padding: 0 25px 55px 10px;
+}
+.faq-accordion-wrp ul li:nth-child(2n+1){
+	clear: left;
+}
+.faq-accordion-wrp ul li:nth-child(9),
+.faq-accordion-wrp ul li:nth-child(7),
+.faq-accordion-wrp ul li:nth-child(5),
+.faq-accordion-wrp ul li:nth-child(3),
+.faq-accordion-wrp ul li:nth-child(1){
+	padding-left: 0;
+}
+.faq-accordion-controller{
+	border: 2px solid #F5F5F5;
+	padding: 35px 40px 22px 35px;
+	position: relative;
+}
+.faq-accordion-title{
+	display: block;
+	font-size: 20px;
+	line-height: 1.4;
+	color: #1E1E1E;
+	font-weight: 700;
+	margin-bottom: 0;
+	text-transform: inherit;
+}
+.faq-accordion-dsc{
+	padding-top: 20px;
+}
+.faq-accordion-dsc p{
+	font-size: 12px;
+	line-height: 1.7;
+	margin-bottom: 18px;
+}
+.faq-accordion-dsc p a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: #A61916;
+	text-decoration: underline;
+}
+.faq-accordion-controller span{
+	width: 42px;
+	height: 42px;
+	background: #A61916;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
+	position: absolute;
+	bottom: -16px;
+	right: -22px;
+}
+.faq-accordion-controller span:after{
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+    background: url(../images/plus-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+}
+.faq-accordion-controller span.faq-accordion-active:after{
+    content: "";
+    background: url(../images/minus-icon.svg);
+    background-size: 10px 3px;
+    width: 10px;
+    height: 3px;
+}
+/*.faq-accordion-dsc.active{
+	display: block !important;
+}*/
+/*.faq-accordion-controller.active .faq-accordion-dsc{
+	display: block !important;
+}*/
+
