@@ -9,6 +9,7 @@
 	position: static;
 	background: #F4F4F4!important;
 	margin: 0 6px;
+	margin-bottom: 10px;
 	padding: 0!important;
 }
 .slick-slider .slick-dots li.slick-active{
@@ -181,6 +182,18 @@
   opacity: 1;
  color: #8A8A8A;
 }
+.search-cntlr .bnr-search input::placeholder {
+  color: #717171;
+  opacity: 1;
+}
+.search-cntlr .bnr-search input:-ms-input-placeholder {
+  opacity: 1;
+ color: #717171;
+}
+.search-cntlr .bnr-search input::-ms-input-placeholder {
+  opacity: 1;
+ color: #717171;
+}
 .bnr-search button{
 	position: absolute;
 	top: 50%;
@@ -212,7 +225,7 @@
 /*search sec*/
 .search-sec{
 	background: #F7F7F7;
-	display: none;
+	
 }
 .search-cntlr{
 	padding: 20px 12px;
@@ -272,6 +285,16 @@
 		font-size: 50px;
 		margin-bottom: 5px;
 	}
+	.bnr-search input{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.bnr-btn .fl-btn{
+	    padding: 23px 5px 19px 5px;
+	}
+	.bnr-search button i svg{
+		max-width: 25px;
+	}
 }
 @media(max-width: 991px){
 	.banner-sec{
@@ -283,8 +306,9 @@
 	}
 }
 @media(max-width: 767px){
-	.search-sec{
-		display: block;
+	
+	.bnr-search button i svg{
+		max-width: 18px;
 	}
 	.banner-sec{
 		min-height: 400px;
@@ -322,6 +346,13 @@
 @media(max-width: 575px){
 	.search-cntlr{
 		padding: 15px 0;
+	}
+	.search-cntlr .bnr-search input{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.bnr-search button i svg{
+		max-width: 14px;
 	}
 	.banner-sec{
 		min-height: 375px;
