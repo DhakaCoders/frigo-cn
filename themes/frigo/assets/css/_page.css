@@ -33,6 +33,9 @@
 	margin: 0;
 	padding: 0;
 	z-index: 2;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .slick-prev{
 	background: url('../images/slider-prev-icon.svg')!important;
@@ -87,7 +90,7 @@
 	min-height: 688px;
 	display: flex;
 	align-items: center;
-	padding: 20px 30px;
+	padding: 30px 0;
 }
 .banner-sec:after{
 	content: "";
@@ -111,13 +114,35 @@
 	font-size: 72px;
 	color: #fff;
 	margin-bottom: 3px;
+	
+}
+.bnr-title span{
+	position: relative;
+	display: inline-block;
+	padding-right: 32px;
+}
+.bnr-title i{
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 .bnr-sub-title{
 	text-transform: initial;
 	font-weight: 400;
 	font-size: 18px;
 	color: #fff;
+	
 	margin-bottom: 20px;
+}
+.bnr-sub-title span{
+	position: relative;
+	display: inline-block;
+	padding-left: 10px;
+}
+.bnr-sub-title i{
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 .bnr-search{
 	position: relative;
@@ -127,9 +152,12 @@
 	width: 100%;
 	padding: 25px 90px 25px 35px;
 	background: #fff;
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	color: #8A8A8A;
 	font-size: 14px;
+}
+.bnr-search input:focus{
+	border-color: #A61916;
 }
 .bnr-search input::placeholder {
   color: #8A8A8A;
@@ -143,14 +171,16 @@
   opacity: 1;
  color: #8A8A8A;
 }
-.bnr-search i{
+.bnr-search button{
 	position: absolute;
 	top: 50%;
+	height: 100%;
+	background: transparent;
 	transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
-	right: 37px;
+	right: 30px;
 	cursor: pointer;
 }
 .banner-inr strong{
@@ -162,4 +192,63 @@
 }
 .bnr-btn{
 	justify-content: center;
+}
+
+/*search sec*/
+.search-sec{
+	background: #F7F7F7;
+	display: none;
+}
+.search-cntlr{
+	padding: 20px 32px;
+}
+.search-cntlr .bnr-search{
+	margin-bottom: 0;
+}
+.search-cntlr .bnr-search input{
+  color: #A61916;
+}
+.search-cntlr .bnr-search input:focus::placeholder {
+  color: #A61916;
+  opacity: 1;
+}
+.search-cntlr .bnr-search input:focus:-ms-input-placeholder {
+  opacity: 1;
+ color: #A61916;
+}
+.search-cntlr .bnr-search input:focus::-ms-input-placeholder {
+  opacity: 1;
+ color: #A61916;
+}
+
+/*responsive*/
+@media(max-width: 1499px){
+
+}
+@media(max-width: 1399px){
+
+}
+@media(max-width: 1299px){
+	
+}
+@media(max-width: 1199px){
+	
+}
+@media(max-width: 991px){
+	
+}
+@media(max-width: 767px){
+	
+}
+@media(max-width: 639px){
+	
+}
+@media(max-width: 575px){
+	
+}
+@media(max-width: 479px){
+	
+} 
+@media(max-width: 359px){
+	
 }

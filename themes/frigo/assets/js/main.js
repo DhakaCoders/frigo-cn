@@ -226,10 +226,10 @@ if( $('.spotlightSlider').length ){
     });
 }
 
-/*if( $('.workSlider').length ){
+if( $('.workSlider').length ){
     $('.workSlider').slick({
       dots: false,
-      arrow: true,
+      arrow: false,
       infinite: true,
       autoplay: true,
       autoplaySpeed: 2000,
@@ -237,7 +237,7 @@ if( $('.spotlightSlider').length ){
       slidesToShow: 3,
       slidesToScroll: 1,
     });
-}*/
+}
 
 
 /*Start Shoriful*/
