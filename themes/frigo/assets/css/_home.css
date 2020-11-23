@@ -27,7 +27,7 @@
 
 .spotlight-sec{
 	padding-top: 90px;
-	padding-bottom: 100px;
+	padding-bottom: 76px;
 	
 }
 .spotlight-inr{
@@ -129,7 +129,7 @@
 .product-price .amount bdi span.woocommerce-Price-currencySymbol{
 	margin-right: 2px;
 }
-.sprt-slider-item-desc strong{
+.pro-item-desc strong{
 	font-weight: 400;
 	text-transform: initial;
 	color: #717171;
@@ -225,17 +225,17 @@
 	height: 15px;
 	z-index: 2;
 }
-.product-quantity-btn{
+.product-order-btn{
 	margin-left: auto;
 }
-.product-quantity-btn .fl-btn{
+.product-order-btn .fl-btn{
 	background: #5CB85C;
 	border-color: #5CB85C;
 	width: 120px;
 	font-size: 11px;
 	padding: 14px 10px 11px 10px;
 }
-.product-quantity-btn .fl-btn:hover{
+.product-order-btn .fl-btn:hover{
 	border-color: #378a37;
 	background: #378a37;
 	color: #fff;
@@ -276,7 +276,7 @@
 	margin-bottom: 24px;
 	padding: 0 12px;
 }
-.work-slide-item{
+.work-item{
 	min-height: 270px;
 	text-align: center;
 	display: flex;
@@ -286,20 +286,20 @@
 	padding: 15px;
 	position: relative;
 }
-.work-slide-item img{
+.work-item img{
 	max-height: 48px;
 }
-.work-slide-item-icon{
+.work-item-icon{
 	margin-bottom: 27px;
 }
-.work-slide-item-title{
+.work-item-title{
 	color: #fff;
 	font-size: 20px;
 	font-weight: 400;
 	text-transform: initial;
 	margin-bottom: 20px;
 }
-.work-slide-item p{
+.work-item p{
 	margin-bottom: 0;
 	line-height: 1.5;
 	font-size: 14px;
@@ -332,7 +332,7 @@
 	flex-wrap: wrap;
 }
 .lft-img-rt-desc-mdul-img{
-	min-height: 575px;
+	height: 575px;
 	width: 49%;
 }
 .lft-img-rt-desc-mdul-desc{

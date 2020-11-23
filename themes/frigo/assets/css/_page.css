@@ -42,6 +42,9 @@
 	background-size: 100% 100%!important;
 	background-position: center center!important;
 	background-repeat: no-repeat!important;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .slick-prev:hover{
 	background: url('../images/slider-prev-icon-hvr.svg')!important;
@@ -49,12 +52,18 @@
 	background-size: 100% 100%!important;
 	background-position: center center!important;
 	background-repeat: no-repeat!important;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .slick-next{
 	background: url('../images/slider-next-icon.svg')!important;
 	background-size: 100% 100%!important;
 	background-position: center center!important;
 	background-repeat: no-repeat!important;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .slick-next:hover{
 	background: url('../images/slider-next-icon-hvr.svg')!important;
@@ -62,6 +71,9 @@
 	fill: red!important;
 	background-position: center center!important;
 	background-repeat: no-repeat!important;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .slick-prev:before,
 .slick-next:before{
@@ -183,6 +195,9 @@
 	right: 30px;
 	cursor: pointer;
 }
+.bnr-search button:hover i svg{
+	fill: #79110f;
+}
 .banner-inr strong{
 	display: inline-block;
 	font-size: 18px;
@@ -287,6 +302,9 @@
 		font-size: 35px;
 		margin-bottom: 10px;
 		line-height: 1.2;
+	}
+	.bnr-sub-title{
+		font-size: 16px;
 	}
 }
 @media(max-width: 479px){
