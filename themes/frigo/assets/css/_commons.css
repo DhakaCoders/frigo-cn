@@ -24,7 +24,7 @@ body {
     font-weight: 400;
 }
 p{
-	line-height: 1.4;
+	line-height: 1.5;
 	margin-bottom: 15px;
 }
 b, strong {
@@ -190,6 +190,10 @@ img{
 	background-size: cover!important;
 	background-repeat: no-repeat!important;
 	background-position: center center!important;
+}
+
+.form-control{
+	background-clip: initial;
 }
 
 ul.reset-list,

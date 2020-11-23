@@ -333,25 +333,30 @@ Gallery design
 	font-size: 20px;
 	line-height: 26px;
 	color: #A61916;
+	margin: 0;
+}
+.dft-blockquote strong{
+	color: #A61916;
+	font-size: 14px;
+	font-weight: 700;
 }
 
 /*extra*/
-.newsletter-form{
+.dft-newsletter-form{
 	background: #252525;
 	color: #fff;
 	text-align: center;
-	padding: 40px 0;
+	padding: 40px 20px;
 	margin-bottom: 28px;
 }
-.newsletter-form-hdr h6, .nfh-title{
+.dft-newsletter-form-hdr h6, .nfh-title{
 	color: #fff;
 	font-size: 18px;
 	line-height: 21px;
 	margin: 0 0 15px 0;
 }
-.newsletter-form-hdr p{
+.dft-newsletter-form-hdr p{
 	font-size: 12px;
-	line-height: 1;
 	margin-bottom: 17px;
 }
 
@@ -378,6 +383,21 @@ a.dft-btn:hover,
 	background: transparent;
 	color: #A61916;
 }
+
+
+.dft-newsletter-form .ftr-top-newsletter{
+	max-width: 740px;
+} 
+.dft-newsletter-form .from-group-3-col{
+	margin: 0 -5px;
+	padding-bottom: 15px;
+}
+.dft-newsletter-form .from-group-3-col .from-group{
+	width: 33.3333%;
+	float: left;
+	padding: 0 5px;
+}
+
 @media(max-width: 1199px){
 	.dft-promo-module-title{
 		margin-bottom: 35px;
@@ -442,7 +462,28 @@ a.dft-btn:hover,
 	.dft-promo-module-title {
 	    margin-bottom: 27px;
 	}
-	
+	.dft-blockquote i{
+		position: static;
+		display: block;
+		padding-bottom: 15px;
+	}
+	.dft-blockquote{
+		padding-left: 0;
+	}
+	.dft-blockquote-cntlr{
+		text-align: center;
+	}
+	.dft-blockquote blockquote{
+		margin-bottom: 25px;
+	}
+	.dft-newsletter-form .from-group-3-col{
+		margin: 0 -10px;
+	}
+	.dft-newsletter-form .from-group-3-col .from-group {
+	    width: 50%;
+	    padding: 0 10px;
+	}
+
 }
 
 
@@ -512,6 +553,23 @@ a.dft-btn:hover,
 	.gallery-wrap{
 		padding-bottom: 20px;
 	}
+	.dft-blockquote-cntlr{
+		padding: 20px 20px 30px;
+	}
+	.dft-newsletter-form .from-group-3-col .from-group {
+	    width: 100%;
+	    padding: 0 0;
+	    margin-bottom: 10px;
+	}
+	.dft-newsletter-form .from-group-3-col {
+	    margin: 0;
+	}
+	.dft-newsletter-form .from-group-3-col{
+		padding-bottom: 5px;
+	}
+	.default-page-con{
+		padding-bottom: 35px;
+	}
 }
 
 
@@ -522,6 +580,14 @@ a.dft-btn:hover,
 
 
 @media(max-width: 359px){
-
+	a.dft-btn, .dft-btn{
+		max-width: 100%;
+	}
+	.dft-btn-cntlr{
+		margin-bottom: 10px;
+	}
+	.default-page-con{
+		padding-bottom: 30px;
+	}
 }
 
