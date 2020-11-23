@@ -57,6 +57,15 @@
 .spotlight-silder{
 	margin: 0 -12px;
 }
+.spotlight-silder > div{
+	display: none;
+}
+.spotlight-silder > div:nth-child(1){
+	display: block;
+}
+.spotlight-silder.slick-initialized.slick-slider > div{
+	display: block;
+}
 .pro-item-cntlr{
 	padding: 0 12px;
 	margin-bottom: 24px;
@@ -254,8 +263,13 @@
 	margin: 0 -12px;
 }
 .work-slider > div{
-	
-
+	display: none;
+}
+.work-slider > div:nth-child(1){
+	display: block;
+}
+.work-slider.slick-initialized.slick-slider > div{
+	display: block;
 }
 .work-slide-item-cntlr{
 	
