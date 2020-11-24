@@ -2,14 +2,18 @@
 
 }
 .who-are-you-desc-inr{
-	display: flex;
-	flex-wrap: wrap;
+	
 	padding-bottom: 40px;
 	border-bottom: 1px solid #F6F6F6;
 	margin-bottom: 58px;
 }
+.who-are-you-desc-cntlr{
+	display: flex;
+	flex-wrap: wrap;
+}
 .who-are-you-lft{
 	width: 50%;
+	padding-right: 10px;
 }
 .who-are-you-title{
 	font-size: 48px;
@@ -20,8 +24,8 @@
 	font-weight: 700;
 }
 .who-are-you-rt{
+	padding-left: 10px;
 	width: 50%;
-	padding-top: 67px;
 }
 .who-are-you-grid-cntlr{
 	padding-bottom: 15px;
@@ -66,6 +70,13 @@
 	line-height: 28px;
 	color: #1E1E1E;
 	margin-bottom: 15px;
+}
+.wru-grid-item-desc-title a{
+	display: inline-block;
+	color: #1E1E1E;
+}
+.wru-grid-item-desc-title a:hover{
+	color: #A61916;
 }
 .wru-grid-item-desc p{
 	font-size: 12px;
