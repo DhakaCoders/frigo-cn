@@ -242,7 +242,7 @@ if( $('.workSlider').length ){
       dots: false,
       arrow: false,
       infinite: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 2000,
       speed: 300,
       slidesToShow: 3,

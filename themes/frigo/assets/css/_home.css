@@ -289,6 +289,7 @@
 	flex-direction: column;
 	padding: 15px;
 	position: relative;
+	background: #1A1919;
 }
 .work-item img{
 	max-height: 48px;
@@ -684,6 +685,11 @@
 		margin: auto;
 	}
 	.work-item-cntlr{
+		padding: 0;
+	}
+	.work-item{
+		background: transparent;
+		min-height: auto;
 		padding: 0;
 	}
 	.work-sec-btn .fl-btn{
