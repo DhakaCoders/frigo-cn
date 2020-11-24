@@ -87,7 +87,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 2px;
+    top: 4px;
     width: 24px;
     height: 23px;
     background: url(../images/star-icon.svg);
@@ -149,23 +149,100 @@
 }
 
 @media(max-width: 991px){
-	
+	.fl-product .woocommerce-product-gallery{
+		width: 100%;
+		padding-right: 0;
+		float: none;
+	}
+	.fl-product .summary {
+	    width: 100%;
+	    float: none;
+	}
+	.fl-product figure .woocommerce-product-gallery__image {
+	    height: 475px;
+	}
+	.fl-product  .woocommerce-product-gallery{
+		max-width: 600px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 20px;
+	}
+	.fl-product  .summary-entry-hdr-md{
+		padding-bottom: 20px;
+	}
+	.fl-product  .summary-entry-hdr-md strong{
+		font-size: 14px;
+		line-height: 20px;
+		color: #A61916;
+		font-weight: 400;
+		display: block;
+	}
+	.product_title.entry-title{
+		margin-bottom: 10px;
+	}
+	.summary-hdr{
+		border-bottom: 1px solid #F6F6F6;
+		margin-bottom: 35px;
+	}
+	.pro-summary-content h6{
+		font-size: 18px;
+	}
 }
 
 @media(max-width: 767px){
-	
+	.fl-product figure .woocommerce-product-gallery__image {
+	    height: 375px;
+	}
+}
+@media(max-width: 639px){
+	.fl-product .summary .summary-hdr ul li,
+	.fl-product .pro-summary-content li{
+		width: 100%;
+	}
+	.fl-product .pro-summary-content ul{
+		padding-left: 0;
+	}
+	.fl-product .summary .summary-hdr ul li{
+		font-weight: 500;
+	}
+	.thumbnails .woocommerce-product-gallery__image .inline-bg {
+    	height: 100px;
+	}
+
 }
 
 @media(max-width: 575px){
-	
+	.fl-product figure .woocommerce-product-gallery__image {
+	    height: 300px;
+	}
 
 }
 
 @media(max-width: 479px){
-
-
+	.fl-product .highlight-text{
+		display: none;
+	}
+	.fl-product figure .woocommerce-product-gallery__image {
+	    height: 280px;
+	}
+	.thumbnails-cntlr{
+		max-width: 300px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.thumbnails .woocommerce-product-gallery__image .inline-bg {
+	    height: 80px;
+	}
 }
 
 @media(max-width: 359px){
+	.fl-product figure .woocommerce-product-gallery__image {
+	    height: 260px;
+	}
+	.thumbnails .woocommerce-product-gallery__image .inline-bg {
+	    height: 60px;
+	}
 
 }
