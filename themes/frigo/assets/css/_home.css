@@ -494,6 +494,9 @@
 	.pro-item-img-cntlr{
 		height: 200px;
 	}
+	.pro-item{
+		padding-bottom: 20px;
+	}
 	.pro-item-desc {
 		padding-left: 10px;
 		padding-right: 10px;
