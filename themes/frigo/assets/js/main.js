@@ -309,6 +309,19 @@ $('.faq-accordion-controller').removeClass('remove-border');
         return false;
 });
 
+$('li.menu-item-has-children > a').on('click', function(){
+    $(this).toggleClass('xs-sub-menu-expend');
+    $('.sub-menu').slideToggle(300);
+});
+
+$('.xs-humbergur-btn').on('click', function(){
+    $('.xs-pop-up-menu').show();
+});
+$('.xs-menu-bar-close').on('click', function(){
+    $('.xs-pop-up-menu').hide();
+});
+
+
 
 
 
