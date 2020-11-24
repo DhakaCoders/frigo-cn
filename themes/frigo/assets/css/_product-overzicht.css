@@ -26,6 +26,7 @@
 .pro-overview-filter span i{
 	position: absolute;
 	top: 50%;
+	margin-top: -1px;
 	transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
@@ -114,7 +115,7 @@
 		padding: 0 10px;
 	}
 	.pw-item-img-cntlr{
-		height: 200px;
+		height: 170px;
 	}
 	.pw-item-desc .pro-item-desc-title{
 		font-size: 22px;
@@ -151,6 +152,14 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 30px;
+		border: 2px solid #1E1E1E;
+		background: transparent;
+	}
+	.pro-overview-filter span i svg{
+		fill: #1E1E1E;
+	}
+	.pro-overview-filter span{
+		color: #1E1E1E;
 	}
 	.pro-ovrvw-accrdon-row-hdr img{
 		display: none;
