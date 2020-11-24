@@ -186,26 +186,22 @@ nav.main-nav ul li.current-menu-item a {
 	padding: 20px 0;
 	background: #1E1E1E;
 }
-.hdr-btm-service-wrp ul li{
-	float: left;
-}
-.hdr-btm-service-wrp ul li:nth-child(1){
-	width: 30%;
-}
-.hdr-btm-service-wrp ul li:nth-child(2){
-	width: 27%;
-}
-.hdr-btm-service-wrp ul li:nth-child(3){
-	width: 24%;
-}
-.hdr-btm-service-wrp ul li:nth-child(4){
-	width: 19%;
-}
-.hdr-btm-service-wrp ul li:nth-child(1) .hdr-btm-service-item{
+.hdr-btm-service-innr{
 	padding-left: 10px;
 }
-.hdr-btm-service-item {
-	padding-right: 10px;
+.hdr-btm-service-wrp ul{
+	margin: 0 -20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.hdr-btm-service-wrp ul li{
+	float: left;
+	width: 25%;
+	padding: 0 20px;
+}
+.hdr-btm-service-item{
     display: flex;
     justify-content: left;
     align-items: center;
@@ -233,11 +229,17 @@ nav.main-nav ul li.current-menu-item a {
 	nav.main-nav > ul > li{
 		padding: 0 25px;
 	}
+	nav.main-nav ul.sub-menu li a{
+		padding: 10px 25px;
+	}
 }
 
 @media(max-width: 1399px){
 	nav.main-nav > ul > li{
 		padding: 0 18px;
+	}
+	nav.main-nav ul.sub-menu li a{
+		padding: 10px 20px;
 	}
 }
 
@@ -246,6 +248,9 @@ nav.main-nav ul li.current-menu-item a {
 }
 
 @media(max-width: 1199px){
+	.hdr-btm-service-innr {
+	    padding-left: 0;
+	}
 	nav.main-nav > ul > li {
 	    padding: 0 8px;
 	    font-size: 14px;
@@ -272,18 +277,21 @@ nav.main-nav ul li.current-menu-item a {
 	nav.main-nav {
 	    padding: 10px 0 0;
 	}
-	.hdr-btm-service-wrp ul li:nth-child(1){
-		width: 29%;
+	nav.main-nav ul.sub-menu li a {
+	    font-size: 12px;
+	    padding: 10px 14px;
 	}
-	.hdr-btm-service-wrp ul li:nth-child(2){
-		width: 25%;
+	.hdr-btm-service-wrp ul{
+		margin: 0 -10px;
 	}
-	.hdr-btm-service-wrp ul li:nth-child(3){
-		width: 22%;
+	.hdr-btm-service-wrp ul li {
+	    padding: 0 10px;
 	}
-	.hdr-btm-service-wrp ul li:nth-child(4){
-		width: 24%;
+	.hdr-btm-service-item span{
+		font-size: 15px;
+		line-height: 17px;
 	}
+
 
 }
 
@@ -303,25 +311,36 @@ nav.main-nav ul li.current-menu-item a {
 	.hdr-tp-lft {
 	    width: 40%;
 	    position: relative;
-	    z-index: 65;
 	}
 	.logo a {
 	    max-width: 190px;
 	    width: 100%;
 	}
-	.search-sec {
+	.search-sec{
 	    position: relative;
-	    z-index: 61;
 	}
-	.xs-main-nav{
-		position: relative;
-		z-index: 65;
+	.bdoverlay{
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(0,0,0,0.8);
+		opacity: 0;
+		z-index: -1;
+		transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-webkit-transition: all 0.5s;
 	}
-	.xs-menu-bar-inr{
+	.bdoverlay.active{
+		opacity: 1;
+		z-index: 1;
+	}
+	.xs-menu-bar-humberger{
 		float: right;
 		text-align: center;
 	}
-	.xs-humbergur-btn strong,
+	.xs-menu-bar-humberger strong,
 	.xs-menu-bar-inr strong{
 		font-weight: 700;
 		text-transform: uppercase;
@@ -332,6 +351,7 @@ nav.main-nav ul li.current-menu-item a {
 		color: #1E1E1E;
 		padding-top: 3px;
 	}
+	.xs-menu-bar-humberger span,
 	.xs-menu-bar-inr span{
 		display: block;
 		text-align: center;
@@ -342,27 +362,40 @@ nav.main-nav ul li.current-menu-item a {
 	}
 	.hdr-tp-rgt .xs-humbergur-btn {
 	    padding-top: 4px;
+	    position: relative;
+	    z-index: 61;
 	}
 	.xs-pop-up-menu{
 		position: fixed;
 		top: 0;
-		left: 0;
-		right: 0;
+		right: -375px;
 		bottom: 0;
+		max-width: 375px;
 		background: #fff;
 		color: #fff;
 		z-index: 60;
 		text-align: center;
-		display: none;
+		display: block;
+		opacity: 0;
 		overflow-y: scroll;
+		transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+	}
+	.xs-pop-up-menu.opacity-1{
+		opacity: 1;
+		width: 100%;
+		right: 0;
+		transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		z-index: 62;
 	}
 	.xs-pop-up-menu-inr {
-	    position: relative;
 	    padding: 240px 20px 50px;
-	    z-index: 66;
 	}
 	.xs-pop-up-menu .xs-menu-bar {
-	    position: absolute;
+	    position: fixed;
 	    right: 15px;
 	    top: 37px;
 	}
@@ -438,8 +471,8 @@ nav.main-nav ul li.current-menu-item a {
 	    padding-bottom: 0;
 	    padding-top: 25px;
 	}
-	.xs-main-nav .sub-menu li a{
-		font-size: 16px;
+	.xs-main-nav .sub-menu li a {
+	    font-size: 14px;
 	}
 	.xs-main-nav > ul > li.menu-item-has-children > a:after{
 		content: "\f107"!important;
@@ -462,6 +495,13 @@ nav.main-nav ul li.current-menu-item a {
 		display: inline-block;
 		vertical-align: baseline;
 		padding: 0 12px;
+	}
+	.hdr-btm-service-wrp ul li{
+	    width: 33.3333%;
+	    padding-bottom: 10px;
+	}
+	.hdr-btm-service-wrp ul li:nth-child(4){
+		padding-bottom: 0;
 	}
 
 	

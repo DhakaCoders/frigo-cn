@@ -304,6 +304,9 @@
 		font-size: 45px;
 		margin-bottom: 5px;
 	}
+	.banner-inr .bnr-search{
+		display: none;
+	}
 }
 @media(max-width: 767px){
 	
@@ -322,9 +325,6 @@
 	}
 	.bnr-sub-title{
 		font-size: 16px;
-	}
-	.banner-inr .bnr-search{
-		display: none;
 	}
 	.banner-inr strong{
 		display: none;
