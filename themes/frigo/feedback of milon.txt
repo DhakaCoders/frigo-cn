@@ -13,6 +13,36 @@ Desktop--->
 	padding bottom ta 'a' tag a daw
 
 
+Responsive--->
+
+1. https://prnt.sc/vowvsz
+	main menu item gulor font size komale sub-menu aro size komate hobe, dimension akare
+
+2. https://prnt.sc/vowwxe
+	full-width hobena, 375px max width hobe
+
+
+3. https://prnt.sc/voxgwe
+	scroll korle content thik thak thakena
+
+4. popup menu ber hole 
+	i) https://prnt.sc/vox0s0
+		left a akta overlay ber hobe, amader ager project gulo thake idea nite paro
+
+	ii) https://prnt.sc/vox2no
+		logo , close button and search scroll hobena, nicher content gulo scroll hobe just
+
+	iii) https://prnt.sc/vox3jd
+		991px thakei search thakbe. 
+
+	iv) https://prnt.sc/vox6tp
+		main menu ar thake sub-menu ar font size aktu choto hoy
+
+
+
+
+
+
 
 Footer
 -------------------------
@@ -47,3 +77,19 @@ Desktop--->
 
 8. https://prnt.sc/vod04q
 	p ta form tag ar bahire hobe. heading ar niche
+
+
+
+Responsive--->
+
+1. https://prnt.sc/voxd9q
+	content gulo center nei mone hosche
+
+2. https://prnt.sc/voxeck
+	logo gulo choto hoye geche khub
+
+	https://prnt.sc/voxeql
+	design ar moto buja jabe clear and brak hote pare item gulo
+
+3. https://prnt.sc/voxfzs
+	359px a logo ar size aktu komate hobe
