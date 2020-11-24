@@ -314,6 +314,7 @@ nav.main-nav ul li.current-menu-item a {
 	.hdr-tp-lft {
 	    width: 40%;
 	    position: relative;
+	    z-index: 63;
 	}
 	.logo a {
 	    max-width: 190px;
@@ -321,6 +322,7 @@ nav.main-nav ul li.current-menu-item a {
 	}
 	.search-sec{
 	    position: relative;
+	    z-index: 65;
 	}
 	.bdoverlay{
 		position: fixed;
@@ -506,6 +508,11 @@ nav.main-nav ul li.current-menu-item a {
 	.hdr-btm-service-wrp ul li:nth-child(4){
 		padding-bottom: 0;
 	}
+	.opacity-1 .xs-main-nav{
+		position: relative;
+		z-index: 70;
+	}
+
 
 	
 }

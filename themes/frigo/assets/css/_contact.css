@@ -43,7 +43,7 @@
 	width: 50%;
 	float: left;
 	padding: 0 12px;
-	margin-bottom: 15px;
+	margin-bottom: 18px;
 	position: relative;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container{
@@ -122,7 +122,7 @@
 	cursor: pointer;
 	display: table;
 	margin: 0 auto;
-	padding: 16px 0 15;
+	padding: 16px 0 15px;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button:hover{
 	background: transparent;
@@ -221,4 +221,125 @@
 .contact-msg-btn a:hover{
 	background: #A61916;
 	border-color: #A61916;
+}
+
+@media(max-width: 1499px){
+
+}
+
+@media(max-width: 1399px){
+	
+
+}
+
+@media(max-width: 1299px){
+	
+}
+
+@media(max-width: 1199px){
+	.contact-form-dsc-title{
+		font-size: 44px;
+	}
+	.contact-form-dsc p {
+	    margin-bottom: 50px;
+	}
+	.contact-msg-dsc-title {
+	    font-size: 19px;
+	}
+
+}
+
+@media(max-width: 991px){
+	.contact-form-wrp {
+	    padding-top: 40px;
+	}
+	.contact-form-dsc-title{
+		font-size: 40px;
+	}
+	.contact-form-dsc p {
+	    margin-bottom: 40px;
+	}
+	.contact-msg-dsc-title {
+	    font-size: 18px;
+	}
+	.contact-msg-btn {
+	    padding-top: 20px;
+	    padding-left: 0;
+	    float: left;
+	}
+	.contact-msg-wrp {
+	    padding: 45px 40px;
+	}
+	.contact-msg-dsc {
+	    padding-right: 0;
+	    width: 100%;
+	}
+
+}
+
+@media(max-width: 767px){
+	.contact-form-dsc-title{
+		font-size: 36px;
+	}
+	.contact-form-dsc p {
+	    margin-bottom: 30px;
+	}
+	.contact-msg-wrp {
+	    padding: 35px 30px;
+	}
+}
+
+@media(max-width: 575px){
+	.contact-form-dsc-title{
+		font-size: 28px;
+		margin-bottom: 15px;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field {
+	    width: 100%;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input {
+	    height: 48px;
+	    padding: 15px 20px 16px;
+	}
+	.contact-form-dsc p {
+	    margin-bottom: 15px;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button {
+	    height: 40px;
+	    font-size: 11px;
+	    line-height: 13px;
+	    padding: 12px 0 12px;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
+		font-size: 11px;
+		line-height: 13px;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-textarea textarea{
+		height: 175px;
+	}
+	.contact-msg-wrp {
+	    display: none;
+	}
+	.contact-form-sec-wrp {
+	    padding-bottom: 50px;
+	}
+	.contact-form-wrp {
+	    padding-bottom: 0;
+	}
+	.faq-accordion-controller {
+	    padding: 22px 15px 22px 20px;
+	}
+
+
+}
+
+@media(max-width: 479px){
+	.contact-form-dsc-title {
+	    font-size: 24px;
+	}
+
+}
+
+@media(max-width: 359px){
+
 }
