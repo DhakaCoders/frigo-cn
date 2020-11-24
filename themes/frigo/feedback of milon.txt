@@ -38,8 +38,14 @@ Responsive--->
 	iv) https://prnt.sc/vox6tp
 		main menu ar thake sub-menu ar font size aktu choto hoy
 
+5. https://prnt.sc/vozemq
+	i) flex use hobe, akta item jodi bere jay niche center a thakbe
+	ii) li a padding left and right thakbe ul ar (-) margin
+	iii) same width hobe sobar a
+	iv) https://prnt.sc/vozjb3 
+		inner div a padding left hobe jehetu left thake suru hoyni, akta somoy amra padding-left off kore dibo jokhon niche nambe
 
-
+	v) ai bar ta 767px a hide hobe tar upore manage korte hobe
 
 
 
