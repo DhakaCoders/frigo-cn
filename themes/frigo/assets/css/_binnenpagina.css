@@ -240,8 +240,18 @@ ol li::before {
 	position: relative;
 }
 
+.dft-pro-items-cntlr .spotlight-slider-cntlr{
+	padding-left: 0;
+	padding-right: 0;
+}
 
-
+.dft-pro-items-cntlr .slick-next, 
+.dft-pro-items-cntlr .slick-prev{
+	display: none!important;
+}
+.dft-pro-items-cntlr{
+	padding-bottom: 40px;
+}
 /*
 Gallery design
 */
@@ -569,6 +579,14 @@ a.dft-btn:hover,
 	}
 	.default-page-con{
 		padding-bottom: 35px;
+	}
+	.dft-works{
+		margin-bottom: 35px;
+		padding-bottom: 25px;
+	}
+	.dft-works,
+	.dft-works .work-item{
+		background: #1e1e1e!important;
 	}
 }
 
