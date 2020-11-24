@@ -344,3 +344,22 @@ form .dropdown-menu li a{
 .dropdown-menu.show{
 	width: 100%;
 }
+
+
+
+/*slider brk fix*/
+
+.fl-product .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image,
+.thumbnails-cntlr .thumbnails .woocommerce-product-gallery__image{
+	display: none;
+}
+
+.fl-product .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image:first-child,
+.thumbnails-cntlr .thumbnails .woocommerce-product-gallery__image:first-child{
+	display: block;
+}
+
+.fl-product .slick-initialized.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image,
+.thumbnails-cntlr .slick-initialized.thumbnails .woocommerce-product-gallery__image{
+	display: block;
+}

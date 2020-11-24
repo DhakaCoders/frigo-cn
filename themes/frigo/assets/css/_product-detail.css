@@ -120,3 +120,52 @@
 	border-top: 1px solid #F6F6F6;
 	margin-top: 30px;
 }
+
+
+
+
+@media(max-width: 1499px){
+
+}
+
+@media(max-width: 1399px){
+	.fl-product .woocommerce-product-gallery {
+	    width: 52%;
+	    padding: 0 70px 0 0;
+	}
+	.fl-product .summary {
+	    width: 48%;
+	}
+
+}
+
+@media(max-width: 1299px){
+	
+}
+
+@media(max-width: 1199px){
+	
+
+}
+
+@media(max-width: 991px){
+	
+}
+
+@media(max-width: 767px){
+	
+}
+
+@media(max-width: 575px){
+	
+
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
+}
