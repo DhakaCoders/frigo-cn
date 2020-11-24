@@ -296,6 +296,9 @@ nav.main-nav ul li.current-menu-item a {
 }
 
 @media(max-width: 991px){
+	body.active-scroll-off {
+	    overflow: hidden;
+	}
 	.header-tp-inr{
 		display: flex;
 		justify-content: center;
