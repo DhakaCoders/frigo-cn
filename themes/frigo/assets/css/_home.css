@@ -687,6 +687,11 @@
 	.work-item-cntlr{
 		padding: 0;
 	}
+	.work-item{
+		background: transparent;
+		min-height: auto;
+		padding: 0;
+	}
 	.work-sec-btn .fl-btn{
 		font-size: 11px;
 	}
