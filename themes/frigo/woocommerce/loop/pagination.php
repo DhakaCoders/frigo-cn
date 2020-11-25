@@ -28,7 +28,7 @@ if ( $total <= 1 ) {
 	return;
 }
 ?>
-<nav class="woocommerce-pagination">
+<div class="faq-pagi-ctlr">
 	<?php
 	echo paginate_links(
 		apply_filters(
@@ -39,8 +39,16 @@ if ( $total <= 1 ) {
 				'add_args'  => false,
 				'current'   => max( 1, $current ),
 				'total'     => $total,
-				'prev_text' => '&larr;',
-				'next_text' => '&rarr;',
+				'prev_text' => '<i>
+                <svg class="faq-lft-arrows-icon-svg" width="10" height="10" viewBox="0 0 10 10" fill="717171">
+                  <use xlink:href="#faq-lft-arrows-icon-svg"></use>
+                </svg>  
+              </i>Vorige',
+				'next_text' => 'Volgende<i>
+                <svg class="faq-rgt-arrows-icon-svg" width="10" height="10" viewBox="0 0 10 10" fill="717171">
+                  <use xlink:href="#faq-rgt-arrows-icon-svg"></use>
+                </svg>  
+              </i>',
 				'type'      => 'list',
 				'end_size'  => 3,
 				'mid_size'  => 3,
@@ -48,4 +56,4 @@ if ( $total <= 1 ) {
 		)
 	);
 	?>
-</nav>
+</div>

@@ -141,6 +141,17 @@ add_filter('body_class', 'custom_body_classes');
 
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
+if( !function_exists('cbv_custom_both_breadcrump')){
+  function cbv_both_breadcrump(){
+    if ( is_product_category() || is_product() || is_shop() || is_cart() || is_checkout()
+       || is_woocommerce() || is_product_tag() || is_account_page() || is_wc_endpoint_url()
+       || is_ajax()) {
+                woocommerce_breadcrumb();
+            }else{
+                cbv_breadcrumbs();
+            }
+    }
+}
 /**
 Debug->>
 */

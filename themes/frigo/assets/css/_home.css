@@ -142,7 +142,8 @@
 	margin-bottom: 7px;
 	line-height: 1;
 }
-.product-quantity{
+.product-quantity,
+.product-quantity form.cart{
 	display: flex;
 	align-items: center;
 }
