@@ -385,7 +385,7 @@ a.dft-btn,
 	background: #A61916;
 	border: 2px solid #A61916;
 	min-height: 45px;
-	padding: 17px 10px;
+	padding: 18px 10px 16px;
 
 }
 a.dft-btn:hover,
@@ -410,6 +410,9 @@ a.dft-btn:hover,
 
 .default-page-con .dft-works  p{
 	margin-bottom: 0;
+}
+.default-page-con .from-group-submit button{
+	padding-top: 2px;
 }
 
 @media(max-width: 1199px){
