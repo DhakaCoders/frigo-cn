@@ -1,22 +1,32 @@
 <?php
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 
 
 add_action('woocommerce_before_main_content', 'get_custom_wc_output_content_wrapper', 11);
 add_action('woocommerce_after_main_content', 'get_custom_wc_output_content_wrapper_end', 9);
-
+add_filter( 'woocommerce_show_page_title', '__return_false' );
 function get_custom_wc_output_content_wrapper(){
 
     if(is_shop() OR is_product_category()){ 
         echo '<section class="product-overview-sec"><div class="container"><div class="row"><div class="col-md-12"><div class="product-overview-inr">';
+        get_template_part('templates/breadcrumbs');
+        get_template_part('templates/shop', 'search');
+        echo '<div class="pro-overview-cntnt-cntlr clearfix">';
+        echo '<div class="pro-overview-cntnt-lft">';
+            get_sidebar('shop');
+        echo '</div>';
+        echo '<div class="pro-overview-grid-cntlr">';
     }
 
 
 }
 
 function get_custom_wc_output_content_wrapper_end(){
-  if(is_shop() OR is_product_category()){ 
+  if(is_shop() OR is_product_category()){
+    echo '</div>';
+    echo '</div>'; 
     echo '</div></div></div></div></section>';
   }
 
@@ -76,53 +86,58 @@ add_action('woocommerce_shop_loop_item_title', 'add_shorttext_below_title_loop',
 if (!function_exists('add_shorttext_below_title_loop')) {
     function add_shorttext_below_title_loop() {
         global $product, $woocommerce, $post;
-/*        $sc = '[yith_quick_view product_id="'.$product->get_id().'" type="icon" label="QV"]';
-    echo '<div class="fl-product-item hello">';
-        wc_stock_manage();
-        echo '<div class="fl-product-item-fea-img">';
-        echo '<a href="'.get_permalink( $product->get_id() ).'">';
-        echo wp_get_attachment_image( get_post_thumbnail_id($product->get_id()), 'pgrid' );
-        echo '</a>';
-        echo '<div class="product-overlay-icons">';
-        get_wish_thumb();
-        echo '<a href="#" class="product-overlay-icon-search yith-wcqv-button" data-product_id="'.$product->get_id().'"><i class="fas fa-search"></i></a>';
-        echo do_shortcode($sc);
-        echo '</div>';
-        echo '</div>';
-        echo '<div class="fl-product-item-des mHc">';
-        get_loop_condition();
-        echo '<h6 class="fl-product-title"><a href="'.get_permalink( $product->get_id() ).'">'.get_the_title().'</a></h6>';
-        echo '<div class="fl-product-box-prices">';
-        echo '<div class="fl-product-regular-price">'.$product->get_price_html().'</div>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';*/
+
+        switch ( $product->get_type() ) {
+            case "variable" :
+                $link   = get_permalink($product->get_id());
+                $label  = apply_filters('variable_add_to_cart_text', __('Bestel nu', 'woocommerce'));
+            break;
+            case "grouped" :
+                $link   = get_permalink($product->get_id());
+                $label  = apply_filters('grouped_add_to_cart_text', __('Bestel nu', 'woocommerce'));
+            break;
+            case "external" :
+                $link   = get_permalink($product->get_id());
+                $label  = apply_filters('external_add_to_cart_text', __('Read More', 'woocommerce'));
+            break;
+            default :
+                $link   = esc_url( $product->add_to_cart_url() );
+                $label  = apply_filters('add_to_cart_text', __('Bestel nu', 'woocommerce'));
+            break;
+        }
+
         $gridurl = cbv_get_image_src( get_post_thumbnail_id($product->get_id()), 'pgrid' );
         echo '<div class="pro-item">';
         echo '<div class="pro-item-img-cntlr pw-item-img-cntlr">';
         echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
         echo '<div class="pro-item-img dft-transition inline-bg" style="background-image: url('.$gridurl.');"></div>';
         echo '<div class="pro-item-highlight-text">';
-        echo '<span>'.get_the_title().'</span>';
+        echo '<span>Product van de week</span>';
         echo '</div>';
         echo '</div>';
         echo '<div class="pro-item-desc pw-item-desc">';
-        echo '<h3 class="pro-item-desc-title"><a href="#">Feest Gourmet</a></h3>';
+        echo '<h3 class="pro-item-desc-title"><a href="'.get_permalink( $product->get_id() ).'">'.get_the_title().'</a></h3>';
         echo '<h6 class="pro-item-desc-sub-title">Vers, simpel en panklaar!</h6>';
         echo '<div class="product-price">';
-        echo '<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span> 16,01</bdi></span>';
+        echo $product->get_price_html();
         echo '<span class="pro-prize-shrt-title show-sm">pp</span>';
         echo '</div>';
         echo '<strong>Aantal personen</strong>';
         echo '<div class="product-quantity product-quantity-cntlr">';
-        echo '<div class="quantity qty">';
-        echo '<span class="minus">-</span>';
-        echo '<input type="number" class="count" name="qty" value="1">';
-        echo '<span class="plus">+</span>';
-        echo '</div>';
-        echo '<div class="product-order-btn">';
-        echo '<a class="fl-btn" href="#">Bestel nu</a>';
-        echo '</div>';
+        if ( ! $product->is_in_stock() ) :
+            
+        else:
+            if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && ! $product->is_sold_individually() ) {
+            echo '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
+            echo '<div class="quantity qty"><span class="minus">-</span>';
+            echo woocommerce_quantity_input( array(), $product, false );
+            echo '<span class="plus">+</span></div>';
+            echo '<div class="product-order-btn"><button type="submit" class="fl-btn">Bestel nu</button></div>';
+            echo '</form>';
+            }else{
+                printf('<div class="product-order-btn"><a class="fl-btn" href="%s" rel="nofollow" data-product_id="%s" class="button add_to_cart_button product_type_%s">%s</a></div>', $link, $product->get_id(), $product->get_type(), $label);
+            }
+        endif;
         echo '</div>';
         echo '</div>';
         echo '</div>';
@@ -157,6 +172,15 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
+
+//add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+function new_loop_shop_per_page( $cols ) {
+  // $cols contains the current number of products per page based on the value stored on Options –> Reading
+  // Return the number of products you wanna show per page.
+  $cols = 2;
+  return $cols;
+}
 
 
 //add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
@@ -198,11 +222,11 @@ if( !function_exists('cbv_woocommerce_breadcrumbs')):
 function cbv_woocommerce_breadcrumbs() {
     return array(
             'delimiter'   => '',
-            'wrap_before' => '<div class="fl-breadcrumbs"><ul class="reset-list">',
-            'wrap_after'  => '</ul></div>',
+            'wrap_before' => '<ul class="reset-list">',
+            'wrap_after'  => '</ul>',
             'before'      => '<li>',
             'after'       => '</li>',
-            'home'        => _x( 'home', 'breadcrumb', 'woocommerce' ),
+            'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
         );
 }
 endif;
