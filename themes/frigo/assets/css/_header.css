@@ -401,7 +401,7 @@ nav.main-nav ul li.current-menu-item a {
 		position: relative;
 	}
 	.xs-pop-up-menu-inr {
-	    padding: 188px 0 50px;
+	    padding: 188px 0 30px;
 	    height: 100%;
 	    width: 100%;
 	}
@@ -477,7 +477,7 @@ nav.main-nav ul li.current-menu-item a {
 	    padding-bottom: 55px;
 	}
 	.xs-main-nav > ul > li{
-		padding-bottom: 15px;
+		padding-bottom: 10px;
 		padding-top: 15px;
 	}
 	.xs-main-nav ul li a{
@@ -497,7 +497,7 @@ nav.main-nav ul li.current-menu-item a {
 		height: 100%;
 		width: 100%;
 		padding: 0 34px;
-		padding-top: 52px;
+		padding-top: 40px;
 		text-align: center;
 		z-index: 10;
 	}
@@ -560,7 +560,7 @@ nav.main-nav ul li.current-menu-item a {
 	    padding-top: 0;
 	}
 	.xs-pop-up-menu-inr {
-	    padding: 215px 20px 50px;
+	    padding: 188px 20px 30px;
 	}
 
 
