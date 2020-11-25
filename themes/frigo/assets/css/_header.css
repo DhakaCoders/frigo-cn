@@ -320,10 +320,6 @@ nav.main-nav ul li.current-menu-item a {
 	    max-width: 190px;
 	    width: 100%;
 	}
-	.search-sec{
-	    position: relative;
-	    z-index: 65;
-	}
 	.bdoverlay{
 		position: fixed;
 		left: 0;
@@ -379,10 +375,8 @@ nav.main-nav ul li.current-menu-item a {
 		background: #fff;
 		color: #fff;
 		z-index: 60;
-		text-align: center;
 		display: block;
 		opacity: 0;
-		overflow-y: scroll;
 		transition: all 0.5s;
 		-ms-transition: all 0.5s;
 		-webkit-transition: all 0.5s;
@@ -396,15 +390,46 @@ nav.main-nav ul li.current-menu-item a {
 		-webkit-transition: all 0.5s;
 		z-index: 62;
 	}
+	.xs-pop-up-menu-top{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+	}
+	.xs-pop-up-menu-top .logo-close-btn-cntlr{
+		padding: 30px 34px 27px 34px;
+		position: relative;
+	}
 	.xs-pop-up-menu-inr {
-	    padding: 240px 20px 50px;
-	    position: relative;
-	    z-index: 70;
+	    padding: 188px 0 50px;
+	    height: 100%;
+	    width: 100%;
+	}
+	.xs-logo  a{
+		display: inline-block;
+		max-width: 177px;
 	}
 	.xs-pop-up-menu .xs-menu-bar {
-	    position: fixed;
+	    position: absolute;
 	    right: 15px;
-	    top: 37px;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+	.xs-search{
+		background: #F7F7F7;
+	}
+	.xs-search .search-cntlr{
+		padding: 20px 32px;
+	}
+	.xs-search .search-cntlr .bnr-search input{
+		padding: 10px 20px;
+	}
+	.xs-search .search-cntlr .bnr-search button{
+		right: 13px;
+	}
+	.xs-search .search-cntlr .bnr-search button i svg{
+		max-width: 14px;
 	}
 	.xs-hdr-sign-up{
 		padding-left: 0;
@@ -469,7 +494,13 @@ nav.main-nav ul li.current-menu-item a {
 		display: none;
 	}
 	.xs-pop-menu-con{
-		overflow-y: scroll;
+		overflow-y: auto;
+		height: 100%;
+		width: 100%;
+		padding: 0 34px;
+		padding-top: 52px;
+		text-align: center;
+		z-index: 10;
 	}
 	.xs-main-nav .sub-menu li{
 		padding-top: 5px;
