@@ -398,6 +398,8 @@ nav.main-nav ul li.current-menu-item a {
 	}
 	.xs-pop-up-menu-inr {
 	    padding: 240px 20px 50px;
+	    position: relative;
+	    z-index: 70;
 	}
 	.xs-pop-up-menu .xs-menu-bar {
 	    position: fixed;
