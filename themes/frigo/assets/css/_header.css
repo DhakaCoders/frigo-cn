@@ -50,9 +50,9 @@ nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu{
 	background: #fff;
 	border-top: 2px solid #A61916;
 	z-index: 30;
-	box-shadow: 0 11px 10px 0 rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 11px 10px 0 rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 11px 10px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
     transform: scale3d(1,0,1);
     -ms-transform: scale3d(1,0,1);
     -webkit-transform: scale3d(1,0,1);
