@@ -506,7 +506,7 @@ nav.main-nav ul li.current-menu-item a {
 	}
 	.xs-main-nav .sub-menu {
 	    padding-bottom: 0;
-	    padding-top: 25px;
+	    padding-top: 18px;
 	}
 	.xs-main-nav .sub-menu li a {
 	    font-size: 14px;
@@ -559,9 +559,9 @@ nav.main-nav ul li.current-menu-item a {
 	.xs-humbergur-btn {
 	    padding-top: 0;
 	}
-	.xs-pop-up-menu-inr {
+	/*.xs-pop-up-menu-inr {
 	    padding: 188px 20px 30px;
-	}
+	}*/
 
 
 }
