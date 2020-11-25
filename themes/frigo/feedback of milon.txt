@@ -99,3 +99,54 @@ Responsive--->
 
 3. https://prnt.sc/voxfzs
 	359px a logo ar size aktu komate hobe
+
+
+
+
+
+Contact
+-------------------------
+Desktop and responsive -->
+
+
+1. https://prnt.sc/vpl6o5
+	h1 hobe
+
+2. https://prnt.sc/vpl7u8
+	ai block ar width 926px ache FG te -> https://prnt.sc/vpl846
+
+3. https://prnt.sc/vplack
+	375px akta media hobe , r se media tate FG ar moto look ta korte hobe
+
+4. https://prnt.sc/vplcz4
+	768px pojonto button ta akline a rakho
+
+
+5. https://prnt.sc/vplffj
+	button ar top a aktu gap kom mone hosche r niche beshi. padding top 16px daw
+
+	avabe sundor kore potita button fix korte hobe.
+
+
+
+
+
+FAQ
+-------------------------
+Desktop--->
+1. https://prnt.sc/vplhcd
+	h1 hobe
+
+2. https://prnt.sc/vpli2a
+	akbar click korar pore r akbar click korle dhuke jayna
+
+3. https://prnt.sc/vpljk8
+	aikhane gap nai design a.
+
+4. https://prnt.sc/vplk2f
+	'page-numbers' s add hobe
+
+5. https://prnt.sc/vplq07
+	hover korle arrow gulo aktu shore jabe
+
+

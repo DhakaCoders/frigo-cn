@@ -121,7 +121,7 @@
 	display:flex;
 }
 .wzw-promotion-inr .bnr-btn .fl-btn{
-	padding: 17px 5px 15px 5px;
+	padding: 18px 5px 14px 5px;
 }
 
 
@@ -227,7 +227,9 @@
 	}
 	.who-are-you-desc-inr{
 		padding-bottom: 20px;
+		margin-bottom: 35px;
 	}
+
 	.wru-grid-item-img-cntlr{
 		height: 260px;
 	}
@@ -242,6 +244,15 @@
 	.who-are-you-grid-cntlr > ul > li:nth-child(2n+1){
 		clear: initial;
 	}
+	.wru-grid-item{
+		margin-bottom: 35px;
+		border-bottom: 1px solid #F6F6F6;
+	}
+	.wru-grid-item-mb-none{
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+
 	.wru-grid-item-img-cntlr{
 		margin-bottom: 15px;
 	}
@@ -259,6 +270,21 @@
 	}
 	.wzw-promotion-inr .bnr-btn .fl-btn{
 		padding: 14px 5px 12px 5px;
+	}
+	.wzw-work-inr .work-slider-cntlr .slick-slider .slick-dots li{
+		background: rgba(244, 244, 244, 0.1)!important;
+	}
+	
+	.wzw-work-inr .work-slider-cntlr .slick-slider .slick-dots li.slick-active {
+		background: #A61916!important;
+	}
+	.wzw-work-sec-btn .fl-btn{
+		padding-top: 14px;
+		padding-bottom: 11px;
+		margin-bottom: 35px;
+	}
+	.wzw-work-inr .sec-entry-hdr p{
+		margin-bottom: 35px;
 	}
 }
 @media(max-width: 479px){

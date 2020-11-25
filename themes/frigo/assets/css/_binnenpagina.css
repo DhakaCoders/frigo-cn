@@ -385,7 +385,7 @@ a.dft-btn,
 	background: #A61916;
 	border: 2px solid #A61916;
 	min-height: 45px;
-	padding: 17px 10px;
+	padding: 18px 10px 16px;
 
 }
 a.dft-btn:hover,
@@ -406,6 +406,13 @@ a.dft-btn:hover,
 	width: 33.3333%;
 	float: left;
 	padding: 0 5px;
+}
+
+.default-page-con .dft-works  p{
+	margin-bottom: 0;
+}
+.default-page-con .from-group-submit button{
+	padding-top: 2px;
 }
 
 @media(max-width: 1199px){
@@ -581,13 +588,20 @@ a.dft-btn:hover,
 		padding-bottom: 35px;
 	}
 	.dft-works{
-		margin-bottom: 35px;
-		padding-bottom: 25px;
+		padding: 50px 15px 45px;
+		margin-bottom: 30px;
 	}
 	.dft-works,
 	.dft-works .work-item{
 		background: #1e1e1e!important;
 	}
+	.dft-works .slick-slider .slick-dots li{
+		background: rgba(244, 244, 244, 0.1)!important;
+	}
+	.dft-works .slick-slider .slick-dots li.slick-active {
+	    background: #A61916!important;
+	}
+	
 }
 
 

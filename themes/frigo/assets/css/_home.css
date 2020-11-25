@@ -28,6 +28,7 @@
 .spotlight-sec{
 	padding-top: 90px;
 	padding-bottom: 76px;
+	overflow: hidden;
 	
 }
 .spotlight-inr{
@@ -265,14 +266,14 @@
 	justify-content: center;
 	margin: 0 -12px;
 }
-.work-slider > div{
+.work-slider .workSlideItem{
 	display: none;
 
 }
-.work-slider > div:nth-child(1){
+.work-slider .workSlideItem:nth-child(1){
 	display: block;
 }
-.work-slider.slick-initialized.slick-slider > div{
+.work-slider.slick-initialized.slick-slider .workSlideItem{
 	display: block;
 }
 .work-item-cntlr{
