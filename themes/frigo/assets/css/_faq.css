@@ -129,12 +129,15 @@
     padding-bottom: 0;
 }
 .faq-pagi-ctlr ul li a.prev,
-.faq-pagi-ctlr ul li a.next {
+.faq-pagi-ctlr ul li a.next{
     height: 32px !important;
     font-size: 12px !important;
     line-height: 10px !important; 
     font-weight: 400 !important;
     color: #717171 !important;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 .faq-pagi-ctlr ul li a.prev.page-number:hover,
 .faq-pagi-ctlr ul li a.next.page-number:hover{
@@ -149,11 +152,25 @@
     margin-right: 55px;
     width: 60px !important;
 }
+.faq-pagi-ctlr ul li a.prev i,
 .faq-pagi-ctlr ul li a.next i{
-	padding-left: 10px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 }
 .faq-pagi-ctlr ul li a.prev i{
-	padding-right: 10px;
+	left: 0;
+}
+.faq-pagi-ctlr ul li a.next i{
+	right: 0px;
+}
+.faq-pagi-ctlr ul li a.next:hover i{
+    right: -3px;
+}
+.faq-pagi-ctlr ul li:hover a.prev i{
+    left: -3px;
 }
 .faq-pagi-ctlr ul li a.prev:hover i svg,
 .faq-pagi-ctlr ul li a.next:hover i svg{

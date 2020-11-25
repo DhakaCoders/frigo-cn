@@ -2,7 +2,7 @@
 	padding-bottom: 60px;
 }
 .contact-form-block{
-	max-width: 935px;
+	max-width: 926px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -12,7 +12,7 @@
 .contact-form-dsc{
 	text-align: center;
 }
-.contact-form-dsc-title {
+.contact-form-dsc-title{
     display: block;
     font-size: 48px;
     line-height: 1;
@@ -174,6 +174,7 @@
     padding-top: 6px;
     padding-bottom: 6px;
     padding-right: 25px;
+    width: 78%;
 }
 .contact-msg-dsc-title{
 	display: block;
@@ -204,6 +205,7 @@
     float: right;
     padding-top: 3px;
     padding-left: 25px;
+    width: 22%;
 }
 .contact-msg-btn a{
 	display: inline-block;
@@ -215,7 +217,7 @@
 	color: #fff;
 	border: 2px solid #FFFFFF;
 	filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.03));
-	padding: 14px 55px 13px;
+	padding: 16px 55px 13px;
 	text-transform: uppercase;
 }
 .contact-msg-btn a:hover{
@@ -223,18 +225,6 @@
 	border-color: #A61916;
 }
 
-@media(max-width: 1499px){
-
-}
-
-@media(max-width: 1399px){
-	
-
-}
-
-@media(max-width: 1299px){
-	
-}
 
 @media(max-width: 1199px){
 	.contact-form-dsc-title{
@@ -245,6 +235,14 @@
 	}
 	.contact-msg-dsc-title {
 	    font-size: 19px;
+	}
+	.contact-msg-btn a{
+		float: right;
+	}
+	.contact-msg-wrp {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
 	}
 
 }
@@ -263,17 +261,14 @@
 	    font-size: 18px;
 	}
 	.contact-msg-btn {
-	    padding-top: 20px;
 	    padding-left: 0;
-	    float: left;
+	    float: right;
 	}
+	
 	.contact-msg-wrp {
-	    padding: 45px 40px;
+	    padding: 45px 30px;
 	}
-	.contact-msg-dsc {
-	    padding-right: 0;
-	    width: 100%;
-	}
+	
 
 }
 
@@ -286,6 +281,17 @@
 	}
 	.contact-msg-wrp {
 	    padding: 35px 30px;
+	    display: inline-block;
+	}
+	.contact-msg-dsc{
+		width: 100%;
+	}
+	.contact-msg-btn{
+		width: 100%;
+		margin-top: 20px;
+	}
+	.contact-msg-btn a {
+	    float: left;
 	}
 }
 
@@ -293,6 +299,7 @@
 	.contact-form-dsc-title{
 		font-size: 28px;
 		margin-bottom: 15px;
+		text-align: left;
 	}
 	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field {
 	    width: 100%;
@@ -328,6 +335,9 @@
 	}
 	.faq-accordion-controller {
 	    padding: 22px 15px 22px 20px;
+	}
+	.contact-form-dsc {
+	    text-align: left;
 	}
 
 
