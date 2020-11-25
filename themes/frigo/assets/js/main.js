@@ -297,26 +297,16 @@ if( $('.tabs').length ){
   });
 }
 
-/*var allPanels = $('.faq-accordion-dsc').hide();
-$('.faq-accordion-controller').removeClass('remove-border');
+var allPanels = $('.faq-accordion-dsc').hide();
   $('.faq-accordion-controller span').click(function() {
         allPanels.slideUp();
         $('.faq-accordion-controller span').removeClass('faq-accordion-active');
-        $('.faq-accordion-controller').removeClass('remove-border');
         $(this).next().slideDown();
-        $(this).addClass('faq-accordion-active');
-        $(this).parent().next().addClass('remove-border');
-        return false;
-});*/
-
-var allPanels = $('.faq-accordion-dsc').hide();
-  $('.faq-accordion-controller span').click(function() {
-        allPanels.slideDown();
-        $('.faq-accordion-controller span').removeClass('faq-accordion-active');
-        $(this).next().slideUp();
         $(this).addClass('faq-accordion-active');
         return false;
 });
+
+
 
 
 if (windowWidth <= 1199) {
