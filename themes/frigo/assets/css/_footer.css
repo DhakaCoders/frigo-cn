@@ -428,9 +428,7 @@
 }
 
 @media(max-width: 575px){
-  .ftr-btm-col-2 ul li{
-    width: 25%;
-  }
+  
 }
 
 @media(max-width: 479px){
@@ -439,7 +437,10 @@
       padding-right: 5px;
   }
   .ftr-btm-col-2 ul li{
-    width: 33.3333%;
+    width: 25%;
+  }
+  .ftr-btm-col-1{
+    padding-top: 15px;
   }
 
 }
