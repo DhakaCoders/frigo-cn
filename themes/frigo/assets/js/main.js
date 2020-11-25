@@ -301,9 +301,14 @@ var allPanels = $('.faq-accordion-dsc').hide();
   $('.faq-accordion-controller span').click(function() {
         allPanels.slideUp();
         $('.faq-accordion-controller span').removeClass('faq-accordion-active');
-        $(this).next().slideDown();
-        $(this).addClass('faq-accordion-active');
-        return false;
+        if( $(this).next().is(':visible') ){
+          $(this).next().slideUp();
+          $(this).removeClass('faq-accordion-active');
+      }else{
+          $(this).next().slideDown();
+          $(this).addClass('faq-accordion-active');
+      }
+      return false;
 });
 
 
