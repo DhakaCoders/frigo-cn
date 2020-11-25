@@ -1,0 +1,11 @@
+2020-11-25T10:07:43+00:00 CRITICAL Uncaught Error: Call to undefined function get_wish_thumb() in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php:87
+Stack trace:
+#0 C:\xampp\htdocs\2020\11\frigo\wp-includes\class-wp-hook.php(287): add_shorttext_below_title_loop('')
+#1 C:\xampp\htdocs\2020\11\frigo\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2020\11\frigo\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\content-product.php(49): do_action('woocommerce_sho...')
+#4 C:\xampp\htdocs\2020\11\frigo\wp-includes\template.php(732): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#6 C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\archive-product.php(70): wc_get_template_part('content', 'product')
+#7 C:\xampp\htdocs\2020\11\frigo\wp-includes\template-loader.php(106): include in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php on line 87
+

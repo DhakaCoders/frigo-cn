@@ -17,6 +17,7 @@ if( !function_exists('cbv_theme_setup') ){
         
       load_theme_textdomain( 'capital', get_template_directory() . '/languages' );
         add_theme_support( 'title-tag' );
+        add_theme_support('woocommerce');
         add_theme_support('post-thumbnails');
         if(function_exists('add_theme_support')) {
             add_theme_support('category-thumbnails');
@@ -36,7 +37,9 @@ if( !function_exists('cbv_theme_setup') ){
         ) );
 
         register_nav_menus( array(
-            'cbv_copyright_menu' => __( 'Copyright Menu', THEME_NAME ),
+            'cbv_main_menu' => __( 'Hoofdmenu', THEME_NAME ),
+            'cbv_fta_menu' => __( 'Footer Menu 1', THEME_NAME ),
+            'cbv_ftb_menu' => __( 'Footer Menu 2', THEME_NAME )
         ) );
 
     }
@@ -66,6 +69,7 @@ Includes->>
 */
 include_once(THEME_DIR .'/inc/breadcrumbs.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');
+include_once(THEME_DIR .'/inc/wc-functions.php');
 /**
 ACF Option pages->>
 */

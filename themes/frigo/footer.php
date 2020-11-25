@@ -6,13 +6,16 @@
     $logo_tag = '';
   }
 
-  $replaceArray = '';
-  $branches = get_field('branches', 'options');
+  $contact_title = get_field('titel', 'options');
+  $address = get_field('address', 'options');
+  $gmurl = get_field('url', 'options');
+  $telefoon = get_field('telefoon', 'options');
+  $email = get_field('emailadres', 'options');
   $bwt = get_field('btw', 'options');
+  $gmaplink = !empty($gmurl)?$gmurl: 'javascript:void()';
   $vennootschap = get_field('vennootschap', 'options');
   $polisnr = get_field('polisnr', 'options');
-  $fburl = get_field('facebook_url', 'options');
-  $insturl = get_field('instagram_url', 'options');
+  $smedias = get_field('social_media', 'options');
   $copyright_text = get_field('copyright_text', 'options');
 ?>
 <footer class="footer-wrp">
@@ -28,44 +31,17 @@
                 </a>
               </div>
               <div class="ftr-socail-icon hide-md">
+                <?php if(!empty($smedias)):  ?>
                 <ul class="reset-list clearfix">
+                  <?php foreach($smedias as $smedia): ?>
                   <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-facebook-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="white">
-                          <use xlink:href="#ftr-facebook-icon-svg"></use>
-                        </svg> 
-                      </i>
+                    <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                        <?php echo $smedia['icon']; ?>
                     </a>
                  </li>
-                  <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-twiter-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="white">
-                          <use xlink:href="#ftr-twiter-icon-svg"></use>
-                        </svg> 
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-instagram-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="white">
-                          <use xlink:href="#ftr-instagram-icon-svg"></use>
-                        </svg> 
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-linkedin-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="white">
-                          <use xlink:href="#ftr-linkedin-icon-svg"></use>
-                        </svg> 
-                      </i>
-                    </a>
-                  </li>
+                 <?php endforeach; ?>
                 </ul>
+                <?php endif; ?>
               </div>
             </div>
             <div class="ftr-col ftr-col-5">
@@ -96,75 +72,51 @@
             <div class="ftr-col ftr-col-4">
               <h6><span>Contact info</span></h6>
               <ul class="reset-list clearfix">
-                <li><strong>Afhaalpunt/Athelier</strong></li>
-                <li><a href="#">Heilig Hartlaan 1, 9300 Aalst</a></li>
-                <li><span>Telefoon: <a href="tel:053 21 42 17"> 053 21 42 17</a></span></li>
-                <li>
-                  <span>E-Mail: <a href="mailto:info@frigobox.be"> info@frigobox.be</a></span>
-                </li>
-                <li><span>BTW: BE0664.788.510</span></li>
+                <?php 
+                  if( !empty($contact_title) ) printf('<li><strong>%s</strong></li>', $contact_title);
+                  if( !empty($address) ) printf('<li><a href="%s">%s</a></li>', $gmaplink, $address);
+                  if( !empty($email) ) printf('<li><span>Telefoon: <a href="tel:%s">%s</a></span></li>', phone_preg($telefoon),  $telefoon); 
+                  if( !empty($email) ) printf('<li><span>E-Mail: <a href="mailto:%s">%s</a></span></li>', $email, $email); 
+                  if( !empty($bwt) ) printf('<li><span>BTW: %s</span>', $bwt); 
+                ?>
               </ul>              
             </div>
             <div class="ftr-col ftr-col-3">
-              <h6><span>Praktische info</span></h6>
-              <ul class="reset-list clearfix">
-                <li><a href="#">Veelgestelde vragen</a></li>
-                <li><a href="#">Bestelling</a></li>
-                <li><a href="#">Transport en Levering</a></li>
-                <li><a href="#">Privacy policy + GDPR</a></li>
-                <li><a href="#">Algemene voorwaarden</a></li>
-              </ul>  
+              <h6><span><?php _e( 'Praktische info', THEME_NAME ); ?></span></h6>
+              <?php 
+                $fmenuOptions2 = array( 
+                    'theme_location' => 'cbv_ftb_menu', 
+                    'menu_class' => 'reset-list clearfix',
+                    'container' => '',
+                    'container_class' => ''
+                  );
+                wp_nav_menu( $fmenuOptions2 );
+              ?> 
               <div class="ftr-socail-icon show-md">
+                <?php if(!empty($smedias)):  ?>
                 <ul class="reset-list clearfix">
+                  <?php foreach($smedias as $smedia): ?>
                   <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-facebook-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="white">
-                          <use xlink:href="#ftr-facebook-icon-svg"></use>
-                        </svg> 
-                      </i>
+                    <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                        <?php echo $smedia['icon']; ?>
                     </a>
                  </li>
-                  <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-twiter-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="white">
-                          <use xlink:href="#ftr-twiter-icon-svg"></use>
-                        </svg> 
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-instagram-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="white">
-                          <use xlink:href="#ftr-instagram-icon-svg"></use>
-                        </svg> 
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i>
-                        <svg class="ftr-linkedin-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="white">
-                          <use xlink:href="#ftr-linkedin-icon-svg"></use>
-                        </svg> 
-                      </i>
-                    </a>
-                  </li>
+                 <?php endforeach; ?>
                 </ul>
+                <?php endif; ?>
               </div>           
             </div>
             <div class="ftr-col ftr-col-2 hide-md"> 
-              <h6 class="active"><span>Navigatie</span></h6>
-              <ul class="reset-list clearfix">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Assortiment</a></li>
-                <li><a href="#">Wie zijn we </a></li>
-                <li><a href="#"> How Werkt Het? </a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+              <h6 class="active"><span><?php _e( 'Navigatie', THEME_NAME ); ?></span></h6>
+              <?php 
+                $fmenuOptions1 = array( 
+                    'theme_location' => 'cbv_fta_menu', 
+                    'menu_class' => 'reset-list clearfix',
+                    'container' => '',
+                    'container_class' => ''
+                  );
+                wp_nav_menu( $fmenuOptions1 );
+              ?>
             </div>    
             
           </div>
@@ -178,19 +130,19 @@
         <div class="col-md-12">
           <div class="ftr-btm-innr clearfix">
             <div class="ftr-btm-col-1 hide-md">
-              <span>Copyright &copy; 2020 Frigobox. All Rights Reserved.</span>
+              <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?> 
             </div>
             <div class="ftr-btm-col-2">
               <ul class="reset-list clearfix">
-                <li><a href="#"><img src="assets/images/ftr-btm-logo-1.png"></a></li>
-                <li><a href="#"><img src="assets/images/ftr-btm-logo-2.png"></a></li>
-                <li><a href="#"><img src="assets/images/ftr-btm-logo-3.png"></a></li>
-                <li><a href="#"><img src="assets/images/ftr-btm-logo-4.png"></a></li>
-                <li><a href="#"><img src="assets/images/ftr-btm-logo-5.png"></a></li>
+                <li><a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/ftr-btm-logo-1.png"></a></li>
+                <li><a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/ftr-btm-logo-2.png"></a></li>
+                <li><a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/ftr-btm-logo-3.png"></a></li>
+                <li><a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/ftr-btm-logo-4.png"></a></li>
+                <li><a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/ftr-btm-logo-5.png"></a></li>
               </ul>
             </div>
             <div class="ftr-btm-col-1 show-md">
-              <span>Copyright &copy; 2020 Frigobox. All Rights Reserved.</span>
+              <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?> 
             </div>
             <div class="ftr-btm-col-3 text-right">
               <a href="#">webdesign by conversal</a>

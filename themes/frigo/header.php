@@ -140,7 +140,7 @@ if( is_array($logoObj) ){
               <div class="hdr-tp-rgt-menu-contlr hide-md">
                 <div class="hdr-tp-icons-cntlr clearfix">
                 <div class="hdr-sign-up">
-                  <a href="#">
+                  <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
                     <i>
                       <svg class="hdr-tp-sign-up-icon-svg" width="16" height="18" viewBox="0 0 16 18" fill="#1E1E1E">
                         <use xlink:href="#hdr-tp-sign-up-icon-svg"></use>
@@ -149,33 +149,32 @@ if( is_array($logoObj) ){
                   </a>
                 </div>
                 <div class="hdr-tp-cart-btn">
-                  <a href="#">
+                  <a href="<?php echo wc_get_cart_url(); ?>">
                     <i>
                       <svg class="hdr-tp-cart-icon-svg" width="18" height="17" viewBox="0 0 18 17" fill="#FFFFFF">
                         <use xlink:href="#hdr-tp-cart-icon-svg"></use>
                       </svg> 
                     </i>
-                    <span>4</span>
+                    <?php 
+                    if( WC()->cart->get_cart_contents_count() > 0 ){
+                      echo sprintf ( '<span>%d</span>', WC()->cart->get_cart_contents_count() );
+                    }else{
+                      echo sprintf ( '<span>%d</span>', 0 );
+                    }  
+                    ?>
                   </a>
                 </div>
               </div>
               <nav class="main-nav">
-                <ul class="clearfix reset-list">
-                  <li class="current-menu-item"><a href="#">Home</a></li>
-                  <li class="menu-item-has-children">
-                    <a href="#">Assortiment</a>
-                    <ul class="sub-menu">
-                      <li><a href="#">Sub menu item 1</a></li>
-                      <li><a href="#">Sub menu item 2</a></li>
-                      <li><a href="#">Sub menu item 3</a></li>
-                      <li><a href="#">Sub menu item 4</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">wie zijn we</a></li>
-                  <li><a href="#">Hoe werkt het?</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
+                  <?php 
+                  $cmenuOptions = array( 
+                      'theme_location' => 'cbv_main_menu', 
+                      'menu_class' => 'clearfix reset-list',
+                      'container' => '',
+                      'container_class' => ''
+                    );
+                  wp_nav_menu( $cmenuOptions ); 
+                ?>
               </nav>
               </div>
             </div>
@@ -184,6 +183,10 @@ if( is_array($logoObj) ){
       </div>
     </div>
   </div>
+  <?php 
+  $shop_features = get_field('shop_features', 'options'); 
+  if( $shop_features ):
+  ?>
   <div class="header-btm hide-sm">
     <div class="container">
       <div class="row">
@@ -191,6 +194,7 @@ if( is_array($logoObj) ){
           <div class="hdr-btm-service-innr">
             <div class="hdr-btm-service-wrp">
               <ul class="clearfix reset-list">
+                <?php foreach( $shop_features as $sfeature ): ?>
                 <li>
                   <div class="hdr-btm-service-item">
                     <i>
@@ -198,49 +202,10 @@ if( is_array($logoObj) ){
                         <use xlink:href="#hdr-btm-star-icon-svg"></use>
                       </svg> 
                       </i>
-                    <span>
-                      Vers- en kwaliteitsgarantie
-                    </span>
+                    <?php if( !empty($sfeature['titel']) ) printf('<span>%s</span>', $sfeature['titel']); ?>
                   </div>
                 </li>
-                <li>
-                  <div class="hdr-btm-service-item">
-                    <i>
-                      <svg class="hdr-btm-star-icon-svg" width="28" height="27" viewBox="0 0 28 27" fill="#FFFFFF">
-                        <use xlink:href="#hdr-btm-star-icon-svg"></use>
-                      </svg> 
-                      </i>
-                    <span>
-                      Afhaling of levering
-                    </span>
-                  </div>
-                </li>
-                <li>
-                  <div class="hdr-btm-service-item">
-                     <i>
-                    <svg class="hdr-btm-star-icon-svg" width="28" height="27" viewBox="0 0 28 27" fill="#FFFFFF">
-                      <use xlink:href="#hdr-btm-star-icon-svg"></use>
-                    </svg> 
-                    </i>
-                    <span>
-                      Snelle service
-                    </span>
-                  </div>
-                </li>
-                <li>
-                  <div class="hdr-btm-service-item">
-                    <i>
-                    <svg class="hdr-btm-star-icon-svg" width="28" height="27" viewBox="0 0 28 27" fill="#FFFFFF">
-                      <use xlink:href="#hdr-btm-star-icon-svg"></use>
-                    </svg> 
-                    </i>
-                    <span>
-                       4de generatie expertise
-                    </span>
-                  </div>
-                </li>
-
-
+                <?php endforeach; ?>
               </ul>
             </div>
           </div>
@@ -248,4 +213,5 @@ if( is_array($logoObj) ){
       </div>
     </div>
   </div>
+  <?php endif; ?>
 </header>
