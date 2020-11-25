@@ -109,7 +109,7 @@
     width: 10px;
     height: 3px;
 }
-.faq-accordion-dsc.active{
+.active.faq-accordion-dsc{
 	display: block !important;
 }
 
