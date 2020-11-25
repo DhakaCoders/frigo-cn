@@ -314,7 +314,6 @@ nav.main-nav ul li.current-menu-item a {
 	.hdr-tp-lft {
 	    width: 40%;
 	    position: relative;
-	    z-index: 63;
 	}
 	.logo a {
 	    max-width: 190px;
@@ -568,9 +567,7 @@ nav.main-nav ul li.current-menu-item a {
 }
 
 @media(max-width: 479px){
-	.xs-pop-up-menu .xs-menu-bar {
-	    top: 34px;
-	}
+	
 
 }
 
