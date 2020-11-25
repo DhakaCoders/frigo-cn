@@ -408,6 +408,10 @@ a.dft-btn:hover,
 	padding: 0 5px;
 }
 
+.default-page-con .dft-works  p{
+	margin-bottom: 0;
+}
+
 @media(max-width: 1199px){
 	.dft-promo-module-title{
 		margin-bottom: 35px;
@@ -581,13 +585,20 @@ a.dft-btn:hover,
 		padding-bottom: 35px;
 	}
 	.dft-works{
-		margin-bottom: 35px;
-		padding-bottom: 25px;
+		padding: 50px 15px 45px;
+		margin-bottom: 30px;
 	}
 	.dft-works,
 	.dft-works .work-item{
 		background: #1e1e1e!important;
 	}
+	.dft-works .slick-slider .slick-dots li{
+		background: rgba(244, 244, 244, 0.1)!important;
+	}
+	.dft-works .slick-slider .slick-dots li.slick-active {
+	    background: #A61916!important;
+	}
+	
 }
 
 
