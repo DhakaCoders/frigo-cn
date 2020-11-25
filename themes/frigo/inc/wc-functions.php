@@ -97,6 +97,35 @@ if (!function_exists('add_shorttext_below_title_loop')) {
         echo '</div>';
         echo '</div>';
         echo '</div>';*/
+        $gridurl = cbv_get_image_src( get_post_thumbnail_id($product->get_id()), 'pgrid' );
+        echo '<div class="pro-item">';
+        echo '<div class="pro-item-img-cntlr pw-item-img-cntlr">';
+        echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
+        echo '<div class="pro-item-img dft-transition inline-bg" style="background-image: url('.$gridurl.');"></div>';
+        echo '<div class="pro-item-highlight-text">';
+        echo '<span>'.get_the_title().'</span>';
+        echo '</div>';
+        echo '</div>';
+        echo '<div class="pro-item-desc pw-item-desc">';
+        echo '<h3 class="pro-item-desc-title"><a href="#">Feest Gourmet</a></h3>';
+        echo '<h6 class="pro-item-desc-sub-title">Vers, simpel en panklaar!</h6>';
+        echo '<div class="product-price">';
+        echo '<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span> 16,01</bdi></span>';
+        echo '<span class="pro-prize-shrt-title show-sm">pp</span>';
+        echo '</div>';
+        echo '<strong>Aantal personen</strong>';
+        echo '<div class="product-quantity product-quantity-cntlr">';
+        echo '<div class="quantity qty">';
+        echo '<span class="minus">-</span>';
+        echo '<input type="number" class="count" name="qty" value="1">';
+        echo '<span class="plus">+</span>';
+        echo '</div>';
+        echo '<div class="product-order-btn">';
+        echo '<a class="fl-btn" href="#">Bestel nu</a>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
         
     }
 }
