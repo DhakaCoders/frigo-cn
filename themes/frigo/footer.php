@@ -154,75 +154,78 @@
   </div>
 </footer>
 
-
+<?php 
+$hdlogoObj = get_field('hdlogo', 'options');
+if( is_array($hdlogoObj) ){
+  $hdlogo_tag = '<img src="'.$hdlogoObj['url'].'" alt="'.$hdlogoObj['alt'].'" title="'.$hdlogoObj['title'].'">';
+}else{
+  $hdlogo_tag = '';
+}
+?>
 <div class="show-md">
   <div class="xs-pop-up-menu">
     <div class="xs-pop-up-menu-inr">
+      <div class="xs-pop-up-menu-top">
+        <div class="logo-close-btn-cntlr">
+          <div class="xs-logo">
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+              <?php echo $hdlogo_tag; ?>
+            </a>
+          </div>
+          <div class="xs-menu-bar">
+            <div class="xs-menu-bar-inr">
+              <div class="xs-menu-bar-close">
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/xs-close-icon.png"></span>
+                <strong>SLUITEN</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xs-search">
+          <div class="search-cntlr">
+            <form action="" class="bnr-search">
+              <input type="text" placeholder="Zoeken Producten">
+              <button>
+                <i>
+                  <svg class="bnr-srch-icon-svg" width="30" height="30" viewBox="0 0 30 30" fill="#A61916">
+                    <use xlink:href="#bnr-srch-icon-svg"></use>
+                  </svg>
+                </i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="xs-pop-menu-con">
         <nav class="xs-main-nav clearfix">
-          <ul class="clearfix reset-list">
-            <li class="current-menu-item"><a href="#">Home</a></li>
-            <li class="menu-item-has-children">
-              <a href="#">Assortiment</a>
-              <ul class="sub-menu">
-                <li><a href="#">sub menu item</a></li>
-                <li><a href="#">sub menu item</a></li>
-                <li><a href="#">sub menu item</a></li>
-                <li><a href="#">sub menu item</a></li>
-                <li><a href="#">sub menu item</a></li>
-              </ul>
-            </li>
-            <li><a href="#">wie zijn we</a></li>
-            <li><a href="#">Hoe werkt het?</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+        <?php 
+        $cmenuOptions = array( 
+            'theme_location' => 'cbv_main_menu', 
+            'menu_class' => 'clearfix reset-list',
+            'container' => '',
+            'container_class' => ''
+          );
+        wp_nav_menu( $cmenuOptions ); 
+        ?>
         </nav>
         <div class="xs-social">
           <div class="hdr-social">
+            <?php if(!empty($smedias)):  ?>
             <ul class="reset-list clearfix">
+              <?php foreach($smedias as $smedia): ?>
               <li>
-                <a href="#">
-                  <i>
-                    <svg class="xs-facebook-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="#D3D3D3">
-                      <use xlink:href="#xs-facebook-icon-svg"></use>
-                    </svg> 
-                  </i>
+                <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                    <?php echo $smedia['icon']; ?>
                 </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <svg class="xs-twiter-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="#D3D3D3">
-                      <use xlink:href="#xs-twiter-icon-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <svg class="xs-instagram-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="#D3D3D3">
-                      <use xlink:href="#xs-instagram-icon-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>
-                    <svg class="xs-linkedin-icon-svg" width="25" height="24" viewBox="0 0 25 24" fill="#D3D3D3">
-                      <use xlink:href="#xs-linkedin-icon-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </li>
+             </li>
+             <?php endforeach; ?>
             </ul>
+            <?php endif; ?>
           </div>
         </div>
         <div class="xs-sign-up">
           <div class="xs-hdr-sign-up">
-            <a href="#">
+            <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
               <i>
                 <svg class="xs-login-icon-svg" width="16" height="18" viewBox="0 0 16 18" fill="#FFFFFF">
                   <use xlink:href="#xs-login-icon-svg"></use>
@@ -230,7 +233,7 @@
               </i>
               <strong>Account/login</strong>
             </a>
-            <a href="#">
+            <a href="<?php echo wc_get_cart_url(); ?>">
               <i>
                 <svg class="xs-cart-icon-svg" width="18" height="17" viewBox="0 0 18 17" fill="#FFFFFF">
                   <use xlink:href="#xs-cart-icon-svg"></use>
@@ -238,14 +241,6 @@
               </i>
               <strong>winkelwagen</strong>
             </a>
-          </div>
-        </div>
-      </div>
-      <div class="xs-menu-bar">
-        <div class="xs-menu-bar-inr">
-          <div class="xs-menu-bar-close">
-            <span><img src="assets/images/xs-close-icon.png"></span>
-            <strong>SLUITEN</strong>
           </div>
         </div>
       </div>
