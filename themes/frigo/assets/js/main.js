@@ -298,28 +298,21 @@ if( $('.tabs').length ){
 }
 
 var allPanels = $('.faq-accordion-dsc').hide();
-$('.faq-accordion-controller').removeClass('remove-border');
   $('.faq-accordion-controller span').click(function() {
         allPanels.slideUp();
         $('.faq-accordion-controller span').removeClass('faq-accordion-active');
-        $('.faq-accordion-controller').removeClass('remove-border');
-        $(this).next().slideDown();
-        $(this).addClass('faq-accordion-active');
-        $(this).parent().next().addClass('remove-border');
-        return false;
+        if( $(this).next().is(':visible') ){
+          $(this).next().slideUp();
+          $(this).removeClass('faq-accordion-active');
+      }else{
+          $(this).next().slideDown();
+          $(this).addClass('faq-accordion-active');
+      }
+      return false;
 });
 
-/*$('li.menu-item-has-children > a').on('click', function(){
-    $(this).toggleClass('xs-sub-menu-expend');
-    $('.sub-menu').slideToggle(300);
-});
 
-$('.xs-humbergur-btn').on('click', function(){
-    $('.xs-pop-up-menu').show();
-});
-$('.xs-menu-bar-close').on('click', function(){
-    $('.xs-pop-up-menu').hide();
-});*/
+
 
 if (windowWidth <= 1199) {
   $('.xs-humbergur-btn').on('click', function(e){

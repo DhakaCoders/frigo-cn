@@ -109,9 +109,7 @@
     width: 10px;
     height: 3px;
 }
-.faq-accordion-dsc.active{
-	display: block !important;
-}
+
 
 .faq-pagi-ctlr{
 	padding-top: 45px;
@@ -129,38 +127,55 @@
     padding-bottom: 0;
 }
 .faq-pagi-ctlr ul li a.prev,
-.faq-pagi-ctlr ul li a.next {
+.faq-pagi-ctlr ul li a.next{
     height: 32px !important;
     font-size: 12px !important;
     line-height: 10px !important; 
     font-weight: 400 !important;
     color: #717171 !important;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
-.faq-pagi-ctlr ul li a.prev.page-number:hover,
-.faq-pagi-ctlr ul li a.next.page-number:hover{
+.faq-pagi-ctlr ul li a.prev.page-numbers:hover,
+.faq-pagi-ctlr ul li a.next.page-numbers:hover{
 	border-color:#fff;
 	color: #A61916 !important;
 }
 .faq-pagi-ctlr ul li a.next {
-    margin-left: 50px;
+    margin-left: 40px;
     width: 70px !important;
 }
 .faq-pagi-ctlr ul li a.prev {
-    margin-right: 55px;
+    margin-right: 48px;
     width: 60px !important;
 }
+.faq-pagi-ctlr ul li a.prev i,
 .faq-pagi-ctlr ul li a.next i{
-	padding-left: 10px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 }
 .faq-pagi-ctlr ul li a.prev i{
-	padding-right: 10px;
+	left: 0;
+}
+.faq-pagi-ctlr ul li a.next i{
+	right: 0px;
+}
+.faq-pagi-ctlr ul li a.next:hover i{
+    right: -3px;
+}
+.faq-pagi-ctlr ul li:hover a.prev i{
+    left: -3px;
 }
 .faq-pagi-ctlr ul li a.prev:hover i svg,
 .faq-pagi-ctlr ul li a.next:hover i svg{
 	fill:#A61916; 
 }
-.faq-pagi-ctlr ul li a.page-number,
-.faq-pagi-ctlr ul li span.page-number{
+.faq-pagi-ctlr ul li a.page-numbers,
+.faq-pagi-ctlr ul li span.page-numbers{
     display: inline-block;
     height: 32px;
     width: 32px;
@@ -173,10 +188,10 @@
     justify-content: center;
     border:2px solid#fff;
 }
-.faq-pagi-ctlr ul li span.page-number:hover,
-.faq-pagi-ctlr ul li a.page-number:hover,
-.faq-pagi-ctlr ul li a.page-number.current,
-.faq-pagi-ctlr ul li span.page-number.current{
+.faq-pagi-ctlr ul li span.page-numbers:hover,
+.faq-pagi-ctlr ul li a.page-numbers:hover,
+.faq-pagi-ctlr ul li a.page-numbers.current,
+.faq-pagi-ctlr ul li span.page-numbers.current{
 	border-color: #A61916;
 	color: #A61916;
 }
