@@ -2,7 +2,7 @@
 remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
-//remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 
 
 add_action('woocommerce_before_main_content', 'get_custom_wc_output_content_wrapper', 11);
@@ -171,7 +171,7 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
   // Return the number of products you wanna show per page.
-  $cols = 2;
+  $cols = 3;
   return $cols;
 }
 
@@ -215,7 +215,7 @@ add_action('woocommerce_single_product_summary', 'add_custom_box_product_summary
 if (!function_exists('add_custom_box_product_summary')) {
     function add_custom_box_product_summary() {
         global $product, $woocommerce, $post;
-        $sh_desc = $product->get_short_description();
+        $sh_desc = $product->get_description();
         $sh_desc = !empty($sh_desc)?$sh_desc:'';
 
            echo '<div class="summary-hdr hide-md">';
@@ -234,20 +234,16 @@ if (!function_exists('add_custom_box_product_summary')) {
                 <li>Levering in groot Aalst</li>
               </ul>';
             echo '</div>';
-            echo '<div class="pro-summary-content">
-              <h6>Inhoud</h6>
-              <ul>
-                <li>Lamskotelet,</li>
-                <li>Hamburger VITA 100% Rund</li>
-                <li>Chateau briand met lookboter</li>
-                <li>Indische Kip Saté</li>
-                <li>Brasvar gyros</li>
-                <li>Kwarteleitjes met garnituur</li>
-              </ul>';
+            $get_inhoud = get_field('inhoud', $product->get_id() );
+            if( !empty($get_inhoud) ){
+                echo '<div class="pro-summary-content">';
+                echo wpautop( $get_inhoud );
+                echo '</div>';
+            }
+            echo '<div class="woocommerce-tabs">';
+             wc_get_template(  'single-product/tabs/tabs.php' ); 
             echo '</div>';
-            echo '<div class="woocommerce-tabs">
-              <img src="'.THEME_URI.'/assets/images/static-img-02.png">';
-            echo '</div>';
+
     }
 }
 add_action('woocommerce_before_add_to_cart_quantity', 'cbv_start_div_single_price');
@@ -259,6 +255,58 @@ function cbv_get_single_price(){
     global $product;
     echo $product->get_price_html();
     echo '</div>';
+}
+
+add_filter( 'woocommerce_product_tabs', 'woo_custom_product_tabs' );
+function woo_custom_product_tabs( $tabs ) {
+
+    // 1) Removing tabs
+    unset( $tabs['description'] );              // Remove the description tab
+    // unset( $tabs['reviews'] );               // Remove the reviews tab
+    unset( $tabs['additional_information'] );   // Remove the additional information tab
+
+    //ACF Description tab
+    $tabs['attrib_desc_tab'] = array(
+        'title'     => __( 'Extra info', 'woocommerce' ),
+        'priority'  => 1,
+        'callback'  => 'woo_extrainfo_tab_content'
+    );
+
+    $tabs['qty_pricing_tab'] = array(
+        'title'     => __( 'Allergenen', 'woocommerce' ),
+        'priority'  => 2,
+        'callback'  => 'woo_allergenen_tab_content'
+    );
+
+    return $tabs;
+
+}
+
+// New Tab contents
+
+function woo_extrainfo_tab_content() {
+    global $product;
+    $extra_info = get_field('extra_info', $product->get_id() );
+    if( !empty($extra_info) ){
+        echo '<div class="extra-info-content">';
+        echo wpautop( $extra_info );
+        echo '</div>';
+    }
+}
+function woo_allergenen_tab_content() {
+    global $product;
+    $allergenen = get_field('allergenen', $product->get_id() );
+    if( !empty($allergenen) ){
+        echo '<div class="allergenen-content">';
+        echo wpautop( $allergenen );
+        echo '</div>';
+    }
+}
+
+add_filter( 'woocommerce_product_tabs', 'woo_rename_tab', 98);
+function woo_rename_tab($tabs) {
+$tabs['reviews']['title'] = 'Klanten reviews';
+return $tabs;
 }
 
 /**

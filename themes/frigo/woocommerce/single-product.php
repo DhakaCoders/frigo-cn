@@ -27,6 +27,10 @@ get_template_part('templates/breadcrumbs');
     <div class="row">
       <div class="col-md-12">
         <div class="fl-product clearfix">
+          <div class="show-md summary-entry-hdr-md">
+            <h1 class="product_title entry-title"><?php echo get_the_title(); ?></h1>
+            <strong><?php echo get_the_excerpt(); ?></strong>
+          </div>
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
