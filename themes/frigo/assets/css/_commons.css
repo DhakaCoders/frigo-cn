@@ -202,7 +202,9 @@ ol.reset-list,
 ul.sub-menu,
 .fl-pagi-ctlr ul,
 .reset-slect ul,
-.page-breadcrumbs ul{
+.page-breadcrumbs ul,
+.faq-pagi-ctlr ul,
+.bootstrap-select ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -211,7 +213,9 @@ ul.sub-menu,
 ul.sub-menu li,
 .fl-pagi-ctlr ul li,
 .reset-slect ul li,
-.page-breadcrumbs ul li{
+.page-breadcrumbs ul li,
+.faq-pagi-ctlr ul li,
+.bootstrap-select ul li{
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -221,7 +225,9 @@ ul.sub-menu li,
 ul.sub-menu li:before,
 .fl-pagi-ctlr ul li:before,
 .reset-slect ul li:before,
-.page-breadcrumbs ul li:before{
+.page-breadcrumbs ul li:before,
+.faq-pagi-ctlr ul li:before,
+.bootstrap-select ul li:before{
 	content: none!important;
 }
 
@@ -237,14 +243,18 @@ form .bootstrap-select{
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 19px;
-	width: 100%!important;
+/*	width: 100%!important;*/
 }
-form .bootstrap-select button{
-	background: transparent;
-	border: 0;
-	color: #710023;
-	text-transform: uppercase;
-	font-size: 16px;
+form .bootstrap-select button {
+    background: transparent;
+    border: 1px solid #ddd;
+    color: #710023;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding-top: 14px;
+    line-height: 1;
 }
 form .bootstrap-select .caret{
 	border: 0;
@@ -320,6 +330,7 @@ form .dropdown-menu{
     border-radius: 0;
     box-shadow: none;
     padding: 12px 0 10px;
+    font-size: 14px;
 }
 form .dropdown-menu li{
     position: relative;
@@ -332,7 +343,7 @@ form .dropdown-menu li a{
 .dropdown-menu>.active>a, 
 .dropdown-menu>.active>a:focus, 
 .dropdown-menu>.active>a:hover{
-	background-color: #F3BF00;
+	background-color: #A61916;
 }
 
 .bootstrap-select .dropdown-toggle:focus{
