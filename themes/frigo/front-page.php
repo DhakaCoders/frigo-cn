@@ -228,9 +228,13 @@
             </div>
           </div>
           <?php endif; ?>
-          <div class="work-sec-btn">
-            <a class="fl-btn" href="#">Hoe werkt het?</a>
-          </div>
+          <?php 
+            $hoe_werktknop = get_field('hoe_werktknop', HOMEID);
+            $hwknop = $hoe_werktknop['knop'];
+            if( is_array( $hwknop ) &&  !empty( $hwknop['url'] ) ){
+                printf('<div class="work-sec-btn"><a class="fl-btn" href="%s" target="%s">%s</a></div>', $hwknop['url'], $hwknop['target'], $hwknop['title']); 
+            }
+          ?>
         </div>
         
       </div>

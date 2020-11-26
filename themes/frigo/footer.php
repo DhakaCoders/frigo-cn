@@ -225,7 +225,7 @@ if( is_array($hdlogoObj) ){
         </div>
         <div class="xs-sign-up">
           <div class="xs-hdr-sign-up">
-            <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
+            <a href="<?php echo get_permalink( get_option('wc_myaccount_page_id') ); ?>">
               <i>
                 <svg class="xs-login-icon-svg" width="16" height="18" viewBox="0 0 16 18" fill="#FFFFFF">
                   <use xlink:href="#xs-login-icon-svg"></use>

@@ -1,7 +1,7 @@
 <?php
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
-remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+//remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 
 
 add_action('woocommerce_before_main_content', 'get_custom_wc_output_content_wrapper', 11);
@@ -175,7 +175,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
 
-//add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
