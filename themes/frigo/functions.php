@@ -24,6 +24,7 @@ if( !function_exists('cbv_theme_setup') ){
         }
         add_image_size( 'hhovergrid', 574, 576, true );
         add_image_size( 'hprogrid', 364, 236, true );
+        add_image_size( 'hawgrid', 574, 420, true );
         
         // add size to media uploader
         add_filter( 'image_size_names_choose', 'cbv_custom_image_sizes' );
