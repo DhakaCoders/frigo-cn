@@ -19,8 +19,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
-
+get_header( 'shop' ); 
+get_template_part('templates/breadcrumbs');
+?>
+<section class="product-details-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="fl-product clearfix">
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
@@ -55,7 +61,11 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
-
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <?php
 get_footer( 'shop' );
 

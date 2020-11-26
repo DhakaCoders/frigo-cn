@@ -1,4 +1,5 @@
 <?php
+remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 //remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
@@ -165,16 +166,6 @@ function wc_stock_manage(){
     } 
 }
 
-/*Remove Single page Woocommerce Hooks & Filters are below*/
-
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
-
-
 add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 
 function new_loop_shop_per_page( $cols ) {
@@ -189,31 +180,6 @@ function new_loop_shop_per_page( $cols ) {
 function jk_related_products_args( $args ) {
 $args['posts_per_page'] = 8; // 4 related products
 return $args;
-}
-
-// To change add to cart text on single product page
-add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
-
-function woocommerce_custom_single_add_to_cart_text() {
-    return __( 'ADD TO BAG', 'woocommerce' ); 
-}
-
-add_action( 'woocommerce_single_product_summary', 'wc_single_product_under_cartbutton', 31 );
-function wc_single_product_under_cartbutton(){
-    echo '<div class="sharewith">SHARE WITH LOVE +</div>';
-}
-
-
-
-
-
-//custom action 'woocommerce_delivery_text' is used on add to cart button 
-
-//add_action( 'woocommerce_delivery_text', 'wc_single_free_delivery_text' );
-
-function wc_single_free_delivery_text(){
-
-    echo '<div class="free-text"><p>Free Delivery for over 50 <span>€</span></p</div>';
 }
 
 
@@ -233,6 +199,67 @@ function cbv_woocommerce_breadcrumbs() {
 }
 endif;
 
+/*Remove Single page Woocommerce Hooks & Filters are below*/
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+
+add_action('woocommerce_single_product_summary', 'add_custom_box_product_summary', 5);
+if (!function_exists('add_custom_box_product_summary')) {
+    function add_custom_box_product_summary() {
+        global $product, $woocommerce, $post;
+        $sh_desc = $product->get_short_description();
+        $sh_desc = !empty($sh_desc)?$sh_desc:'';
+
+           echo '<div class="summary-hdr hide-md">';
+            echo '<h1 class="product_title entry-title">'.$product->get_title().'</h1>';
+            echo wpautop( $sh_desc, true );
+            echo '</div>';
+            echo '<div class="price-quentity">';
+              woocommerce_template_single_add_to_cart();
+            echo '</div>';
+            echo '<div class="summary-hdr show-md">
+              <ul>
+                <li>Meer dan verwacht service</li>
+                <li>Gratis bezorging vanaf 150 euro</li>
+                <li>Geleverd in gratis koelboxen!</li>
+                <li>Scherpe prijzen</li>
+                <li>Levering in groot Aalst</li>
+              </ul>';
+            echo '</div>';
+            echo '<div class="pro-summary-content">
+              <h6>Inhoud</h6>
+              <ul>
+                <li>Lamskotelet,</li>
+                <li>Hamburger VITA 100% Rund</li>
+                <li>Chateau briand met lookboter</li>
+                <li>Indische Kip Saté</li>
+                <li>Brasvar gyros</li>
+                <li>Kwarteleitjes met garnituur</li>
+              </ul>';
+            echo '</div>';
+            echo '<div class="woocommerce-tabs">
+              <img src="'.THEME_URI.'/assets/images/static-img-02.png">';
+            echo '</div>';
+    }
+}
+add_action('woocommerce_before_add_to_cart_quantity', 'cbv_start_div_single_price');
+function cbv_start_div_single_price(){
+    echo '<div class="qty-price-wrap">';
+}
+add_action('woocommerce_after_add_to_cart_button', 'cbv_get_single_price');
+function cbv_get_single_price(){
+    global $product;
+    echo $product->get_price_html();
+    echo '</div>';
+}
 
 /**
  * Build a custom query based on several conditions

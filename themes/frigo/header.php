@@ -140,7 +140,7 @@ if( is_array($logoObj) ){
               <div class="hdr-tp-rgt-menu-contlr hide-md">
                 <div class="hdr-tp-icons-cntlr clearfix">
                 <div class="hdr-sign-up">
-                  <a href="<?php echo get_permalink( get_option('wc_myaccount_page_id') ); ?>">
+                  <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
                     <i>
                       <svg class="hdr-tp-sign-up-icon-svg" width="16" height="18" viewBox="0 0 16 18" fill="#1E1E1E">
                         <use xlink:href="#hdr-tp-sign-up-icon-svg"></use>
