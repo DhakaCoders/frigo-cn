@@ -216,25 +216,33 @@ if (!function_exists('add_custom_box_product_summary')) {
     function add_custom_box_product_summary() {
         global $product, $woocommerce, $post;
         $sh_desc = $product->get_description();
+        $get_inhoud = get_field('inhoud', $product->get_id() );
+        $product_usps = get_field('product_usps', 'options' );
         $sh_desc = !empty($sh_desc)?$sh_desc:'';
 
            echo '<div class="summary-hdr hide-md">';
             echo '<h1 class="product_title entry-title">'.$product->get_title().'</h1>';
             echo wpautop( $sh_desc, true );
+            if( $product_usps ){
+            echo '<ul>';
+                foreach( $product_usps as $product_usp ){
+                    if( !empty($product_usp['titel']) ) printf('<li>%s</li>', $product_usp['titel']);
+                }
+            echo '</ul>';
+            }
             echo '</div>';
             echo '<div class="price-quentity">';
               woocommerce_template_single_add_to_cart();
             echo '</div>';
-            echo '<div class="summary-hdr show-md">
-              <ul>
-                <li>Meer dan verwacht service</li>
-                <li>Gratis bezorging vanaf 150 euro</li>
-                <li>Geleverd in gratis koelboxen!</li>
-                <li>Scherpe prijzen</li>
-                <li>Levering in groot Aalst</li>
-              </ul>';
+            if( $product_usps ){
+            echo '<div class="summary-hdr show-md">';
+                echo '<ul>';
+                    foreach( $product_usps as $product_usp ){
+                        if( !empty($product_usp['titel']) ) printf('<li>%s</li>', $product_usp['titel']);
+                    }
+                echo '</ul>';
             echo '</div>';
-            $get_inhoud = get_field('inhoud', $product->get_id() );
+            }
             if( !empty($get_inhoud) ){
                 echo '<div class="pro-summary-content">';
                 echo wpautop( $get_inhoud );
