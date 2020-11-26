@@ -141,6 +141,7 @@
 	display: inline-block;
 	margin-bottom: 7px;
 	line-height: 1;
+	height: 14px;
 }
 .product-quantity,
 .product-quantity form.cart{
@@ -233,10 +234,14 @@
 .product-order-btn{
 	margin-left: auto;
 }
+.notSimple .product-order-btn {
+    margin-right: auto;
+    margin-left: 0;
+}
 .product-order-btn .fl-btn{
 	background: #5CB85C;
 	border-color: #5CB85C;
-	width: 120px;
+	min-width: 120px;
 	font-size: 11px;
 	padding: 14px 10px 11px 10px;
 }

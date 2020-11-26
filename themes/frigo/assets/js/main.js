@@ -171,9 +171,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 })();
 
 
-
-/*Start Noyon*/
-
 var windowLength = $(window).width();
 var containerLength = $('.container').width();
 var mainLenght = windowLength - containerLength;
@@ -190,7 +187,7 @@ $('.qty').each(function() {
 
   btnUp.click(function() {
     var oldValue = parseFloat(input.val());
-    if (oldValue <= max) {
+    if (oldValue == max) {
       var newVal = oldValue;
     } else {
       var newVal = oldValue + 1;
@@ -201,7 +198,7 @@ $('.qty').each(function() {
 
   btnDown.click(function() {
     var oldValue = parseFloat(input.val());
-    if (oldValue <= min) {
+    if (oldValue == min) {
       var newVal = oldValue;
     } else {
       var newVal = oldValue - 1;
@@ -223,6 +220,9 @@ if( $('.spotlightSlider').length ){
       speed: 300,
       slidesToShow: 3,
       slidesToScroll: 1,
+      draggable: false,
+      swipe: false,
+      touchMove: false,
       responsive: [
         {
           breakpoint: 768,
@@ -269,15 +269,6 @@ if( $('.workSlider').length ){
       ]
     });
 }
-
-
-/*Start Shoriful*/
-
-
-
-
-
-/*start milon*/
 
 /*
 ----------------------
@@ -335,12 +326,6 @@ if (windowWidth <= 1199) {
 });
 }
 
-
-
-
-
-
-/*Start Rannojit*/
 if( $('.fl-product').length ){
   $('.fl-product .woocommerce-product-gallery__wrapper').slick({
     slidesToShow: 1,
@@ -391,9 +376,5 @@ if( $('.fl-product').length ){
 }
 
 $('.woocommerce-ordering select').addClass('selectpicker');
-
-
-
-    new WOW().init();
 
 })(jQuery);

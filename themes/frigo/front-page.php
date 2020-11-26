@@ -112,27 +112,31 @@
                 <div>
                   <div class="pro-item-cntlr">
                     <?php 
+                    $person = ' ';
+                    $itemCls = 'notSimple';
                       switch ( $product->get_type() ) {
                       case "variable" :
                           $link   = get_permalink($product->get_id());
-                          $label  = apply_filters('variable_add_to_cart_text', __('Bestel nu', 'woocommerce'));
+                          $label  = apply_filters('variable_add_to_cart_text', __('Selecteer optie', 'woocommerce'));
                       break;
                       case "grouped" :
                           $link   = get_permalink($product->get_id());
-                          $label  = apply_filters('grouped_add_to_cart_text', __('Bestel nu', 'woocommerce'));
+                          $label  = apply_filters('grouped_add_to_cart_text', __('Selecteer optie', 'woocommerce'));
                       break;
                       case "external" :
                           $link   = get_permalink($product->get_id());
-                          $label  = apply_filters('external_add_to_cart_text', __('Read More', 'woocommerce'));
+                          $label  = apply_filters('external_add_to_cart_text', __('Less Meer', 'woocommerce'));
                       break;
                       default :
                           $link   = esc_url( $product->add_to_cart_url() );
                           $label  = apply_filters('add_to_cart_text', __('Bestel nu', 'woocommerce'));
+                          $person = 'Aantal personen';
+                          $itemCls = 'prsimple';
                       break;
                       }
                       $isShowWeekProdict = get_field('weekend_product', $product->get_id());
                       $gridurl = cbv_get_image_src( get_post_thumbnail_id($product->get_id()), 'hprogrid' );
-                      echo '<div class="pro-item">';
+                      echo "<div class='pro-item {$itemCls}'>";
                       echo '<div class="pro-item-img-cntlr pw-item-img-cntlr">';
                       echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
                       echo '<div class="pro-item-img dft-transition inline-bg" style="background-image: url('.$gridurl.');"></div>';
@@ -149,7 +153,7 @@
                       echo $product->get_price_html();
                       echo '<span class="pro-prize-shrt-title show-sm">pp</span>';
                       echo '</div>';
-                      echo '<strong>Aantal personen</strong>';
+                      echo "<strong>{$person}</strong>";
                       echo '<div class="product-quantity product-quantity-cntlr">';
                       if ( ! $product->is_in_stock() ) :
 
@@ -157,7 +161,7 @@
                       if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && ! $product->is_sold_individually() ) {
                       echo '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
                       echo '<div class="quantity qty"><span class="minus">-</span>';
-                      echo woocommerce_quantity_input( array(), $product, false );
+                      echo woocommerce_quantity_input( array('min_value' => 1, 'max_value' => 5), $product, false );
                       echo '<span class="plus">+</span></div>';
                       echo '<div class="product-order-btn"><button type="submit" class="fl-btn">Bestel nu</button></div>';
                       echo '</form>';

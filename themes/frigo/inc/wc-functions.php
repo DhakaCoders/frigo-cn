@@ -245,6 +245,7 @@ if (!function_exists('add_custom_box_product_summary')) {
             }
             if( !empty($get_inhoud) ){
                 echo '<div class="pro-summary-content">';
+                echo '<h6>Inhoud</h6>';
                 echo wpautop( $get_inhoud );
                 echo '</div>';
             }
@@ -254,6 +255,15 @@ if (!function_exists('add_custom_box_product_summary')) {
 
     }
 }
+
+//add_action('woocommerce_after_single_product_summary', 'frigobox_output_product_data_tabs', 5);
+function frigobox_output_product_data_tabs(){
+    global $product, $woocommerce, $post;
+    echo '<div class="woocommerce-tabs">';
+     wc_get_template(  'single-product/tabs/tabs.php' ); 
+    echo '</div>';
+}
+
 add_action('woocommerce_before_add_to_cart_quantity', 'cbv_start_div_single_price');
 function cbv_start_div_single_price(){
     echo '<div class="qty-price-wrap">';
