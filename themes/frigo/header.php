@@ -116,7 +116,7 @@ if( is_array($logoObj) ){
             <div class="hdr-tp-rgt clearfix">
               <div class="xs-menu-bar-humberger show-md">
                 <div class="xs-humbergur-btn">
-                  <span><img src="assets/images/xs-humbergar-icon.png"></span>
+                  <span><img src="<?php echo THEME_URI; ?>/assets/images/xs-humbergar-icon.png"></span>
                   <strong>Menu</strong>
                 </div>
               </div>
