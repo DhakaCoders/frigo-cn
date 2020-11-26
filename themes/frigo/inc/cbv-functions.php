@@ -88,45 +88,17 @@ function array_insert(&$array, $position, $insert_arr)
     return false;
 }
 
-/**
- * Register a custom post type called "book".
- *
- * @see get_post_type_labels() for label keys.
- */
-function wpdocs_codex_client_init() {
-    $labels = array(
-        'name'                  => _x( 'Clients', 'Post type general name', THEME_NAME ),
-        'singular_name'         => _x( 'Client', 'Post type singular name', THEME_NAME ),
-        'menu_name'             => _x( 'Clients', 'Admin Menu text', THEME_NAME ),
-        'name_admin_bar'        => _x( 'Client', 'Add New on Toolbar', THEME_NAME ),
-        'add_new'               => __( 'Add New', THEME_NAME ),
-        'add_new_item'          => __( 'Add New Client', THEME_NAME ),
-        'new_item'              => __( 'New Client', THEME_NAME ),
-        'edit_item'             => __( 'Edit Client', THEME_NAME ),
-        'view_item'             => __( 'View Client', THEME_NAME ),
-        'all_items'             => __( 'All Clients', THEME_NAME ),
-        'search_items'          => __( 'Search Clients', THEME_NAME ),
-        'parent_item_colon'     => __( 'Parent Clients:', THEME_NAME ),
-        'not_found'             => __( 'No clients found.', THEME_NAME ),
-        'not_found_in_trash'    => __( 'No clients found in Trash.', THEME_NAME )
-    );
- 
-    $args = array(
-        'labels'             => $labels,
-        'public'             => true,
-        'publicly_queryable' => true,
-        'show_ui'            => true,
-        'show_in_menu'       => true,
-        'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'client' ),
-        'capability_type'    => 'post',
-        'has_archive'        => true,
-        'hierarchical'       => false,
-        'menu_position'      => null,
-        'supports'           => array( 'title' ),
-    );
- 
-    register_post_type( 'client', $args );
+
+function wpmu_role_based_style() {
+  
+    if( isset($_GET['taxonomy']) && $_GET['taxonomy'] == 'product_cat' ){
+    ?>
+    <style>
+      .taxonomy-product_cat .form-field.term-description-wrap{display:none;}
+    </style>
+    <?php 
+    }
 }
- 
-add_action( 'init', 'wpdocs_codex_client_init' );
+
+// for back-end; comment out if you don't want to hide in back-end
+add_action( 'admin_footer', 'wpmu_role_based_style', 99 );

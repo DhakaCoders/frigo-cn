@@ -105,19 +105,21 @@ if (!function_exists('add_shorttext_below_title_loop')) {
                 $label  = apply_filters('add_to_cart_text', __('Bestel nu', 'woocommerce'));
             break;
         }
-
+        $isShowWeekProdict = get_field('weekend_product', $product->get_id());
         $gridurl = cbv_get_image_src( get_post_thumbnail_id($product->get_id()), 'pgrid' );
         echo '<div class="pro-item">';
         echo '<div class="pro-item-img-cntlr pw-item-img-cntlr">';
         echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
         echo '<div class="pro-item-img dft-transition inline-bg" style="background-image: url('.$gridurl.');"></div>';
-        echo '<div class="pro-item-highlight-text">';
-        echo '<span>Product van de week</span>';
-        echo '</div>';
+        if( $isShowWeekProdict ):
+            echo '<div class="pro-item-highlight-text">';
+            echo '<span>Product van de week</span>';
+            echo '</div>';
+        endif;
         echo '</div>';
         echo '<div class="pro-item-desc pw-item-desc">';
         echo '<h3 class="pro-item-desc-title"><a href="'.get_permalink( $product->get_id() ).'">'.get_the_title().'</a></h3>';
-        echo '<h6 class="pro-item-desc-sub-title">Vers, simpel en panklaar!</h6>';
+        echo '<h6 class="pro-item-desc-sub-title">'.get_the_excerpt().'</h6>';
         echo '<div class="product-price">';
         echo $product->get_price_html();
         echo '<span class="pro-prize-shrt-title show-sm">pp</span>';
@@ -230,3 +232,58 @@ function cbv_woocommerce_breadcrumbs() {
         );
 }
 endif;
+
+
+/**
+ * Build a custom query based on several conditions
+ * The pre_get_posts action gives developers access to the $query object by reference
+ * any changes you make to $query are made directly to the original object - no return value is requested
+ *
+ * @link https://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
+ *
+ */
+function sm_pre_get_posts( $query ) {
+    // check if the user is requesting an admin page 
+    // or current query is not the main query
+    if ( is_admin() || ! $query->is_main_query() ){
+        return;
+    }
+
+    // edit the query only when post type is 'accommodation'
+    // if it isn't, return
+    if ( !is_post_type_archive( 'product' ) ){
+        return;
+    }
+    $post_type = 'product';
+    $meta_query = array();
+    $keyword = '';
+
+    if( isset($_GET['keyword']) && !empty($_GET['keyword']) ){
+        $keyword = $_GET['keyword'];
+    }
+    // add meta_query elements
+    /*if( !empty( get_query_var( 'city' ) ) ){
+        $meta_query[] = array( 'key' => '_sm_accommodation_city', 'value' => get_query_var( 'city' ), 'compare' => 'LIKE' );
+    }
+
+    if( !empty( get_query_var( 'type' ) ) ){
+        $meta_query[] = array( 'key' => '_sm_accommodation_type', 'value' => get_query_var( 'type' ), 'compare' => 'LIKE' );
+    }
+
+    if( count( $meta_query ) > 1 ){
+        $meta_query['relation'] = 'AND';
+    }
+
+    if( count( $meta_query ) > 0 ){
+        $query->set( 'meta_query', $meta_query );
+    }*/
+
+    if( !empty( $keyword ) ){
+        $query->set('post_type', $post_type);
+        $query->set( 's', $keyword );
+        //$query->set( 'category_name', $keyword );
+    }
+    return $query;
+    
+}
+add_action( 'pre_get_posts', 'sm_pre_get_posts', 1 );

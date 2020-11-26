@@ -78,126 +78,103 @@
                 if( !empty($hproduct['beschrijving']) ) echo wpautop( $hproduct['beschrijving'] );
               ?>
             </div>
+            <?php 
+            $productIDS = $hproduct['products'];
+            if( !empty($productIDS) ){
+              $count = count($productIDS);
+              $pIDS = ( $count > 1 )? $productIDS: $productIDS;
+              $pQuery = new WP_Query(array(
+                'post_type' => 'product',
+                'posts_per_page'=> $count,
+                'post__in' => $pIDS,
+                'orderby' => 'date',
+                'order'=> 'asc',
+
+              ));
+                  
+            }else{
+              $pQuery = new WP_Query(array(
+                'post_type' => 'product',
+                'posts_per_page'=> 9,
+                'orderby' => 'date',
+                'order'=> 'desc',
+
+              ));
+            }
+            if( $pQuery->have_posts() ):
+            ?>
             <div class="spotlight-slider-cntlr">
               <div class="spotlight-silder spotlightSlider">
+                <?php 
+                  while($pQuery->have_posts()): $pQuery->the_post(); 
+                  global $product, $woocommerce, $post;
+                ?>
                 <div>
                   <div class="pro-item-cntlr">
-                    <div class="pro-item">
-                      <div class="pro-item-img-cntlr">
-                        <a class="overlay-link" href="#"></a>
-                        <div class="pro-item-img dft-transition inline-bg" style="background-image: url('assets/images/pro-item-img-001.jpg');"></div>
-                      </div>
-                      <div class="pro-item-desc">
-                        <h3 class="pro-item-desc-title"><a href="#">Feest Gourmet</a></h3>
-                        <h6 class="pro-item-desc-sub-title">Vers, simpel en panklaar!</h6>
-                        <div class="product-price">
-                          <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span> 16,01</bdi></span>
-                          <span class="pro-prize-shrt-title show-sm">pp</span>
-                        </div>
-                        <strong>Aantal personen</strong>
-                        <div class="product-quantity product-quantity-cntlr">
-                          <div class="quantity qty">
-                            <span class="minus">-</span>
-                            <input type="number" class="count" name="qty" value="1">
-                            <span class="plus">+</span>
-                          </div>
-                          <div class="product-order-btn">
-                            <a class="fl-btn" href="#">Bestel nu</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <?php 
+                      switch ( $product->get_type() ) {
+                      case "variable" :
+                          $link   = get_permalink($product->get_id());
+                          $label  = apply_filters('variable_add_to_cart_text', __('Bestel nu', 'woocommerce'));
+                      break;
+                      case "grouped" :
+                          $link   = get_permalink($product->get_id());
+                          $label  = apply_filters('grouped_add_to_cart_text', __('Bestel nu', 'woocommerce'));
+                      break;
+                      case "external" :
+                          $link   = get_permalink($product->get_id());
+                          $label  = apply_filters('external_add_to_cart_text', __('Read More', 'woocommerce'));
+                      break;
+                      default :
+                          $link   = esc_url( $product->add_to_cart_url() );
+                          $label  = apply_filters('add_to_cart_text', __('Bestel nu', 'woocommerce'));
+                      break;
+                      }
+                      $isShowWeekProdict = get_field('weekend_product', $product->get_id());
+                      $gridurl = cbv_get_image_src( get_post_thumbnail_id($product->get_id()), 'hprogrid' );
+                      echo '<div class="pro-item">';
+                      echo '<div class="pro-item-img-cntlr pw-item-img-cntlr">';
+                      echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
+                      echo '<div class="pro-item-img dft-transition inline-bg" style="background-image: url('.$gridurl.');"></div>';
+                      if( $isShowWeekProdict ):
+                          echo '<div class="pro-item-highlight-text">';
+                          echo '<span>Product van de week</span>';
+                          echo '</div>';
+                      endif;
+                      echo '</div>';
+                      echo '<div class="pro-item-desc pw-item-desc">';
+                      echo '<h3 class="pro-item-desc-title"><a href="'.get_permalink( $product->get_id() ).'">'.get_the_title().'</a></h3>';
+                      echo '<h6 class="pro-item-desc-sub-title">'.get_the_excerpt().'</h6>';
+                      echo '<div class="product-price">';
+                      echo $product->get_price_html();
+                      echo '<span class="pro-prize-shrt-title show-sm">pp</span>';
+                      echo '</div>';
+                      echo '<strong>Aantal personen</strong>';
+                      echo '<div class="product-quantity product-quantity-cntlr">';
+                      if ( ! $product->is_in_stock() ) :
+
+                      else:
+                      if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && ! $product->is_sold_individually() ) {
+                      echo '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
+                      echo '<div class="quantity qty"><span class="minus">-</span>';
+                      echo woocommerce_quantity_input( array(), $product, false );
+                      echo '<span class="plus">+</span></div>';
+                      echo '<div class="product-order-btn"><button type="submit" class="fl-btn">Bestel nu</button></div>';
+                      echo '</form>';
+                      }else{
+                          printf('<div class="product-order-btn"><a class="fl-btn" href="%s" rel="nofollow" data-product_id="%s" class="button add_to_cart_button product_type_%s">%s</a></div>', $link, $product->get_id(), $product->get_type(), $label);
+                      }
+                      endif;
+                      echo '</div>';
+                      echo '</div>';
+                      echo '</div>';
+                    ?>
                   </div>
                 </div>
-                <div>
-                  <div class="pro-item-cntlr">
-                    <div class="pro-item">
-                      <div class="pro-item-img-cntlr">
-                        <a class="overlay-link" href="#"></a>
-                        <div class="pro-item-img dft-transition inline-bg" style="background-image: url('assets/images/pro-item-img-001.jpg');"></div>
-                      </div>
-                      <div class="pro-item-desc">
-                        <h3 class="pro-item-desc-title"><a href="#">Feest Gourmet</a></h3>
-                        <h6 class="pro-item-desc-sub-title">Vers, simpel en panklaar!</h6>
-                        <div class="product-price">
-                          <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span> 16,01</bdi></span>
-                          <span class="pro-prize-shrt-title show-sm">pp</span>
-                        </div>
-                        <strong>Aantal personen</strong>
-                        <div class="product-quantity product-quantity-cntlr">
-                          <div class="quantity qty">
-                            <span class="minus">-</span>
-                            <input type="number" class="count" name="qty" value="1">
-                            <span class="plus">+</span>
-                          </div>
-                          <div class="product-order-btn">
-                            <a class="fl-btn" href="#">Bestel nu</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="pro-item-cntlr">
-                    <div class="pro-item">
-                      <div class="pro-item-img-cntlr">
-                        <a class="overlay-link" href="#"></a>
-                        <div class="pro-item-img dft-transition inline-bg" style="background-image: url('assets/images/pro-item-img-001.jpg');"></div>
-                      </div>
-                      <div class="pro-item-desc">
-                        <h3 class="pro-item-desc-title"><a href="#">Feest Gourmet</a></h3>
-                        <h6 class="pro-item-desc-sub-title">Vers, simpel en panklaar!</h6>
-                        <div class="product-price">
-                          <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span> 16,01</bdi></span>
-                          <span class="pro-prize-shrt-title show-sm">pp</span>
-                        </div>
-                        <strong>Aantal personen</strong>
-                        <div class="product-quantity product-quantity-cntlr">
-                          <div class="quantity qty">
-                            <span class="minus">-</span>
-                            <input type="number" class="count" name="qty" value="1">
-                            <span class="plus">+</span>
-                          </div>
-                          <div class="product-order-btn">
-                            <a class="fl-btn" href="#">Bestel nu</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="pro-item-cntlr">
-                    <div class="pro-item">
-                      <div class="pro-item-img-cntlr">
-                        <a class="overlay-link" href="#"></a>
-                        <div class="pro-item-img dft-transition inline-bg" style="background-image: url('assets/images/pro-item-img-001.jpg');"></div>
-                      </div>
-                      <div class="pro-item-desc">
-                        <h3 class="pro-item-desc-title"><a href="#">Feest Gourmet</a></h3>
-                        <h6 class="pro-item-desc-sub-title">Vers, simpel en panklaar!</h6>
-                        <div class="product-price">
-                          <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">€</span> 16,01</bdi></span>
-                          <span class="pro-prize-shrt-title show-sm">pp</span>
-                        </div>
-                        <strong>Aantal personen</strong>
-                        <div class="product-quantity product-quantity-cntlr">
-                          <div class="quantity qty">
-                            <span class="minus">-</span>
-                            <input type="number" class="count" name="qty" value="1">
-                            <span class="plus">+</span>
-                          </div>
-                          <div class="product-order-btn">
-                            <a class="fl-btn" href="#">Bestel nu</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <?php endwhile; ?>
               </div>
             </div>
+            <?php endif; wp_reset_postdata(); ?>
           </div>
           <?php endif; ?>
         </div>

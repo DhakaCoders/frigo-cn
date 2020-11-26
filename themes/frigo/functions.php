@@ -23,6 +23,7 @@ if( !function_exists('cbv_theme_setup') ){
             add_theme_support('category-thumbnails');
         }
         add_image_size( 'hhovergrid', 574, 576, true );
+        add_image_size( 'hprogrid', 364, 236, true );
         
         // add size to media uploader
         add_filter( 'image_size_names_choose', 'cbv_custom_image_sizes' );

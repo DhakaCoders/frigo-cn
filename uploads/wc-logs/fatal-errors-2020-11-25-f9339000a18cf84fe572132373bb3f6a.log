@@ -28,3 +28,5 @@ Stack trace:
 #6 C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\content-product.php(49): do_action('woocommerce_sho...')
 #7 C:\xampp\htdocs\2020\11\frigo\wp-includes\t in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\loop\add-to-cart.php on line 45
 
+2020-11-25T17:57:29+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\front-page.php on line 172
+
