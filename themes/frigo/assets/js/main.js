@@ -390,6 +390,10 @@ if( $('.fl-product').length ){
   });
 }
 
+$('.woocommerce-ordering select').addClass('selectpicker');
+
+
+
     new WOW().init();
 
 })(jQuery);
