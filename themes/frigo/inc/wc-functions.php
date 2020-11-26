@@ -87,28 +87,31 @@ add_action('woocommerce_shop_loop_item_title', 'add_shorttext_below_title_loop',
 if (!function_exists('add_shorttext_below_title_loop')) {
     function add_shorttext_below_title_loop() {
         global $product, $woocommerce, $post;
-
-        switch ( $product->get_type() ) {
-            case "variable" :
-                $link   = get_permalink($product->get_id());
-                $label  = apply_filters('variable_add_to_cart_text', __('Bestel nu', 'woocommerce'));
-            break;
-            case "grouped" :
-                $link   = get_permalink($product->get_id());
-                $label  = apply_filters('grouped_add_to_cart_text', __('Bestel nu', 'woocommerce'));
-            break;
-            case "external" :
-                $link   = get_permalink($product->get_id());
-                $label  = apply_filters('external_add_to_cart_text', __('Read More', 'woocommerce'));
-            break;
-            default :
-                $link   = esc_url( $product->add_to_cart_url() );
-                $label  = apply_filters('add_to_cart_text', __('Bestel nu', 'woocommerce'));
-            break;
-        }
+        $person = ' ';
+        $itemCls = 'notSimple';
+          switch ( $product->get_type() ) {
+          case "variable" :
+              $link   = get_permalink($product->get_id());
+              $label  = apply_filters('variable_add_to_cart_text', __('Selecteer optie', 'woocommerce'));
+          break;
+          case "grouped" :
+              $link   = get_permalink($product->get_id());
+              $label  = apply_filters('grouped_add_to_cart_text', __('Selecteer optie', 'woocommerce'));
+          break;
+          case "external" :
+              $link   = get_permalink($product->get_id());
+              $label  = apply_filters('external_add_to_cart_text', __('Less Meer', 'woocommerce'));
+          break;
+          default :
+              $link   = esc_url( $product->add_to_cart_url() );
+              $label  = apply_filters('add_to_cart_text', __('Bestel nu', 'woocommerce'));
+              $person = 'Aantal personen';
+              $itemCls = 'prsimple';
+          break;
+          }
         $isShowWeekProdict = get_field('weekend_product', $product->get_id());
         $gridurl = cbv_get_image_src( get_post_thumbnail_id($product->get_id()), 'pgrid' );
-        echo '<div class="pro-item">';
+        echo "<div class='pro-item {$itemCls}'>";
         echo '<div class="pro-item-img-cntlr pw-item-img-cntlr">';
         echo '<a class="overlay-link" href="'.get_permalink( $product->get_id() ).'"></a>';
         echo '<div class="pro-item-img dft-transition inline-bg" style="background-image: url('.$gridurl.');"></div>';
@@ -125,7 +128,7 @@ if (!function_exists('add_shorttext_below_title_loop')) {
         echo $product->get_price_html();
         echo '<span class="pro-prize-shrt-title show-sm">pp</span>';
         echo '</div>';
-        echo '<strong>Aantal personen</strong>';
+        echo "<strong>{$person}</strong>";
         echo '<div class="product-quantity product-quantity-cntlr">';
         if ( ! $product->is_in_stock() ) :
             
