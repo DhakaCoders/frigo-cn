@@ -241,7 +241,13 @@ while ( have_posts() ) :
 	              </div>
 	            </div>
             </div>
-		    <?php }elseif( get_row_layout() == 'troefs' ){ ?>
+      		<?php } ?>
+		<?php endwhile; ?>
+		<?php }else{ ?>
+			<?php the_content(); ?>
+		<?php } ?>
+		<?php if( is_cart() OR is_checkout() OR is_account_page() ): ?>
+		<?php else: ?>
             <div class="block-930">
             <div class="dft-newsletter-form">
               <div class="dft-newsletter-form-hdr">
@@ -278,11 +284,7 @@ while ( have_posts() ) :
               </div>
             </div>
           </div>
-      		<?php } ?>
-		<?php endwhile; ?>
-		<?php }else{ ?>
-			<?php the_content(); ?>
-		<?php } ?>
+     	 <?php endif; ?>
         </article>
       </div>
     </div>
