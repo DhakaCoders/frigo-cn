@@ -150,13 +150,13 @@ if( is_array($logoObj) ){
               </div>
               <nav class="main-nav">
                   <?php 
-                  $cmenuOptions = array( 
+                  $menuOptions = array( 
                       'theme_location' => 'cbv_main_menu', 
                       'menu_class' => 'clearfix reset-list',
                       'container' => '',
                       'container_class' => ''
                     );
-                  wp_nav_menu( $cmenuOptions ); 
+                  wp_nav_menu( $menuOptions ); 
                 ?>
               </nav>
               </div>

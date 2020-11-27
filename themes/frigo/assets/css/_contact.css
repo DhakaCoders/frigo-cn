@@ -224,8 +224,16 @@
 	background: #A61916;
 	border-color: #A61916;
 }
-
-
+.wpforms-field.wpforms-field-html {
+    margin: 0 !important;
+    text-align: center;
+    width: 100% !important;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field.wpforms-field-html p {
+    font-size: 12px;
+    line-height: 14px;
+    color: #717171;
+}
 @media(max-width: 1199px){
 	.contact-form-dsc-title{
 		font-size: 44px;

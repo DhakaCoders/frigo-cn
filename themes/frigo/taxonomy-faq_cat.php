@@ -1,7 +1,4 @@
 <?php 
-/*
-  Template Name: FAQ
-*/
 get_header(); 
 $thisID = 127;
 $category = get_queried_object();
@@ -101,6 +98,8 @@ get_template_part('templates/breadcrumbs');
               </li>
               <?php endwhile; ?>
             </ul>
+            <?php }else{?>
+            <div class="no-result"><p>Geen resultaten</p></div>
             <?php } wp_reset_postdata();?>
           </div>
           <?php if( $query->max_num_pages > 1 ): ?>
