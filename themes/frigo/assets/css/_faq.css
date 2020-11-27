@@ -113,7 +113,10 @@
 
 .faq-pagi-ctlr{
 	padding-top: 45px;
-	padding-bottom: 90px;  
+	padding-bottom: 0;  
+}
+.faq-tab-wrp{
+    padding-bottom: 90px;  
 }
 .faq-pagi-ctlr ul{
     display: flex;

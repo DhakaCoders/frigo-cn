@@ -290,8 +290,8 @@ if( $('.tabs').length ){
 
 var allPanels = $('.faq-accordion-dsc').hide();
   $('.faq-accordion-controller span').click(function() {
-        allPanels.slideUp();
-        $('.faq-accordion-controller span').removeClass('faq-accordion-active');
+        //allPanels.slideUp();
+        //$('.faq-accordion-controller span').removeClass('faq-accordion-active');
         if( $(this).next().is(':visible') ){
           $(this).next().slideUp();
           $(this).removeClass('faq-accordion-active');
