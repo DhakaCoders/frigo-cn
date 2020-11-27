@@ -10,6 +10,7 @@ while ( have_posts() ) :
 ?>
 <?php
   $form = get_field('formsec', $thisID);
+  $gvragen = get_field('gestelde_vragen', $thisID);
 ?>
 <section class="search-sec show-md">
   <div class="container">
@@ -50,18 +51,25 @@ while ( have_posts() ) :
             </div>
           </div>
           <?php endif; ?>
+          <?php if( $gvragen ): ?>
           <div class="contact-msg-wrp clearfix">
             <div class="contact-msg-dsc">
               <i>
                 <img src="<?php echo THEME_URI; ?>/assets/images/contact-msg-icon.png">
               </i>
-              <h5 class="contact-msg-dsc-title">VEEL GESTELDE VRAGEN</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac odio eget et enim egestas.</p>
+              <?php 
+                if( !empty( $gvragen['titel'] ) ) printf( '<h5 class="contact-msg-dsc-title">%s</h5>', $gvragen['titel']); 
+                if( !empty( $gvragen['tekst'] ) ) echo wpautop( $gvragen['tekst'] ); 
+              ?>
             </div>
-            <div class="contact-msg-btn">
-              <a href="#">FAQ</a>
-            </div>
+            <?php 
+              $knop = $gvragen['knop'];
+              if( !empty( $knop) ){
+                  printf('<div class="contact-msg-btn"><a href="%s">%s</a></div>', $knop, 'FAQ'); 
+              }
+            ?>
           </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
