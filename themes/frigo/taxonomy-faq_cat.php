@@ -3,7 +3,8 @@
   Template Name: FAQ
 */
 get_header(); 
-$thisID = get_the_ID();
+$thisID = 127;
+$category = get_queried_object();
 get_template_part('templates/breadcrumbs');
 ?>
 <section class="search-sec show-sm">
@@ -51,12 +52,13 @@ get_template_part('templates/breadcrumbs');
             ?>
           <div class="faq-tabs hide-sm">
             <ul class="reset-list tabs-menu">
-              <li class="active"><a href="#">Alle</a></li>
+              <li><a href="<?php echo esc_url( home_url('faq') ); ?>">Alle</a></li>
               <?php if( $terms ): ?>
                 <?php
                 foreach( $terms as $term ):
+                  $currentcat = ($term->term_id == $category->term_id)? ' class="active"':'';
                 ?>
-                  <li><a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a></li>
+                  <li<?php echo $currentcat; ?>><a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a></li>
                 <?php endforeach; ?>
               <?php endif; ?>
             </ul>
@@ -70,14 +72,23 @@ get_template_part('templates/breadcrumbs');
                   'post_status' => 'publish',
                   'posts_per_page' => 2,
                   'orderby' => 'date',
-                  'paged' => $paged
+                  'paged' => $paged,
+                  'tax_query' => array(
+                    array(
+                      'taxonomy' => 'faq_cat',
+                      'field'    => 'term_id',
+                      'terms'    => $category->term_id,
+                    )
+                  )
                 ) 
               );
+              
               if($query->have_posts()){
+                
             ?>
             <ul class="clearfix reset-list">
               <?php
-                while($query->have_posts()): $query->the_post();
+                while($query->have_posts()): $query->the_post();  
               ?> 
               <li>
                 <div class="faq-accordion-controller">

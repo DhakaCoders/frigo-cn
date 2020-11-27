@@ -154,6 +154,17 @@ if( !function_exists('cbv_custom_both_breadcrump')){
             }
     }
 }
+
+function searchfilter($query) {
+    if (is_tax('faq_cat') && $query->is_main_query() && !is_admin() ) {
+        $query->set('post_type',array('faqs'));
+        $query->set( 'posts_per_page', 2 );
+        $query->set( 'orderby', 'modified' );
+    }
+return $query;
+}
+ 
+add_filter('pre_get_posts','searchfilter');
 /**
 Debug->>
 */
