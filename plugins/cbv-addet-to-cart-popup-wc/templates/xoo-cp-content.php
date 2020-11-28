@@ -41,8 +41,8 @@ else{
 
 
 //Quantity input
-$max_value = apply_filters( 'woocommerce_quantity_input_max', $_product->get_max_purchase_quantity(), $_product );
-$min_value = apply_filters( 'woocommerce_quantity_input_min', $_product->get_min_purchase_quantity(), $_product );
+$max_value = apply_filters( 'woocommerce_quantity_input_max', product_max_qty($product_id), $_product );
+$min_value = apply_filters( 'woocommerce_quantity_input_min', product_min_qty($product_id), $_product );
 $step      = apply_filters( 'woocommerce_quantity_input_step', 1, $_product );
 $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'woocommerce_stock_amount', 'intval' ) ? '[0-9]*' : '' );
 
@@ -50,30 +50,40 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
 
 
 
-<table class="xoo-cp-pdetails clearfix">
-	<tr data-xoo_cp_key="<?php echo $cart_item_key; ?>">
-		<td class="xoo-cp-remove"><span class="xoo-cp-icon-cross xoo-cp-remove-pd"></span></td>
-		<td class="xoo-cp-pimg"><a href="<?php echo  $product_permalink; ?>"><?php echo $thumbnail; ?></a></td>
-		<td class="xoo-cp-ptitle"><a href="<?php echo  $product_permalink; ?>"><?php echo $product_name; ?></a>
+<div class="xoo-cp-pdetails clearfix">
+	<div class="container" data-xoo_cp_key="<?php echo $cart_item_key; ?>">
+		<div class="row">
+			<div class="col-3">
+				<div class="xoo-cp-pimg"><a href="<?php echo  $product_permalink; ?>"><?php echo $thumbnail; ?></a></div>
+			</div>
+			<div class="col-5">
+				<div class="xoo-cp-ptitle">
+					<a href="<?php echo  $product_permalink; ?>"><?php echo $product_name; ?></a>
 
-		<?php if($attributes): ?>
-			<div class="xoo-cp-variations"><?php echo $attributes; ?></div>
-		<?php endif; ?>
+				<?php if($attributes): ?>
+					<div class="xoo-cp-variations"><?php echo $attributes; ?></div>
+				<?php endif; ?>
+					<div class="xoo-cp-pqty">
+						<?php if ( $_product->is_sold_individually() || !$xoo_cp_gl_qtyen_value ): ?>
+							<span><?php echo $cart_item['quantity']; ?></span>				
+						<?php else: ?>
+							<div class="xoo-cp-qtybox">
+							<span class="xcp-minus xcp-chng">-</span>
+							<input type="number" class="xoo-cp-qty" max="<?php esc_attr_e( 0 < $max_value ? $max_value : '' ); ?>" min="<?php esc_attr_e($min_value); ?>" step="<?php echo esc_attr_e($step); ?>" value="<?php echo $cart_item['quantity']; ?>" pattern="<?php esc_attr_e( $pattern ); ?>">
+							<span class="xcp-plus xcp-chng">+</span></div>
+						<?php endif; ?>
+						<span class="xoo-cp-pprice"><?php echo  $product_price; ?></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-4">
+			<div class="product-order-btn">
+				<a class="fl-btn" href="<?php echo wc_get_checkout_url(); ?>"><?php _e('afrekenen','added-to-cart-popup-woocommerce'); ?></a>
+				<a class="fl-btn"><?php _e('Winkel verder','added-to-cart-popup-woocommerce'); ?></a>
+			</div>
+			</div>
+		</div>
 
-		<td class="xoo-cp-pprice"><?php echo  $product_price; ?></td>
-
-
-		<td class="xoo-cp-pqty">
-			<?php if ( $_product->is_sold_individually() || !$xoo_cp_gl_qtyen_value ): ?>
-				<span><?php echo $cart_item['quantity']; ?></span>				
-			<?php else: ?>
-				<div class="xoo-cp-qtybox">
-				<span class="xcp-minus xcp-chng">-</span>
-				<input type="number" class="xoo-cp-qty" max="<?php esc_attr_e( 0 < $max_value ? $max_value : '' ); ?>" min="<?php esc_attr_e($min_value); ?>" step="<?php echo esc_attr_e($step); ?>" value="<?php echo $cart_item['quantity']; ?>" pattern="<?php esc_attr_e( $pattern ); ?>">
-				<span class="xcp-plus xcp-chng">+</span></div>
-			<?php endif; ?>
-		</td>
-	</tr>
-</table>
-<div class="xoo-cp-ptotal"><span class="xcp-totxt"><?php _e('Total','added-to-cart-popup-woocommerce');?> : </span><span class="xcp-ptotal"><?php echo $product_subtotal; ?></span></div>
+	</div>
+</div>
 

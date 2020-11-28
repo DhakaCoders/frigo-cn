@@ -396,11 +396,11 @@ function xoo_cp_gl_resetbtn_cb(){
 //Style Options Callback
 
 //Popup Width
-$xoo_cp_sy_pw_value = sanitize_text_field(get_option('xoo-cp-sy-pw','650'));
+$xoo_cp_sy_pw_value = sanitize_text_field(get_option('xoo-cp-sy-pw','925'));
 function xoo_cp_sy_pw_cb(){
 	global $xoo_cp_sy_pw_value;
 	$html  = '<input type="number" name="xoo-cp-sy-pw" id="xoo-cp-sy-pw" value="'.$xoo_cp_sy_pw_value.'">';
-	$html .= '<label for="xoo-cp-sy-pw">Value in px (Default: 650).</label>';
+	$html .= '<label for="xoo-cp-sy-pw">Value in px (Default: 925).</label>';
 	echo $html;
 }
 
