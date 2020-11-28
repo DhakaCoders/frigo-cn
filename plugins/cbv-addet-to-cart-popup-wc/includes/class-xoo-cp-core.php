@@ -75,7 +75,7 @@ class Xoo_CP_Core{
 
 		}
 
-		return '<div class="xoo-cp-atcn xoo-cp-success"><span class="xoo-cp-icon-check"></span>'.$notice.'</div>';
+		return '';
 	}
 
 

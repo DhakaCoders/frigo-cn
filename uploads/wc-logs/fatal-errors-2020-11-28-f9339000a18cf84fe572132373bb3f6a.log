@@ -226,3 +226,7 @@ Stack trace:
 #5 C:\xampp\htdocs\2020\11\frigo\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
 #6 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\cl in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php on line 444
 
+2020-11-28T16:36:02+00:00 CRITICAL Object of class WP_Term could not be converted to string in C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\templates\xoo-cp-content.php on line 92
+
+2020-11-28T16:36:29+00:00 CRITICAL Object of class WP_Term could not be converted to string in C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\templates\xoo-cp-content.php on line 92
+
