@@ -161,7 +161,7 @@
                       if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && ! $product->is_sold_individually() ) {
                       echo '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
                       echo '<div class="quantity qty"><span class="minus">-</span>';
-                      echo woocommerce_quantity_input( array('min_value' => 1, 'max_value' => 5), $product, false );
+                      echo loop_qty_input();
                       echo '<span class="plus">+</span></div>';
                       echo '<div class="product-order-btn"><button type="submit" class="fl-btn">Bestel nu</button></div>';
                       echo '</form>';

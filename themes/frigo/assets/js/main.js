@@ -182,7 +182,7 @@ $('.qty').each(function() {
     input = spinner.find('input[type="number"]'),
     btnUp = spinner.find('.plus'),
     btnDown = spinner.find('.minus'),
-    min = 1,
+    min = input.attr('min'),
     max = input.attr('max');
 
   btnUp.click(function() {
