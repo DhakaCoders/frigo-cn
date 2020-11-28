@@ -1,12 +1,12 @@
 <?php
 /**
-* Plugin Name: WooCommerce added to cart popup (Ajax) 
-* Plugin URI: http://xootix.com
-* Author: XootiX
-* Version: 1.5
-* Text Domain: added-to-cart-popup-woocommerce
-* Domain Path: /languages
-* Author URI: http://xootix.com
+* Plugin Name: CVB WooCommerce added to cart popup (Ajax) 
+* Plugin URI: 
+* Author: Azizul
+* Version: 1.0.0
+* Text Domain: cbv-addet-to-cart-popup
+* Domain Path: 
+* Author URI: 
 * Description: WooCommerce add to cart popup displays popup when item is added to cart without refreshing page.
 **/
 
@@ -15,11 +15,11 @@ if(!defined('ABSPATH')){
 	return; 	
 }
 
-$xoo_cp_version = 1.5;
+$xoo_cp_version = 1.0;
 
 define("XOO_CP_PATH", plugin_dir_path(__FILE__));
 define("XOO_CP_URL", plugins_url('',__FILE__));
-define("XOO_CP_VERSION",1.5);
+define("XOO_CP_VERSION",1.0);
 
 
 //Admin Settings

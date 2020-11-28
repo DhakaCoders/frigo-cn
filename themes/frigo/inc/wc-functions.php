@@ -152,6 +152,7 @@ if (!function_exists('add_shorttext_below_title_loop')) {
 }
 
 function loop_qty_input(){
+
     global $product;
     $qty_input = woocommerce_quantity_input( array(
         'min_value'   => apply_filters( 'woocommerce_quantity_input_min', product_min_qty(), $product ),
@@ -450,12 +451,13 @@ function product_min_qty($product_id = ''){
     }
     return $get_min_purchase_qty;
 }
-function product_max_qty($product_id){
+function product_max_qty($product_id = ''){
     global $product;
     if( !empty($product_id) )
         $get_id = $product_id;
     else
         $get_id = $product->get_id();
+    
     $maxQty = get_post_meta( $get_id, 'product_max_qty', true );
     if( !empty($maxQty) && $maxQty > 0 ){
         $get_max_purchase_qty = $maxQty;
