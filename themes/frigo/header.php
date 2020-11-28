@@ -8,6 +8,7 @@
   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
   <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
   <?php } ?>
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
