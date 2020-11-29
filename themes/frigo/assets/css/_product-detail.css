@@ -122,6 +122,25 @@
 }
 
 
+.fl-product  .single_variation_wrap{
+	background: #F6F6F6;
+	padding: 25px 30px 30px;
+}
+
+.fl-product .qty-price-wrap:after,
+.fl-product .qty-price-wrap:before{
+	content: "";
+	display: table;
+	clear: both;
+}
+.fl-product .qty-price-wrap{
+	display: flex;
+}
+.fl-product .qty-price-wrap .woocommerce-Price-amount.amount{
+	margin-left: auto;
+}
+
+
 
 
 @media(max-width: 1499px){
