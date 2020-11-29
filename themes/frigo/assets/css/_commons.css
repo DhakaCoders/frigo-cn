@@ -204,7 +204,8 @@ ul.sub-menu,
 .reset-slect ul,
 .page-breadcrumbs ul,
 .faq-pagi-ctlr ul,
-.bootstrap-select ul{
+.bootstrap-select ul,
+.woocommerce-tabs ul.tabs{
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -215,7 +216,8 @@ ul.sub-menu li,
 .reset-slect ul li,
 .page-breadcrumbs ul li,
 .faq-pagi-ctlr ul li,
-.bootstrap-select ul li{
+.bootstrap-select ul li,
+.woocommerce-tabs ul.tabs li{
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -227,7 +229,8 @@ ul.sub-menu li:before,
 .reset-slect ul li:before,
 .page-breadcrumbs ul li:before,
 .faq-pagi-ctlr ul li:before,
-.bootstrap-select ul li:before{
+.bootstrap-select ul li:before,
+.woocommerce-tabs ul.tabs li:before{
 	content: none!important;
 }
 
