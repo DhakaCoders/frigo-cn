@@ -375,6 +375,6 @@ if( $('.fl-product').length ){
   });
 }
 
-$('.woocommerce-ordering select').addClass('selectpicker');
+$('.woocommerce-ordering select, .woocommerce div.product form.cart .variations select').addClass('selectpicker');
 
 })(jQuery);

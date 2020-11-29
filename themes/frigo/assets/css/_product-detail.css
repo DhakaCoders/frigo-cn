@@ -118,12 +118,35 @@
 .fl-product .woocommerce-tabs .woocommerce-tabs{
 	padding: 45px 0 0 0;
 	margin-top: 30px;
+	border-top: 1px solid #F6F6F6;
 }
 
 
-.fl-product  .single_variation_wrap{
+.woocommerce .fl-product div.product .woocommerce-tabs ul.tabs::before{
+	content: none;
+}
+.woocommerce .fl-product div.product .woocommerce-tabs ul.tabs li{
+	margin: 0;
+}
+.fl-product  .single_variation_wrap,
+.fl-product .price-quentity{
 	background: #F6F6F6;
 	padding: 25px 30px 30px;
+}
+.woocommerce .fl-product div.product form.cart{
+	margin: 0;
+}
+.fl-product form.cart{
+	display: flex;
+}
+
+.fl-product form.cart.variations_form{
+	display: block;
+}
+
+
+.fl-product form.cart.variations_form .single_variation_wrap{
+	padding: 0;
 }
 
 .fl-product .cart-btn-qty:after,
@@ -217,6 +240,18 @@
 .woocommerce .fl-product div.product form.cart .button:hover{
 	background: transparent!important;
 	color: #5CB85C!important;
+}
+
+.woocommerce .fl-product table.variations tbody tr{
+
+}
+
+.woocommerce .fl-product table.variations tbody tr label {
+	margin-bottom: 0;
+	padding-top: 5px;
+	min-width: 50px;
+	font-weight: 700;
+	font-size: 15px;
 }
 
 
