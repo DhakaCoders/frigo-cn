@@ -7,8 +7,8 @@
 	background: #5CB85C!important;
 	color: #fff!important;
 	text-align: center;
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 11px;
+	line-height: 14px;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -22,8 +22,8 @@
 }
 #wccart-wrapper .coupon button.button,
 .woocommerce table.cart td.actions .button{
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 11px;
+	line-height: 14px;
 	text-align: center;
 	text-transform: uppercase;
 	min-height: 52px;
