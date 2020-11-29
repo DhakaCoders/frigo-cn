@@ -258,7 +258,6 @@ if (!function_exists('add_custom_box_product_summary')) {
             }
             if( !empty($get_inhoud) ){
                 echo '<div class="pro-summary-content">';
-                echo '<h6>Inhoud</h6>';
                 echo wpautop( $get_inhoud );
                 echo '</div>';
             }
@@ -279,11 +278,13 @@ function frigobox_output_product_data_tabs(){
 
 add_action('woocommerce_before_add_to_cart_quantity', 'cbv_start_div_single_price');
 function cbv_start_div_single_price(){
-    echo '<div class="qty-price-wrap">';
+    echo '<div class="cartbtn-wrap"><strong>Aantal personen</strong><div class="cart-btn-qty">';
 }
 add_action('woocommerce_after_add_to_cart_button', 'cbv_get_single_price');
 function cbv_get_single_price(){
     global $product;
+    echo '</div></div>';
+    echo '<div class="qty-price-wrap">';
     echo $product->get_price_html();
     echo '</div>';
 }
