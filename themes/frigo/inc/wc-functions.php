@@ -136,7 +136,7 @@ if (!function_exists('add_shorttext_below_title_loop')) {
             if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && ! $product->is_sold_individually() ) {
             echo '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
             echo '<div class="quantity qty"><span class="minus">-</span>';
-            echo woocommerce_quantity_input( array(), $product, false );
+            echo loop_qty_input();
             echo '<span class="plus">+</span></div>';
             echo '<div class="product-order-btn"><button type="submit" class="fl-btn">Bestel nu</button></div>';
             echo '</form>';
@@ -151,6 +151,16 @@ if (!function_exists('add_shorttext_below_title_loop')) {
     }
 }
 
+function loop_qty_input(){
+
+    global $product;
+    $qty_input = woocommerce_quantity_input( array(
+        'min_value'   => apply_filters( 'woocommerce_quantity_input_min', product_min_qty(), $product ),
+        'max_value'   => apply_filters( 'woocommerce_quantity_input_max', product_max_qty(), $product ),
+        'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : product_min_qty(), // WPCS: CSRF ok, input var ok.
+    ) );
+    return $qty_input;
+}
 
 function wc_stock_manage(){
     global $product;
@@ -248,7 +258,6 @@ if (!function_exists('add_custom_box_product_summary')) {
             }
             if( !empty($get_inhoud) ){
                 echo '<div class="pro-summary-content">';
-                echo '<h6>Inhoud</h6>';
                 echo wpautop( $get_inhoud );
                 echo '</div>';
             }
@@ -269,11 +278,13 @@ function frigobox_output_product_data_tabs(){
 
 add_action('woocommerce_before_add_to_cart_quantity', 'cbv_start_div_single_price');
 function cbv_start_div_single_price(){
-    echo '<div class="qty-price-wrap">';
+    echo '<div class="cartbtn-wrap"><strong>Aantal personen</strong><div class="cart-btn-qty">';
 }
 add_action('woocommerce_after_add_to_cart_button', 'cbv_get_single_price');
 function cbv_get_single_price(){
     global $product;
+    echo '</div></div>';
+    echo '<div class="qty-price-wrap">';
     echo $product->get_price_html();
     echo '</div>';
 }
@@ -383,3 +394,76 @@ function sm_pre_get_posts( $query ) {
     
 }
 add_action( 'pre_get_posts', 'sm_pre_get_posts', 1 );
+
+add_action( 'woocommerce_product_options_inventory_product_data', 'misha_adv_product_options');
+function misha_adv_product_options(){
+ 
+    echo '<div class="options_group">';
+ 
+    woocommerce_wp_text_input( array(
+        'id'      => 'product_min_qty',
+        'value'   => get_post_meta( get_the_ID(), 'product_min_qty', true ),
+        'label'   => __('Product Min Quantity', 'woocommerce'),
+        'type' => 'number',
+        'custom_attributes' => array(
+        'step' => 'any',
+        'min' => '0'
+        )
+    ));
+     woocommerce_wp_text_input( array(
+        'id'      => 'product_max_qty',
+        'value'   => get_post_meta( get_the_ID(), 'product_max_qty', true ),
+        'label'   => __('Product Max Quantity', 'woocommerce'),
+        'type' => 'number',
+        'custom_attributes' => array(
+        'step' => 'any',
+        )
+    ));
+    echo '</div>';
+ 
+}
+ 
+ 
+add_action( 'woocommerce_process_product_meta', 'misha_save_fields', 10, 2 );
+function misha_save_fields( $id, $post ){
+ 
+    //if( !empty( $_POST['super_product'] ) ) {
+        update_post_meta( $id, 'product_min_qty', $_POST['product_min_qty'] );
+        update_post_meta( $id, 'product_max_qty', $_POST['product_max_qty'] );
+    //} else {
+    //  delete_post_meta( $id, 'super_product' );
+    //}
+ 
+}
+
+
+function product_min_qty($product_id = ''){
+    global $product;
+    if( !empty($product_id) )
+        $get_id = $product_id;
+    else
+        $get_id = $product->get_id();
+
+    $minQty = get_post_meta( $get_id, 'product_min_qty', true );
+    if( !empty($minQty) && $minQty > 0 ){
+        $get_min_purchase_qty = $minQty;
+    }else{
+        $get_min_purchase_qty = $product->get_min_purchase_quantity();
+    }
+    return $get_min_purchase_qty;
+}
+function product_max_qty($product_id = ''){
+    global $product;
+    if( !empty($product_id) )
+        $get_id = $product_id;
+    else
+        $get_id = $product->get_id();
+    
+    $maxQty = get_post_meta( $get_id, 'product_max_qty', true );
+    if( !empty($maxQty) && $maxQty > 0 ){
+        $get_max_purchase_qty = $maxQty;
+    }else{
+        $get_max_purchase_qty = $product->get_max_purchase_quantity();
+    }
+    return $get_max_purchase_qty;
+}

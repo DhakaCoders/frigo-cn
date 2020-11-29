@@ -8,6 +8,7 @@
   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
   <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
   <?php } ?>
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -150,13 +151,13 @@ if( is_array($logoObj) ){
               </div>
               <nav class="main-nav">
                   <?php 
-                  $cmenuOptions = array( 
+                  $menuOptions = array( 
                       'theme_location' => 'cbv_main_menu', 
                       'menu_class' => 'clearfix reset-list',
                       'container' => '',
                       'container_class' => ''
                     );
-                  wp_nav_menu( $cmenuOptions ); 
+                  wp_nav_menu( $menuOptions ); 
                 ?>
               </nav>
               </div>

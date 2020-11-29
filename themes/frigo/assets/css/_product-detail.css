@@ -117,11 +117,107 @@
 
 .fl-product .woocommerce-tabs .woocommerce-tabs{
 	padding: 45px 0 0 0;
-	border-top: 1px solid #F6F6F6;
 	margin-top: 30px;
 }
 
 
+.fl-product  .single_variation_wrap{
+	background: #F6F6F6;
+	padding: 25px 30px 30px;
+}
+
+.fl-product .cart-btn-qty:after,
+.fl-product .cart-btn-qty:before{
+	content: "";
+	display: table;
+	clear: both;
+}
+.fl-product .qty-price-wrap{
+	display: flex;
+	margin-left: auto;
+	padding-top: 16px;
+}
+.fl-product .qty-price-wrap .woocommerce-Price-amount.amount{
+	margin-left: auto;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li{
+	text-transform: uppercase;
+	font-size: 11px;
+	line-height: 1;
+	font-weight: 700;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li,
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background: transparent;
+    border: none;
+}
+.woocommerce .fl-product div.product .woocommerce-tabs ul.tabs{
+	padding: 0;
+	margin-bottom: 0;
+	border: none!important;
+}
+.woocommerce .fl-product div.product .woocommerce-tabs ul.tabs li.active a{
+	color: #A61916;
+}
+.woocommerce .fl-product div.product .woocommerce-tabs ul.tabs{
+	padding-bottom: 45px;
+}
+.woocommerce .fl-product div.product .woocommerce-tabs ul.tabs li{
+	padding-right: 30px;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+.woocommerce .fl-product div.product .woocommerce-tabs ul.tabs li::after{
+	content: none;
+}
+
+.woocommerce-variation-add-to-cart {
+	display: flex;
+}
+
+
+.woocommerce .fl-product .cartbtn-wrap strong{
+	font-size: 11px;
+	line-height: 1;
+	color: #717171;
+	font-weight: 400;
+	margin-bottom: 8px;
+	display: block;
+}
+
+
+.woocommerce .qty-price-wrap bdi{
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1;
+	color: #373A3C;
+}
+
+.woocommerce .fl-product div.product form.cart div.quantity{
+	margin-right: 0;
+}
+
+.woocommerce .fl-product div.product form.cart .button {
+    margin-left: 0;
+    background: #5CB85C!important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
+    font-size: 11px;
+    line-height: 33px;
+    padding: 0;
+    min-width: 120px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 2px;
+    border: 2px solid #5CB85C!important;
+}
+.woocommerce .fl-product div.product form.cart .button:hover{
+	background: transparent!important;
+	color: #5CB85C!important;
+}
 
 
 @media(max-width: 1499px){
