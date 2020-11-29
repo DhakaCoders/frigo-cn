@@ -258,7 +258,6 @@ if (!function_exists('add_custom_box_product_summary')) {
             }
             if( !empty($get_inhoud) ){
                 echo '<div class="pro-summary-content">';
-                echo '<h6>Inhoud</h6>';
                 echo wpautop( $get_inhoud );
                 echo '</div>';
             }
