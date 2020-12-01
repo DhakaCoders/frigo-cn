@@ -61,12 +61,33 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 		</form>
 
-<?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
+<?php 
+if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : 
+	$product_usps = get_field('product_usps', 'options' );
+?>
 
 	</div>
 
 	<div class="u-column2 col-2">
-
+		<div class="frigo-signup-message">
+			<div class="signup-message-inner">
+				<h6>Nieuw bij Frigobox?</h6>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem ut morbi vitae in.</p>
+				<?php 
+				if( $product_usps ){
+				echo '<div class="summary-hdr">';
+				    echo '<ul>';
+				        foreach( $product_usps as $product_usp ){
+				            if( !empty($product_usp['titel']) ) printf('<li>%s</li>', $product_usp['titel']);
+				        }
+				    echo '</ul>';
+				echo '</div>';
+				}
+				?>
+				<a class="signup-btn" id="frigo_make_account" href="#">Maak een account aan</a>
+			</div>
+		</div>
+		<div class="frigo-register" style="display: none;">
 		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 
 		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
@@ -110,6 +131,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 
 		</form>
+		</div>
 
 	</div>
 

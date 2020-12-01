@@ -375,6 +375,13 @@ if( $('.fl-product').length ){
   });
 }
 
-$('.woocommerce-ordering select, .woocommerce div.product form.cart .variations select').addClass('selectpicker');
-
+  $('.woocommerce-ordering select, .woocommerce div.product form.cart .variations select').addClass('selectpicker');
+  if($('#frigo_make_account').length){
+    // wc myaccount page
+    $('#frigo_make_account').on('click', function(e){
+      e.preventDefault();
+      $(".frigo-signup-message").hide(300);
+      $(".frigo-register").show(300);
+    });
+  }
 })(jQuery);

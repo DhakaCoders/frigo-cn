@@ -1,0 +1,21 @@
+.signup-message-inner {
+    max-width: 334px;
+    background: #A61916;
+    color: #fff;
+    /* text-align: center; */
+    padding: 36px 30px 32px;
+}
+.dashboard-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dashboard-col {
+    padding: 10px;
+    flex: 50%;
+}
+.faq-accordion-wrp.cbvmyaccount ul li {
+    width: 100%;
+    float: left;
+    padding: 0 25px 55px 10px;
+}

@@ -110,8 +110,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 								array(
 									'input_name'   => "cart[{$cart_item_key}][qty]",
 									'input_value'  => $cart_item['quantity'],
-									'max_value'    => product_max_qty($product_id),
-									'min_value'    => product_min_qty($product_id),
+									'max_value'    => product_max_qty($product_id, $_product),
+									'min_value'    => product_min_qty($product_id, $_product),
 									'product_name' => $_product->get_name(),
 								),
 								$_product,

@@ -1,2 +1,55 @@
 2020-11-29T07:18:51+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php on line 288
 
+2020-11-29T11:02:16+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\form-login.php on line 138
+
+2020-11-29T16:35:02+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php:50
+Stack trace:
+#0 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 C:\xampp\htdocs\2020\11\frigo\wp-includes\shortcodes.php(343): WC_Shortcodes::my_account('', '', 'woocommerce_my_...')
+#6 [internal function in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php on line 50
+
+2020-11-29T16:36:18+00:00 CRITICAL Uncaught Error: Call to a member function get_checkout_fields() on null in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php:52
+Stack trace:
+#0 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 C:\xampp\htdocs\2020\11\frigo\wp-includes\shortcodes.php(343): WC_Shortcodes::my_account('', '', 'woocommerce_my_...')
+#6 [ in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php on line 52
+
+2020-11-29T16:38:00+00:00 CRITICAL Uncaught Error: Call to a member function checkout() on null in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php:51
+Stack trace:
+#0 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 C:\xampp\htdocs\2020\11\frigo\wp-includes\shortcodes.php(343): WC_Shortcodes::my_account('', '', 'woocommerce_my_...')
+#6 [internal fu in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php on line 51
+
+2020-11-29T17:51:50+00:00 CRITICAL syntax error, unexpected 'foreach' (T_FOREACH) in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php on line 58
+
+2020-11-29T17:52:10+00:00 CRITICAL Uncaught Error: Class 'WC_API_Customers' not found in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php:51
+Stack trace:
+#0 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 C:\xampp\htdocs\2020\11\frigo\wp-includes\shortcodes.php(343): WC_Shortcodes::my_account('', '', 'woocommerce_my_...')
+#6 [internal function]: d in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php on line 51
+
+2020-11-29T17:53:08+00:00 CRITICAL Uncaught Error: Call to undefined method WooCommerce::get_customer_billing_address() in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php:51
+Stack trace:
+#0 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(123): wc_get_template('myaccount/my-ac...', Array)
+#2 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-my-account.php(72): WC_Shortcode_My_Account::my_account('')
+#3 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_My_Account::output('')
+#4 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\class-wc-shortcodes.php(115): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 C:\xampp\htdocs\2020\11\frigo\wp-includes\shortcodes.php(343): WC_Shortcodes::my_account('', '', 'woocommerce_ in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\woocommerce\myaccount\my-account.php on line 51
+

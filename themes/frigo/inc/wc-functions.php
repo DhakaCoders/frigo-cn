@@ -437,12 +437,18 @@ function misha_save_fields( $id, $post ){
 }
 
 
-function product_min_qty($product_id = ''){
+function product_min_qty($product_id = '', $_product = array()){
     global $product;
-    if( !empty($product_id) )
+    if( !empty($product_id) ){
         $get_id = $product_id;
-    else
+    }
+    else{
         $get_id = $product->get_id();
+    }
+
+    if( !empty($_product) && $_product ){
+        $product = $_product;
+    }
 
     $minQty = get_post_meta( $get_id, 'product_min_qty', true );
     if( !empty($minQty) && $minQty > 0 ){
@@ -452,12 +458,18 @@ function product_min_qty($product_id = ''){
     }
     return $get_min_purchase_qty;
 }
-function product_max_qty($product_id = ''){
+function product_max_qty($product_id = '', $_product = array()){
     global $product;
-    if( !empty($product_id) )
+    if( !empty($product_id) ){
         $get_id = $product_id;
-    else
+    }
+    else{
         $get_id = $product->get_id();
+    }
+
+    if( !empty($_product) && $_product ){
+        $product = $_product;
+    }
     
     $maxQty = get_post_meta( $get_id, 'product_max_qty', true );
     if( !empty($maxQty) && $maxQty > 0 ){
@@ -467,3 +479,5 @@ function product_max_qty($product_id = ''){
     }
     return $get_max_purchase_qty;
 }
+
+include_once(THEME_DIR .'/inc/wc-manage-fields.php');
