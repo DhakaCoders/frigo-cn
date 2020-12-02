@@ -70,7 +70,7 @@
               </div>            
             </div>
             <div class="ftr-col ftr-col-4">
-              <h6><span>Contact info</span></h6>
+              <h6><span><?php _e( 'Contact info', THEME_NAME ); ?></span></h6>
               <ul class="reset-list clearfix">
                 <?php 
                   if( !empty($contact_title) ) printf('<li><strong>%s</strong></li>', $contact_title);
