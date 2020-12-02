@@ -72,14 +72,30 @@ input#coupon_code:-moz-placeholder { /* Firefox 18- */
 	padding: 20px 0;
 }
 .xoo-cp-container{
-	max-width: 672px;
+	max-width: 925px;
+	width: 100%;
 	background: #FFFFFF;
+	border: none;
+	border-radius: 0;
+	padding: 25px 0 50px!important;
 }
 .xoo-cp-container h5{
 	font-size: 27px;
 	line-height: 1;
 	margin: 0;
 	padding-bottom: 15px;
+	margin-bottom: 0;
+}
+
+.xoo-cp-pdetails-row{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-top: 1px solid #F6F6F6;
+	border-bottom: 1px solid #F6F6F6;
+	margin-bottom: 35px;
+}
+.xoo-cp-pdetails{
+	overflow: initial;
 }
 
 .xoo-cp-pdetails td.xoo-cp-ptitle{
@@ -90,8 +106,8 @@ table.xoo-cp-pdetails{
 }
 .xoo-cp-modal .xoo-cp-btns,
 .xoo-cp-modal .xoo-cp-pdetails  .xoo-cp-ptitle{
-	padding-left: 100px!important;
-	padding-right: 100px!important;
+	padding-left: 0!important;
+	padding-right: 20px!important;
 }
 .xoo-cp-modal .xoo-cp-variations .variation dt{
 	font-weight: 400;
@@ -109,6 +125,151 @@ a.xcp-btn.xoo-cp-close:hover{
 }
 a.xoo-cp-btn-vc.xcp-btn:hover{
 	opacity: .7;
+}
+
+.xoo-cp-pdetails-col-1{
+	width: 60%
+}
+.xoo-cp-pdetails-col-2{
+	width: 40%;
+}
+
+.xoo-cp-left-des{
+	position: relative;
+	padding: 0 0 0 150px;
+}
+.xoo-cp-pimg{
+	position: absolute;
+	left: 0;
+	right: 0;
+	max-width: 130px;
+}
+.xoo-cp-pimg img{
+	max-height: 108px;
+}
+.xoo-cp-ptitle{
+	padding-left: 0;
+	padding-right: 25px;
+}
+
+.xoo-cp-left-des .popup-product-title a{
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	margin: 0;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	color: #1E1E1E;
+}
+
+.xoo-cp-left-des .popup-product-title span{
+	font-size: 14px;
+	line-height: 20px;
+	display: block;
+}
+.xoo-cp-content .product-order-btn .fl-btn:firsth-child{
+	margin-left: 0;
+}
+.xoo-cp-content .product-order-btn .fl-btn{
+	max-width: 175px!important;
+	width: 100%!important;
+	height: 45px!important;
+	margin-left: 20px;
+	min-width: initial!important;
+}
+
+.xoo-cp-content .fl-btn.continue-shopping-btn{
+	background: transparent!important;
+	border: 2px solid #C7C7C7!important;
+	color: #C7C7C7!important;
+	
+}
+
+.xoo-cp-content .product-order-btn{
+	display: flex;
+	align-items: center;
+}
+
+.plr-40,
+.xoo-cp-container > h5{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+
+.xoo-cp-container .pro-item-desc-title {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.xoo-cp-container .pro-item-desc-sub-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #717171;
+}
+
+
+.xoo-cp-content .pro-item-cntlr{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.xoo-cp-content .spotlight-popup{
+	margin-left: -25px;
+	margin-right: -25px;
+}
+
+.xoo-cp-content .flex-fill{
+	flex: initial;
+	width: 33.3333%;
+}
+
+.xoo-cp-content .spotlight-popup{
+	padding-top: 10px;
+}
+
+.xoo-cp-content .pw-item-desc {
+    padding: 0;
+}
+
+.xoo-cp-content .pro-item{
+	background: #fff;
+}
+
+
+.xoo-cp-content  .product-quantity form.cart{
+	width: 100%;
+}
+.xoo-cp-content .product-order-btn{
+	margin-left: 0;
+}
+
+.xoo-cp-content .spotlight-popup .product-quantity-cntlr .product-order-btn .fl-btn{
+	margin-left: 0;
+	min-width: 120px!important;
+}
+.woocommerce a.added_to_cart{
+	color: #1E1E1E;
+}
+
+span.xoo-cp-close{
+	width: 32px;
+	height: 32px;
+	background-color: #1E1E1E;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
+	background-image: url(../images/close-icon-white.png);
+	background-position: center center;
+	background-size: 12px 12px;
+	background-repeat: no-repeat;
+	border-radius: 0;
+}
+
+
+
+.pro-item-desc .product-price{
+
+}
+.xoo-cp-icon-cross:before{
+	content: none;
 }
 .woocommerce-message,
 .woocommerce-info {
@@ -337,8 +498,8 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 @media(max-width: 767px){
 
 	.xoo-cp-modal .xoo-cp-btns, .xoo-cp-modal .xoo-cp-pdetails .xoo-cp-ptitle {
-	    padding-left: 25px!important;
-	    padding-right: 25px!important;
+	    padding-left: 0!important;
+		padding-right: 20px!important;
 	}
 	body.woocommerce-order-received .woocommerce ul.order_details li{
 		width: 50%;

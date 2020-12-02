@@ -16,5 +16,8 @@
     </div>
     <div class="pro-ovrvw-accrdon-row-btm">
     </div>
+<?php if ( is_active_sidebar( 'shop-widget' ) ) : ?>
+    <?php dynamic_sidebar( 'shop-widget' ); ?>
+<?php endif; ?>
   </div>
 </div>
