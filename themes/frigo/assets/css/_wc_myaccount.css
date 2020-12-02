@@ -95,6 +95,8 @@
 .particular-form-submit-btn{
     width: 100%;
     padding-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 0!important;
 }
 .particular-form form .particular-form-submit-btn button{
     margin-left: 0!important;
@@ -150,4 +152,19 @@
 
 .cbvmyaccount{
     padding-top: 75px;
+}
+
+.myac-pro-grd-img{
+    max-width: 90px;
+    width: 100%;
+}
+
+.myac-pro-grds{
+    display: flex;
+    margin: 0 -15px;
+}
+
+.myac-pro-grd-item{
+    width: 50%;
+    padding: 0 15px;
 }

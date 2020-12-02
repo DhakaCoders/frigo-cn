@@ -95,7 +95,7 @@ global $woocommerce;
 						</a>
 
 						<time class="my-ac-time" datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created(), 'd.m.Y' ) ); ?></time>
-
+						<p>Quam nunc massa scelerisque ultrices </p>
 						<?php 
 						echo "<div class='order-status'>";
 						echo "<label>Status:</label> ";
@@ -108,9 +108,52 @@ global $woocommerce;
 						?>
 	                  <span></span>
 	                  <div class="faq-accordion-dsc">
-	                    <p>Quam nunc massa scelerisque ultrices viverra aliquet diam tristique aliquam. Pharetra aliquet mattis laoreet cras. Mi tincidunt fames nunc, feugiat nunc, nullam sed <a href="#">commodo ante</a>. Nibh pharetra ullamcorper tempor at viverra scelerisque feugiat. Lectus nunc facilisis vulputate a ridiculus a quam bibendum eu.</p> 
+	                    <div class="myac-pro-grds">
+	                    	<div class="myac-pro-grd-item">
+	                    		<div class="myac-pro-grd-item-inr">
+	                    			<div class="myac-pro-grd-img">
+	                    				<img src="<?php echo THEME_URI;?>/assets/images/product-img-full-01.jpg">
+	                    			</div>
+	                    			<h5>Feest Gourmet</h5>
+	                    			<p>Pulvinar convallis enim lacus</p>
 
-	                    <p>Facilisi tristique in sed pellentesque ipsum at scelerisque. Habitant augue dictumst non at. Faucibus lorem ornare netus bibendum.</p>
+	                    			<div class="product-price">
+	                    				<span class="woocommerce-Price-amount amount">
+	                    					<del>
+	                    						<span class="woocommerce-Price-currencySymbol">€</span>16,01
+	                    					</del>
+	                    				</span>
+	                    				<span class="woocommerce-Price-amount amount">
+	                    					<bdi>
+	                    						<span class="woocommerce-Price-currencySymbol">€</span>14,37
+	                    					</bdi>
+	                    				</span> 
+	                    			</div>
+	                    		</div>
+	                    	</div>
+	                    	<div class="myac-pro-grd-item">
+	                    		<div class="myac-pro-grd-item-inr">
+	                    			<div class="myac-pro-grd-img">
+	                    				<img src="<?php echo THEME_URI;?>/assets/images/product-img-full-01.jpg">
+	                    			</div>
+	                    			<h5>Feest Gourmet</h5>
+	                    			<p>Pulvinar convallis enim lacus</p>
+
+	                    			<div class="product-price">
+	                    				<span class="woocommerce-Price-amount amount">
+	                    					<del>
+	                    						<span class="woocommerce-Price-currencySymbol">€</span>16,01
+	                    					</del>
+	                    				</span>
+	                    				<span class="woocommerce-Price-amount amount">
+	                    					<bdi>
+	                    						<span class="woocommerce-Price-currencySymbol">€</span>14,37
+	                    					</bdi>
+	                    				</span> 
+	                    			</div>
+	                    		</div>
+	                    	</div>
+	                    </div>
 	                  </div>
 	                </div>
 	                </li>
