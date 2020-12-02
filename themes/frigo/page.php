@@ -241,50 +241,60 @@ while ( have_posts() ) :
 	              </div>
 	            </div>
             </div>
+      		<?php }elseif( get_row_layout() == 'abonnement_formulier' ){ 
+      			$fc_titel = get_sub_field('fc_titel');
+        		$fc_tekst = get_sub_field('fc_tekst');
+      		?>
+			<div class="block-930">
+				<div class="dft-newsletter-form">
+					<div class="dft-newsletter-form-hdr">
+		                <?php 
+		                	if( !empty($fc_titel) ) printf('<h6 class="nfh-title">%s</h6>', $fc_titel); 
+		                	if( !empty($fc_tekst) ) echo wpautop( $fc_tekst ); 
+		                ?>
+					</div>
+					<div class="ftr-top-newsletter"> 
+						<form class="needs-validation" novalidate>
+						  <div class="from-group-wrp clearfix">
+						    <div class="from-group-3-col clearfix">
+						      <div class="from-group hide-sm">
+						        <input placeholder="Voornaam" type="text" class="form-control" required>
+						      </div> 
+						      <div class="from-group">
+						        <input placeholder="Naam" type="text" class="form-control" required> 
+						      </div>
+						      <div class="from-group">
+						        <input placeholder="E-mail address" type="email" class="form-control" required>
+						      </div>
+						    </div>
+						    <div class="from-group-msg">
+						      <p>Wij respecteren uw privacy. Jouw gegevens worden altijd vertrouwelijk behandeld.</p>
+						    </div>
+						    <div class="from-group-submit">
+						      <button type="submit" name="submit">Verzenden</button>
+						    </div>
+						  </div>
+						</form>
+					</div>
+				</div>
+			</div>
+      		<?php }elseif( get_row_layout() == 'fcknop' ){ 
+      			$fc_knop = get_sub_field('knop');
+      			if( is_array( $fc_knop ) &&  !empty( $fc_knop['url'] ) ):
+      		?>
+			<div class="block-930">
+				<div class="dft-btns">
+				  <div class="dft-btn-cntlr">
+				    <?php printf('<a class="dft-btn" href="%s" target="%s">%s</a>', $fc_knop['url'], $fc_knop['target'], $fc_knop['title']); ?>
+				  </div>
+				</div>
+			</div>
+			<?php endif; ?>
       		<?php } ?>
 		<?php endwhile; ?>
 		<?php }else{ ?>
 			<?php the_content(); ?>
 		<?php } ?>
-		<?php if( is_cart() OR is_checkout() OR is_account_page() ): ?>
-		<?php else: ?>
-            <div class="block-930">
-            <div class="dft-newsletter-form">
-              <div class="dft-newsletter-form-hdr">
-                <h6 class="nfh-title">Schrijf in op de nieuwsbrief</h6>
-                <p>Mauris vehicula non arcu eu facilisis. Morbi vitae lectus eget libero ullamcorper suscipit.</p>
-              </div>
-              <div class="ftr-top-newsletter"> 
-                <form class="needs-validation" novalidate>
-                  <div class="from-group-wrp clearfix">
-                    <div class="from-group-3-col clearfix">
-                      <div class="from-group hide-sm">
-                        <input placeholder="Voornaam" type="text" class="form-control" required>
-                      </div> 
-                      <div class="from-group">
-                        <input placeholder="Naam" type="text" class="form-control" required> 
-                      </div>
-                      <div class="from-group">
-                        <input placeholder="E-mail address" type="email" class="form-control" required>
-                      </div>
-                    </div>
-                    <div class="from-group-msg">
-                      <p>Wij respecteren uw privacy. Jouw gegevens worden altijd vertrouwelijk behandeld.</p>
-                    </div>
-                    <div class="from-group-submit">
-                      <button type="submit" name="submit">Verzenden</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="dft-btns">
-              <div class="dft-btn-cntlr">
-                <a href="#" class="dft-btn">BUTTOn</a>
-              </div>
-            </div>
-          </div>
-     	 <?php endif; ?>
         </article>
       </div>
     </div>
