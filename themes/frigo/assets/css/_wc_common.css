@@ -4,13 +4,14 @@
 #wccart-wrapper input.button.alt,
 #wccart-wrapper .coupon .button,
 .woocommerce table.cart td.actions .button{
-	background: #5CB85C!important;
+	background: #A61916!important;
 	color: #fff!important;
 	text-align: center;
-	font-size: 11px;
-	line-height: 14px;
+	font-size: 14px;
+	line-height: 1px;
 	text-align: center;
 	text-transform: uppercase;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
 }
 #wccart-wrapper #respond input#submit.alt:hover, 
 #wccart-wrapper a.button.alt:hover, 
@@ -125,6 +126,7 @@ a.xoo-cp-btn-vc.xcp-btn:hover{
 	-webkit-transition: all 0.5s ease;
 	margin-left: 10px;
 }
+
 .woocommerce #respond input#submit:hover, 
 .woocommerce a.button:hover, 
 .woocommerce button.button:hover, 

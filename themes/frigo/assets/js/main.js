@@ -376,6 +376,8 @@ if( $('.fl-product').length ){
 }
 
   $('.woocommerce-ordering select, .woocommerce div.product form.cart .variations select').addClass('selectpicker');
+  //$('select.country_select').addClass('selectpicker');
+
   if($('#frigo_make_account').length){
     // wc myaccount page
     $('#frigo_make_account').on('click', function(e){

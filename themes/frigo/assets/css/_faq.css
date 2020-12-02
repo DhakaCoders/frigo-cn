@@ -77,7 +77,7 @@
 	color: #A61916;
 	text-decoration: underline;
 }
-.faq-accordion-controller span{
+.faq-accordion-controller > span{
 	width: 42px;
 	height: 42px;
 	background: #A61916;
@@ -87,7 +87,7 @@
 	right: -22px;
 	cursor: pointer;
 }
-.faq-accordion-controller span:after{
+.faq-accordion-controller > span:after{
 	content: "";
 	position: absolute;
 	left: 50%;
@@ -102,7 +102,7 @@
     width: 14px;
     height: 14px;
 }
-.faq-accordion-controller span.faq-accordion-active:after{
+.faq-accordion-controller > span.faq-accordion-active:after{
     content: "";
     background: url(../images/minus-icon.svg);
     background-size: 10px 3px;
@@ -272,13 +272,13 @@
 	.faq-accordion-controller {
 	    padding: 22px 25px 22px 25px;
 	}
-	.faq-accordion-controller span {
+	.faq-accordion-controller > span {
 	    width: 32px;
 	    height: 32px;
 	    bottom: -8px;
 	    right: -8px;
 	}
-	.faq-accordion-controller span:after {
+	.faq-accordion-controller > span:after {
 	    background-size: 10px 10px;
 	    width: 10px;
 	    height: 10px;

@@ -38,7 +38,7 @@ global $woocommerce;
 	<div class="frigo-dashboard">
 		<div><h2 class="dashboard-title">Dashboard</h2></div>
 		<div class="dashboard-row">
-			<div class="dashboard-col">
+			<div class="dashboard-col dashboard-col-1">
 				<div class="frigo-account-form">
 					<div class="form-check-option">
 						<label for="particular"><input type="radio" name="info_type" id="particular" value="particular"> <span>Particulier</span></label>
@@ -54,7 +54,7 @@ global $woocommerce;
 							woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
 						}
 					 ?>
-					<p>
+					<p class="particular-form-submit-btn">
 						<button type="submit" class="button" name="save" value="<?php esc_attr_e( 'Opslaan', 'woocommerce' ); ?>"><?php esc_html_e( 'Opslaan', 'woocommerce' ); ?></button>
 						<input type="hidden" name="woocommerce_user_address" value="<?php echo wp_create_nonce('woocommerce-user-address-nonce'); ?>"/>
 						<input type="hidden" name="action" value="user_address" />
@@ -63,7 +63,7 @@ global $woocommerce;
 					</div>
 				</div>
 			</div>
-			<div class="dashboard-col">
+			<div class="dashboard-col dashboard-col-2">
 	          <div class="faq-accordion-wrp cbvmyaccount">
 	          	<div><h4>Bestel Geschiedenis</h4></div>
 	          	<?php 
@@ -90,11 +90,11 @@ global $woocommerce;
 					?>
 	                <li>
 	                <div class="faq-accordion-controller">
-						<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
+						<a class="code-text" href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
 							<?php echo _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</a>
 
-						<time datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created(), 'd. m. Y' ) ); ?></time>
+						<time class="my-ac-time" datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created(), 'd.m.Y' ) ); ?></time>
 
 						<?php 
 						echo "<div class='order-status'>";
