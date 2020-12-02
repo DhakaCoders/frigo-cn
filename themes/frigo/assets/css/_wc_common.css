@@ -454,6 +454,11 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 .woocommerce div.product form.cart .reset_variations{
     display: none!important;
 }
+ul.woocommerce-thankyou-order-details li:before {
+    content: "";
+    border-radius: 0;
+    background: transparent !important;
+}
 @media(max-width: 1199px){
 	body.woocommerce-order-received .woocommerce ul.order_details{
 		padding-left: 15px;

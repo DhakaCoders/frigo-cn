@@ -40,6 +40,7 @@ global $woocommerce;
 		<div class="dashboard-row">
 			<div class="dashboard-col dashboard-col-1">
 				<div class="frigo-account-form">
+					<div><h4>Persoonlijke info</h4></div>
 					<div class="form-check-option">
 						<label for="particular"><input type="radio" name="info_type" id="particular" value="particular"> <span>Particulier</span></label>
 						<label for="for-business"><input type="radio" name="info_type" id="for-business" value="for-business" checked="checked"> <span>Zakelijk</span></label>
