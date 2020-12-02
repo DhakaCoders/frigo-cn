@@ -10,7 +10,9 @@
 <div class="pro-overview-accordion">
   <div class="pro-ovrvw-accrdon-row">
     <div class="pro-ovrvw-accrdon-row-hdr">
-      
+      <div>
+        <?php do_action('cbv_catalog'); ?>
+      </div>
     </div>
     <div class="pro-ovrvw-accrdon-row-btm">
     </div>
