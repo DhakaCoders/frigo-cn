@@ -173,7 +173,7 @@
 	padding: 25px 90px 25px 35px!important;
 }
 .bnr-search input:focus{
-	border-color: #A61916;
+	border-color: #A61916!important;
 }
 .bnr-search input::placeholder {
   color: #8A8A8A;

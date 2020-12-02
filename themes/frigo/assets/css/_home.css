@@ -158,8 +158,8 @@
 	justify-content: space-between;
 }
 .quantity input{
-	max-width: 58px;
-	width: 100%;
+	max-width: 58px!important;
+	width: 100%!important;
 	text-align: center;
 	font-size: 14px;
 	font-weight: 700;
@@ -541,7 +541,7 @@
 		max-width: 80px;
 	}
 	.quantity input{
-		max-width: 28px;
+		max-width: 28px!important;
 	}
 	.product-order-btn .fl-btn{
 		max-width: 85px;

@@ -20,6 +20,7 @@
 #wccart-wrapper .coupon .button:hover,
 .woocommerce table.cart td.actions .button:hover{
 	background: #5CB85C!important;
+	border-color: #5CB85C!important;
 }
 #wccart-wrapper .coupon button.button,
 .woocommerce table.cart td.actions .button{
@@ -67,14 +68,20 @@ input#coupon_code:-ms-input-placeholder { /* IE 10+ */
 input#coupon_code:-moz-placeholder { /* Firefox 18- */
   color: #7B8CA8!important;
 }
-
+.xoo-cp-active{
+	padding: 20px 0;
+}
 .xoo-cp-container{
 	max-width: 672px;
-	background: #F4F7F9;
-	box-shadow: 0px 0px 26px rgba(67, 88, 123, 0.07);
-	-ms-box-shadow: 0px 0px 26px rgba(67, 88, 123, 0.07);
-	-webkit-box-shadow: 0px 0px 26px rgba(67, 88, 123, 0.07);
+	background: #FFFFFF;
 }
+.xoo-cp-container h5{
+	font-size: 27px;
+	line-height: 1;
+	margin: 0;
+	padding-bottom: 15px;
+}
+
 .xoo-cp-pdetails td.xoo-cp-ptitle{
 	padding-bottom: 30px;
 }
