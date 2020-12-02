@@ -162,9 +162,37 @@
 .myac-pro-grds{
     display: flex;
     margin: 0 -15px;
+    flex-wrap: wrap;
 }
 
 .myac-pro-grd-item{
     width: 50%;
     padding: 0 15px;
+}
+
+.myac-pro-grd-item-inr{
+    position: relative;
+    padding: 0 0 0 115px;
+}
+.myac-pro-grd-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.default-page-con .myac-pro-grd-item h5{
+    font-size: 18px;
+    line-height: 1;
+    margin: 0 0 5px 0;
+    display: block;
+    text-transform: uppercase;
+}
+
+.default-page-con .faq-accordion-dsc .myac-pro-grd-item p{
+    font-size: 14px;
+}
+
+
+.woocommerce-myaccount-content .myac-pro-grd-item{
+    width: 100%;
 }
