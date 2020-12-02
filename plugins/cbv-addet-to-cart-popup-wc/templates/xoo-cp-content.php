@@ -65,16 +65,18 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
           <?php if($attributes): ?>
             <div class="xoo-cp-variations"><?php echo $attributes; ?></div>
           <?php endif; ?>
-              <?php if ( $_product->is_sold_individually() || !$xoo_cp_gl_qtyen_value ): ?>
-                <span><?php echo $cart_item['quantity']; ?></span>        
-              <?php else: ?>
-              <div class="quantity qty">
-                <span class="minus">-</span>
-                <input type="number" max="<?php esc_attr_e( 0 < $max_value ? $max_value : '' ); ?>" min="<?php esc_attr_e($min_value); ?>" step="<?php echo esc_attr_e($step); ?>" value="<?php echo $cart_item['quantity']; ?>" pattern="<?php esc_attr_e( $pattern ); ?>">
-                <span class="plus">+</span>
+              <div class="qty-price-wrap">
+                <?php if ( $_product->is_sold_individually() || !$xoo_cp_gl_qtyen_value ): ?>
+                  <span><?php echo $cart_item['quantity']; ?></span>        
+                <?php else: ?>
+                <div class="quantity qty">
+                  <span class="minus">-</span>
+                  <input type="number" max="<?php esc_attr_e( 0 < $max_value ? $max_value : '' ); ?>" min="<?php esc_attr_e($min_value); ?>" step="<?php echo esc_attr_e($step); ?>" value="<?php echo $cart_item['quantity']; ?>" pattern="<?php esc_attr_e( $pattern ); ?>">
+                  <span class="plus">+</span>
+                </div>
+                <?php endif; ?>
+                <span class="xoo-cp-pprice"><?php echo  $product_price; ?></span>
               </div>
-              <?php endif; ?>
-              <span class="xoo-cp-pprice"><?php echo  $product_price; ?></span>
           </div>
         </div>
 			</div>
