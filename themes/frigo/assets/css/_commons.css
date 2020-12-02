@@ -238,7 +238,12 @@ ul.sub-menu li:before,
 }
 
 
-
+.no-result {
+    text-align: center;
+    color: #A61916;
+    font-size: 22px;
+    padding-top: 40px;
+}
 
 /**
 Selects
