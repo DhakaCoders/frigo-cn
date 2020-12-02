@@ -262,6 +262,12 @@ span.xoo-cp-close{
 	background-repeat: no-repeat;
 	border-radius: 0;
 }
+
+
+
+.pro-item-desc .product-price{
+
+}
 .xoo-cp-icon-cross:before{
 	content: none;
 }

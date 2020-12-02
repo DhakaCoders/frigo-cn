@@ -281,6 +281,16 @@
 .woocommerce p.stars a{
 	color: #A61916;
 }
+
+.summary.entry-summary .xoo-cp-icon-check:before{
+	content: none;
+}
+.woocommerce .summary.entry-summary a.added_to_cart {
+    width: 83px;
+    margin-left: 5px;
+    padding-top: 0;
+}
+
 @media(max-width: 1499px){
 
 }
