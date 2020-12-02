@@ -187,6 +187,7 @@
 .myac-pro-grd-item{
     width: 50%;
     padding: 0 15px;
+    padding-bottom: 20px;
 }
 
 .myac-pro-grd-item-inr{
@@ -320,4 +321,33 @@
 .woocommerce-form.woocommerce-form-login.login{
     margin-top: 0;
     padding-top: 0;
+}
+.myac-pro-grd-item .product-price{
+    font-size: 18px;
+}
+.myac-pro-grd-item .woocommerce-Price-amount.amount del{
+    position: relative;
+    color: #717171;
+    font-weight: 700;
+}
+
+.myac-pro-grd-item .woocommerce-Price-amount.amount del:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    background: #717171;
+    height: 1px;
+}
+
+.myac-pro-grd-item .woocommerce-Price-amount.amount{
+    color: #5CB85C;
+}
+
+.myac-pro-grd-item p{
+    margin-bottom: 7px;
 }
