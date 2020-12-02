@@ -386,4 +386,13 @@ if( $('.fl-product').length ){
       $(".frigo-register").show(300);
     });
   }
+  $('.sidebar-widget h4').on('click', function(){
+    if( $(this).next().is(':visible') ){
+      $(this).next().slideUp();
+      $(this).parents('.sidebar-widget').removeClass('thisex');
+    }else{
+      $(this).next().slideDown();
+      $(this).parents('.sidebar-widget').addClass('thisex');
+    }
+  });
 })(jQuery);
