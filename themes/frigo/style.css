@@ -72,6 +72,14 @@ Text Domain: frigobox
 .sidebar-widget h4 + ul{
 	display: none;
 }
+.sidebar-widget .widget-cn{
+
+}
+.sidebar-widget .woocommerce-ordering{
+	margin-top: 1em;
+    float: left;
+    width: 100%;	
+}
 .sidebar-widget li.current-cat a,
 .sidebar-widget li.woocommerce-widget-layered-nav-list__item--chosen a, 
 .sidebar-widget li.chosen a{

@@ -10,12 +10,15 @@
 <div class="pro-overview-accordion">
   <div class="pro-ovrvw-accrdon-row">
     <div class="pro-ovrvw-accrdon-row-hdr">
-      <div>
-        <?php do_action('cbv_catalog'); ?>
-      </div>
     </div>
     <div class="pro-ovrvw-accrdon-row-btm">
     </div>
+<div class="sidebar-widget" style="display: none;">
+  <h4>Sorteren</h4>
+  <div class="widget-cn clearfix">
+    <?php do_action('cbv_catalog'); ?>
+  </div>
+</div>
 <?php if ( is_active_sidebar( 'shop-widget' ) ) : ?>
     <?php dynamic_sidebar( 'shop-widget' ); ?>
 <?php endif; ?>
