@@ -196,3 +196,109 @@
 .woocommerce-myaccount-content .myac-pro-grd-item{
     width: 100%;
 }
+
+
+.signup-message-inner > h6{
+    color: #fff;
+    text-align: center;
+    text-transform: initial;
+}
+
+.signup-message-inner > p{
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 22px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signup-message-inner{
+    padding-left: 47px;
+    padding-right: 47px;
+}
+
+#frigo_make_account.signup-btn{
+    border: 2px solid #FFFFFF;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.03));
+    max-width: 187px;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 13px;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.frigo-signup-message .summary-hdr ul{
+    padding: 0;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.frigo-signup-message .summary-hdr ul li{
+    position: relative;
+    padding: 5px 0 5px 35px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1;
+}
+.frigo-signup-message .summary-hdr ul li:after{
+    content: ""!important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/star-white-icon.png);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 22px;
+}
+
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register{
+    border: none;
+    border-radius: 0;
+}
+
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit{
+    margin-left: 0;
+    max-width: 200px;
+    width: 100%;
+    font-size: 11px;
+    line-height: 1;
+    text-transform: uppercase;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.woocommerce .woocommerce-form-login .woocommerce-form-login__rememberme{
+    padding-top: 13px;
+}
+
+.woocommerce-LostPassword.lost_password a{
+    font-size: 14px;
+    line-height: 20px;
+    color: #A61916
+}
+
+.woocommerce-form.woocommerce-form-login.login{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.woocommerce form .form-row input.input-text, 
+.woocommerce form .form-row textarea{
+    border: 2px solid #F5F5F5;
+    background: #fff!important;
+    height: 58px;
+}
+
+.woocommerce-form.woocommerce-form-login.login{
+    margin-top: 0;
+    padding-top: 0;
+}
