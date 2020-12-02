@@ -236,7 +236,7 @@ nav.main-nav ul li.current-menu-item a {
 
 @media(max-width: 1399px){
 	nav.main-nav > ul > li{
-		padding: 0 18px;
+		padding: 0 16px;
 	}
 	nav.main-nav ul.sub-menu li a{
 		padding: 10px 20px;
