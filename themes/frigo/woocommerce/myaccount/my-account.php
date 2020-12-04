@@ -34,7 +34,7 @@ global $woocommerce;
 		 *
 		 * @since 2.6.0
 		 */
-		//do_action( 'woocommerce_account_content' );	?>
+		do_action( 'woocommerce_account_content' );	?>
 	<div class="frigo-dashboard">
 		<div><h2 class="dashboard-title">Dashboard</h2></div>
 		<div class="dashboard-row">

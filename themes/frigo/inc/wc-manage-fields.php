@@ -4,10 +4,11 @@ function startsWith($haystack, $needle){
     return $needle === '' || strpos($haystack, $needle) === 0;
 }
 
-add_action('init','zk_save_billing_address');
+
+add_action('init','zk_save_billing_address'); 
 // Custom function to save Usermeta or Billing Address of registered user
 function zk_save_billing_address(){
-	if (isset( $_POST["action"] ) && wp_verify_nonce($_POST['woocommerce_user_address'], 'woocommerce-user-address-nonce')) {
+	if (isset( $_POST["action"] ) && !empty($_POST["action"])) {
 		$user_id = get_current_user_id();
 	    global $woocommerce;
 	    $address = $_POST;
@@ -24,9 +25,9 @@ function zk_save_billing_address(){
 	        }
 	    }
 	}
+    return false;
 
 }
-
 
 // Registration page billing address form Validation
 function zk_validation_billing_address( $errors ) {

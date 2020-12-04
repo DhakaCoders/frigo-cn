@@ -268,14 +268,6 @@ if (!function_exists('add_custom_box_product_summary')) {
     }
 }
 
-//add_action('woocommerce_after_single_product_summary', 'frigobox_output_product_data_tabs', 5);
-function frigobox_output_product_data_tabs(){
-    global $product, $woocommerce, $post;
-    echo '<div class="woocommerce-tabs">';
-     wc_get_template(  'single-product/tabs/tabs.php' ); 
-    echo '</div>';
-}
-
 add_action('woocommerce_before_add_to_cart_quantity', 'cbv_start_div_single_price');
 function cbv_start_div_single_price(){
     echo '<div class="cartbtn-wrap"><strong>Aantal personen</strong><div class="cart-btn-qty">';
@@ -368,22 +360,6 @@ function sm_pre_get_posts( $query ) {
     if( isset($_GET['keyword']) && !empty($_GET['keyword']) ){
         $keyword = $_GET['keyword'];
     }
-    // add meta_query elements
-    /*if( !empty( get_query_var( 'city' ) ) ){
-        $meta_query[] = array( 'key' => '_sm_accommodation_city', 'value' => get_query_var( 'city' ), 'compare' => 'LIKE' );
-    }
-
-    if( !empty( get_query_var( 'type' ) ) ){
-        $meta_query[] = array( 'key' => '_sm_accommodation_type', 'value' => get_query_var( 'type' ), 'compare' => 'LIKE' );
-    }
-
-    if( count( $meta_query ) > 1 ){
-        $meta_query['relation'] = 'AND';
-    }
-
-    if( count( $meta_query ) > 0 ){
-        $query->set( 'meta_query', $meta_query );
-    }*/
 
     if( !empty( $keyword ) ){
         $query->set('post_type', $post_type);
@@ -445,7 +421,6 @@ function product_min_qty($product_id = '', $_product = array()){
     else{
         $get_id = $product->get_id();
     }
-
     if( !empty($_product) && $_product ){
         $product = $_product;
     }
