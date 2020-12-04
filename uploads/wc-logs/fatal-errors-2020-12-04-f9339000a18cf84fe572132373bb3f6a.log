@@ -1,0 +1,30 @@
+2020-12-04T12:44:03+00:00 CRITICAL Uncaught Error: Call to a member function get_max_purchase_quantity() on null in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php:478
+Stack trace:
+#0 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\templates\xoo-cp-content.php(44): product_max_qty(158)
+#1 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\includes\class-xoo-cp-core.php(55): wc_get_template('xoo-cp-content....', Array, '', 'C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\includes\class-xoo-cp-core.php(123): Xoo_CP_Core->get_cart_content()
+#4 C:\xampp\htdocs\2020\11\frigo\wp-includes\class-wp-hook.php(287): Xoo_CP_Core->set_ajax_fragments(Array)
+#5 C:\xampp\htdocs\2020\11\frigo\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#6 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\w in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php on line 478
+
+2020-12-04T12:45:02+00:00 CRITICAL Uncaught Error: Call to a member function get_max_purchase_quantity() on null in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php:478
+Stack trace:
+#0 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\templates\xoo-cp-content.php(44): product_max_qty(158)
+#1 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\includes\class-xoo-cp-core.php(55): wc_get_template('xoo-cp-content....', Array, '', 'C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\includes\class-xoo-cp-core.php(123): Xoo_CP_Core->get_cart_content()
+#4 C:\xampp\htdocs\2020\11\frigo\wp-includes\class-wp-hook.php(287): Xoo_CP_Core->set_ajax_fragments(Array)
+#5 C:\xampp\htdocs\2020\11\frigo\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#6 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\w in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php on line 478
+
+2020-12-04T12:46:13+00:00 CRITICAL Uncaught Error: Call to a member function get_max_purchase_quantity() on null in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php:478
+Stack trace:
+#0 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\templates\xoo-cp-content.php(44): product_max_qty(158)
+#1 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\includes\class-xoo-cp-core.php(55): wc_get_template('xoo-cp-content....', Array, '', 'C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\cbv-addet-to-cart-popup-wc\includes\class-xoo-cp-core.php(123): Xoo_CP_Core->get_cart_content()
+#4 C:\xampp\htdocs\2020\11\frigo\wp-includes\class-wp-hook.php(287): Xoo_CP_Core->set_ajax_fragments(Array)
+#5 C:\xampp\htdocs\2020\11\frigo\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#6 C:\xampp\htdocs\2020\11\frigo\frigo-cn\plugins\w in C:\xampp\htdocs\2020\11\frigo\frigo-cn\themes\frigo\inc\wc-functions.php on line 478
+
