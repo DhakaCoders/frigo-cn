@@ -75,7 +75,7 @@
                 <?php 
                   if( !empty($contact_title) ) printf('<li><strong>%s</strong></li>', $contact_title);
                   if( !empty($address) ) printf('<li><a href="%s">%s</a></li>', $gmaplink, $address);
-                  if( !empty($email) ) printf('<li><span>Telefoon: <a href="tel:%s">%s</a></span></li>', phone_preg($telefoon),  $telefoon); 
+                  if( !empty($telefoon) ) printf('<li><span>Telefoon: <a href="tel:%s">%s</a></span></li>', phone_preg($telefoon),  $telefoon); 
                   if( !empty($email) ) printf('<li><span>E-Mail: <a href="mailto:%s">%s</a></span></li>', $email, $email); 
                   if( !empty($bwt) ) printf('<li><span>BTW: %s</span>', $bwt); 
                 ?>
