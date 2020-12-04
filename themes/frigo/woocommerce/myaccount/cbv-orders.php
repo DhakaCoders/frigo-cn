@@ -21,7 +21,7 @@ $customer_orders = get_posts(
 	)
 );
 ?>
-<div class="customer-order-details">
+<div class="customer-order-details customer-order-controll">
 <div><h4>Bestel Geschiedenis</h4></div>
 <?php
 if ( $customer_orders ) :
