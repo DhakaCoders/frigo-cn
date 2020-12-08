@@ -41,8 +41,8 @@ else{
 
 
 //Quantity input
-$max_value = apply_filters( 'woocommerce_quantity_input_max', product_max_qty($product_id), $_product );
-$min_value = apply_filters( 'woocommerce_quantity_input_min', product_min_qty($product_id), $_product );
+$max_value = apply_filters( 'woocommerce_quantity_input_max', product_max_qty($product_id, $_product));
+$min_value = apply_filters( 'woocommerce_quantity_input_min', product_min_qty($product_id, $_product) );
 $step      = apply_filters( 'woocommerce_quantity_input_step', 1, $_product );
 $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'woocommerce_stock_amount', 'intval' ) ? '[0-9]*' : '' );
 
