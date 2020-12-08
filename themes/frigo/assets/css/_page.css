@@ -390,3 +390,41 @@
 	
 }
 
+
+
+
+/*after code*/
+.banner-sec{
+	position: relative;
+	overflow: hidden;
+}
+
+.main-bnr-slider{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: 1;
+}
+.mainBnrSlideItem{
+	width: 100%;
+	height: 100%;
+}
+.main-bnr-content{
+	position: relative;
+	z-index: 5;
+}
+.banner-sec > div{
+	display: block;
+}
+
+.banner-sec div.main-bnr-content {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+.mainBnrSlider .slick-list , .mainBnrSlider .slick-track{
+	height: 100%;
+}

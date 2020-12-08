@@ -213,7 +213,7 @@ $('.qty').each(function() {
 if( $('.spotlightSlider').length ){
     $('.spotlightSlider').slick({
       dots: false,
-      arrow: true,
+      arrows: true,
       infinite: true,
       autoplay: false,
       autoplaySpeed: 2000,
@@ -395,4 +395,21 @@ if( $('.fl-product').length ){
       $(this).parents('.sidebar-widget').addClass('thisex');
     }
   });
+
+
+if( $('.mainBnrSlider').length ){
+    $('.mainBnrSlider').slick({
+      dots: false,
+      arrows: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      draggable: false,
+      fade: true,
+    });
+}
+
 })(jQuery);
