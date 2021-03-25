@@ -32,7 +32,7 @@ while ( have_posts() ) :
 				<?php 
 		            if( !empty($title) ) printf('<div class="block-930"><strong class="dft-promo-module-title">%s</strong></div>', $title); 
 		            if( !empty($afbeelding) ){
-		              echo '<div class="dfp-plate-one-img-bx">', cbv_get_image_tag($afbeelding), '</div>';
+		              echo '<div class="dfp-plate-one-img-bx">'. cbv_get_image_tag($afbeelding).'</div>';
 		            }
 	          	?>
 			</div>

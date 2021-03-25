@@ -491,5 +491,46 @@ function cbv_catalog_ordering() {
     wc_get_template( 'loop/orderby.php', array( 'catalog_orderby_options' => $catalog_orderby_options, 'orderby' => $orderby, 'show_default_orderby' => $show_default_orderby ) );
 }
 
+/* Custom Product data tab  */
+
+/*add_filter( 'woocommerce_product_data_tabs', 'wc_add_my_custom_product_data_tab' );
+function wc_add_my_custom_product_data_tab( $product_data_tabs ) {
+    $product_data_tabs['min_max_qty-tab'] = array(
+        'label' => __( 'Min/Max Quantity', 'woocommerce' ),
+        'target' => 'wc_min_max_qty_product_data',
+    );
+    return $product_data_tabs;
+}
+add_action( 'woocommerce_product_data_panels', 'wc_add_my_custom_product_data_fields' );
+function wc_add_my_custom_product_data_fields() {
+    global $woocommerce, $post;
+    ?>
+    <!-- id below must match target registered in above add_my_custom_product_data_tab function -->
+    <div id="wc_min_max_qty_product_data" class="panel woocommerce_options_panel">
+        <?php
+            woocommerce_wp_text_input( array(
+                'id'      => 'product_min_qty',
+                'value'   => get_post_meta( get_the_ID(), 'product_min_qty', true ),
+                'label'   => __('Product Min Quantity', 'woocommerce'),
+                'type' => 'number',
+                'custom_attributes' => array(
+                'step' => 'any',
+                'min' => '0'
+                )
+            ));
+             woocommerce_wp_text_input( array(
+                'id'      => 'product_max_qty',
+                'value'   => get_post_meta( get_the_ID(), 'product_max_qty', true ),
+                'label'   => __('Product Max Quantity', 'woocommerce'),
+                'type' => 'number',
+                'custom_attributes' => array(
+                'step' => 'any',
+                )
+            ));
+        ?>
+    </div>
+    <?php
+
+}*/
 
 include_once(THEME_DIR .'/inc/wc-manage-fields.php');

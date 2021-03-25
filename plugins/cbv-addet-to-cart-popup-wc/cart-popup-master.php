@@ -1,8 +1,8 @@
 <?php
 /**
-* Plugin Name: CVB WooCommerce added to cart popup (Ajax) 
+* Plugin Name: CVB WooCommerce added to cart popup 
 * Plugin URI: 
-* Author: Azizul
+* Author: Dhakacoders
 * Version: 1.0.0
 * Text Domain: cbv-addet-to-cart-popup
 * Domain Path: 

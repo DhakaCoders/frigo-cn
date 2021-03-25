@@ -34,17 +34,17 @@ global $woocommerce;
 		 *
 		 * @since 2.6.0
 		 */
-		do_action( 'woocommerce_account_content' );	?>
+		do_action( 'woocommerce_custom_account_content' );	
+?>
 	<div class="frigo-dashboard">
 		<div><h2 class="dashboard-title">Dashboard</h2></div>
 		<div class="dashboard-row">
 			<div class="dashboard-col dashboard-col-1">
 				<div class="frigo-account-form">
-					<div><h4>Persoonlijke info</h4></div>
-					<div class="form-check-option">
+					<!--<div class="form-check-option">
 						<label for="particular"><input type="radio" name="info_type" id="particular" value="particular"> <span>Particulier</span></label>
 						<label for="for-business"><input type="radio" name="info_type" id="for-business" value="for-business" checked="checked"> <span>Zakelijk</span></label>
-					</div>
+					</div>-->
 					<div class="particular-form">
 					<form method="post">
 					<?php 
@@ -82,21 +82,23 @@ global $woocommerce;
 						)
 					);
 					if ( $customer_orders ) :
+					
 	          	?>
 	            <ul class="clearfix reset-list tabs">
 		            <?php
 					foreach ( $customer_orders as $customer_order ) :
+					    
 						$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 						$item_count = $order->get_item_count();
 					?>
 	                <li>
 	                <div class="faq-accordion-controller">
-						<a class="code-text" href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-							<?php echo _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<a class="code-text">
+							<?php echo _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number(); ?>
 						</a>
 
 						<time class="my-ac-time" datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created(), 'd.m.Y' ) ); ?></time>
-						<p>Quam nunc massa scelerisque ultrices </p>
+						<p class="mac-pro-short-des">Quam nunc massa scelerisque ultrices </p>
 						<?php 
 						echo "<div class='order-status'>";
 						echo "<label>Status:</label> ";
@@ -110,50 +112,42 @@ global $woocommerce;
 	                  <span></span>
 	                  <div class="faq-accordion-dsc">
 	                    <div class="myac-pro-grds">
+    	                    <?php 
+    	                        $order_items = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
+    	                        if( $order_items ):
+    	                        foreach ( $order_items as $item_id => $item ) {
+    				            $product = $item->get_product();
+    				            $itemImgID = get_post_thumbnail_id($product->get_id());
+            		            if( empty($itemImgID) ){
+            		                $itemImgID = get_post_thumbnail_id($product->get_parent_id());
+            		            }
+    				            $order_img = cbv_get_image_tag( $itemImgID, 'thumbnail' );
+                                $qty = $item->get_quantity();
+                        		$refunded_qty = $order->get_qty_refunded_for_item( $item_id );
+                        		if ( $refunded_qty ) {
+                        			$qty_display = '<del>' . esc_html( $qty ) . '</del> <ins>' . esc_html( $qty - ( $refunded_qty * -1 ) ) . '</ins>';
+                        		} else {
+                        			$qty_display = esc_html( $qty );
+                        		}
+    	                    ?>
 	                    	<div class="myac-pro-grd-item">
 	                    		<div class="myac-pro-grd-item-inr">
 	                    			<div class="myac-pro-grd-img">
-	                    				<img src="<?php echo THEME_URI;?>/assets/images/product-img-full-01.jpg">
+	                    				<?php echo $order_img; ?>
 	                    			</div>
-	                    			<h5>Feest Gourmet</h5>
-	                    			<p>Pulvinar convallis enim lacus</p>
+	                    			<h5><?php echo $item->get_name(); ?> <strong class="product-quantity">&times;&nbsp;<?php echo $qty_display; ?></strong></h5>
+	                    			<?php 
+                                        
+	                    			?>
+	                    			<?php if( !empty($product->get_short_description()) ) echo wpautop($product->get_short_description()); ?>
 
 	                    			<div class="product-price">
-	                    				<span class="woocommerce-Price-amount amount">
-	                    					<del>
-	                    						<span class="woocommerce-Price-currencySymbol">€</span>16,01
-	                    					</del>
-	                    				</span>
-	                    				<span class="woocommerce-Price-amount amount">
-	                    					<bdi>
-	                    						<span class="woocommerce-Price-currencySymbol">€</span>14,37
-	                    					</bdi>
-	                    				</span> 
+	                    				<?php echo $product->get_price_html(); ?>
 	                    			</div>
 	                    		</div>
 	                    	</div>
-	                    	<div class="myac-pro-grd-item">
-	                    		<div class="myac-pro-grd-item-inr">
-	                    			<div class="myac-pro-grd-img">
-	                    				<img src="<?php echo THEME_URI;?>/assets/images/product-img-full-01.jpg">
-	                    			</div>
-	                    			<h5>Feest Gourmet</h5>
-	                    			<p>Pulvinar convallis enim lacus</p>
-
-	                    			<div class="product-price">
-	                    				<span class="woocommerce-Price-amount amount">
-	                    					<del>
-	                    						<span class="woocommerce-Price-currencySymbol">€</span>16,01
-	                    					</del>
-	                    				</span>
-	                    				<span class="woocommerce-Price-amount amount">
-	                    					<bdi>
-	                    						<span class="woocommerce-Price-currencySymbol">€</span>14,37
-	                    					</bdi>
-	                    				</span> 
-	                    			</div>
-	                    		</div>
-	                    	</div>
+	                    	<?php } ?>
+	                    	<?php endif; ?>
 	                    </div>
 	                  </div>
 	                </div>
@@ -161,7 +155,7 @@ global $woocommerce;
 	              <?php endforeach; ?>
 	            </ul>
 	            <div class="order-details-btn">
-	            	<a href="<?php echo esc_url( wc_get_account_endpoint_url( 'cbv-orders' ) ); ?>">Bekijk alles</a>
+	            	<a href="<?php echo esc_url( wc_get_account_endpoint_url( 'my-orders' ) ); ?>">Bekijk alles</a>
 	            </div>
 	            <?php endif; ?>
 	          </div>

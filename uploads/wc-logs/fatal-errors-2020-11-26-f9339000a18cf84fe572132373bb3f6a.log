@@ -1,8 +1,0 @@
-2020-11-26T13:45:39+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\2020\11\frigo\wp-includes\Requests\Transport\cURL.php on line 163
-
-2020-11-26T14:14:36+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\2020\11\frigo\wp-includes\Requests\Transport\cURL.php on line 163
-
-2020-11-26T14:16:32+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\2020\11\frigo\wp-includes\Requests\Transport\cURL.php on line 163
-
-2020-11-26T14:17:11+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\2020\11\frigo\wp-includes\Requests\Transport\cURL.php on line 163
-

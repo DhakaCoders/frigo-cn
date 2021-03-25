@@ -51,7 +51,7 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
 
 
 <div class="xoo-cp-pdetails clearfix">
-	<div class="container" data-xoo_cp_key="<?php echo $cart_item_key; ?>">
+	<div class="container" id="tr" data-xoo_cp_key="<?php echo $cart_item_key; ?>">
 		<div class="row clearfix xoo-cp-pdetails-row plr-40">
 			<div class="xoo-cp-pdetails-col-1">
         <div class="xoo-cp-left-des">
@@ -70,9 +70,9 @@ $pattern   = apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'w
                   <span><?php echo $cart_item['quantity']; ?></span>        
                 <?php else: ?>
                 <div class="quantity qty">
-                  <span class="minus">-</span>
-                  <input type="number" max="<?php esc_attr_e( 0 < $max_value ? $max_value : '' ); ?>" min="<?php esc_attr_e($min_value); ?>" step="<?php echo esc_attr_e($step); ?>" value="<?php echo $cart_item['quantity']; ?>" pattern="<?php esc_attr_e( $pattern ); ?>">
-                  <span class="plus">+</span>
+                  <span class="xcp-minus xcp-chng">-</span>
+                  <input type="number" class="xoo-cp-qty" max="<?php esc_attr_e( 0 < $max_value ? $max_value : '' ); ?>" min="<?php esc_attr_e($min_value); ?>" step="<?php echo esc_attr_e($step); ?>" value="<?php echo $cart_item['quantity']; ?>" pattern="<?php esc_attr_e( $pattern ); ?>">
+                  <span class="xcp-plus xcp-chng">+</span>
                 </div>
                 <?php endif; ?>
                 <span class="xoo-cp-pprice"><?php echo  $product_price; ?></span>

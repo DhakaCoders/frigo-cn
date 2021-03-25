@@ -227,7 +227,7 @@ jQuery(document).ready(function($){
 
 		//Update if everything is fine.
 		else{
-			var cart_key = $(this).parents('tr').data('xoo_cp_key');
+			var cart_key = $(this).parents('#tr').data('xoo_cp_key');
 			update_cart(cart_key,new_qty);
 		}
 
@@ -272,7 +272,7 @@ jQuery(document).ready(function($){
 			}
 		}
 
-		var cart_key = $(this).parents('tr').data('xoo_cp_key');
+		var cart_key = $(this).parents('#tr').data('xoo_cp_key');
 
 		update_cart(cart_key,new_qty);
 	})
@@ -282,7 +282,7 @@ jQuery(document).ready(function($){
 	//Remove item from cart
 	$(document).on('click','.xoo-cp-remove-pd',function(e){
 		e.preventDefault();
-		var cart_key = $(this).parents('tr').data('xoo_cp_key');
+		var cart_key = $(this).parents('#tr').data('xoo_cp_key');
 		update_cart(cart_key,0);
 	})
 
