@@ -197,6 +197,7 @@
 .faq-pagi-ctlr ul li span.page-numbers.current{
 	border-color: #A61916;
 	color: #A61916;
+	
 }
 
 @media(max-width: 1499px){
